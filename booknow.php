@@ -228,8 +228,10 @@ from roomsetcalendar as t1 right join roomtypesetup as t2 on t1.rtid=t2.rtid  an
 						
 						<div data-role="popup" id="resWERRoomDetailspop" data-overlay-theme="b" class="ui-content">
 							<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-							<h3 class="iCenter">Water's Edge Room</h3>
-							<div class="iCenter">
+							<div class="popHead"
+								<h3 class="iCenter">Water's Edge Room</h3>
+							</div>	
+							<div  class="popSudlanan">
 								<div class="IpatungaInlineBlock roomAndDetails">
 									<img class="IpatungaDblock" title="Water's Edge Room" src="https://online.plantationbay.com/Picture/watersedge.jpg" />
 									<p class="iLeft">Our most sought-after room, located right at the edge of our lagoon. It has a luxurious bathroom with separate tub and shower, and a spacious balcony. You can be in the water in 0-2 seconds (not suitable for children and infants).</p>
