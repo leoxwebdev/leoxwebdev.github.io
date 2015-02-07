@@ -332,6 +332,20 @@ li{
 
 /* END LANGUAGES */
 
+.popHead{
+	margin: 10px auto 0;
+	max-width: 98%;
+	background-color: #fff;
+	border-radius: 3px;
+	padding: 5px;
+}
+.popSudlanan{
+	margin: 3px auto;
+	max-width: 98%;
+	background-color: #fff;
+	border-radius: 3px;
+	padding-top: 10px;
+}
 .ui-page .ui-header{
 	margin:0 auto;
 	max-width:1300px;	
@@ -1440,7 +1454,7 @@ h1.pbayheadlogo{
 	background-color: #fff;
 	/*vertical-align: top;*/
 	text-align: left;
-	padding: 10px 5px 5px 5px;
+	padding: 3px 5px 5px 5px;
 	margin-bottom: 35px;
 	/*border-radius: 3px;*/
 	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 5px 5px 3px 0px rgba(0,75,66,0.10);
@@ -2990,7 +3004,8 @@ p.angComment::before {
 		margin: 0 auto;
 		/*max-width:96%;*/
 		max-width:100%;
-		margin-top: -5px;
+		/*margin-top: -5px;*/
+		padding-top:10px;
 	}
 
 .imgGagmay{
