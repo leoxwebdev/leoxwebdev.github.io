@@ -778,7 +778,7 @@ $(document).on("pagecreate", "#photogallery", function () {
 		$hotelbeauties = $("#hotelbeauties"),
 		
 		$AdtoSaTaas = $("html, body");
-		
+
 	$(".leoxYourHereMainMenu").on( "change", function () {
 		window.location.assign( this.value );
 	});
@@ -826,7 +826,8 @@ $(document).on("pagecreate", "#photogallery", function () {
 	$videoPage.on("click", function () { displayImagesItem( "VIDEOOFPLANTATIONBAY" ); });
 	$hotelmapPage.on("click", function () { displayImagesItem( "HOTELMAP" ); });
 	
-	console.log(localStorage.AngNagTawagNiImages);
+	//console.log(localStorage.AngNagTawagNiImages);
+
 	if ( localStorage.AngNagTawagNiImages === "homevideo" ){
 		localStorage.AngNagTawagNiImages = "leoGwapo";
 		displayImagesItem( "VIDEOOFPLANTATIONBAY" );
@@ -835,6 +836,7 @@ $(document).on("pagecreate", "#photogallery", function () {
 	$images_mobile_menu.on( "change", function () {
 		displayImagesItem( this.value );
 	});
+
 	/*
 	//Images Big and Small
 	$(".pop700px").on({
@@ -844,6 +846,7 @@ $(document).on("pagecreate", "#photogallery", function () {
 		}
 	});
 	*/
+
 	// Pictures of Plantationbay 
 	$(".sendPostcardpbayPic").on("click", function () {
 		$("#sendDetalyebayPic").slideToggle(500);
@@ -852,6 +855,7 @@ $(document).on("pagecreate", "#photogallery", function () {
 	
 	$("#imgGagmaypbayPic img").on("click", function () {
 		$("#pbayPicDaku").attr("src", this.name );
+		$("#imgPop").find("img").attr("src",this.name);
 		$AdtoSaTaas.animate({scrollTop: $("#pbayimages").find("h1").offset().top});
 	});
 	
@@ -875,6 +879,7 @@ $(document).on("pagecreate", "#photogallery", function () {
 	
 	$("#imgGagmayCalPic2015 img").on("click", function () {
 		$("#CalPic2015Daku").attr("src", this.name );
+		$("#imgPop").find("img").attr("src",this.name);
 		$AdtoSaTaas.animate({scrollTop: $("#h3Cal2015").offset().top + 37});
 	});
 	
@@ -898,6 +903,7 @@ $(document).on("pagecreate", "#photogallery", function () {
 	
 	$("#imgGagmayCalPic2014 img").on("click", function () {
 		$("#CalPic2014Daku").attr("src", this.name );
+		$("#imgPop").find("img").attr("src",this.name);
 		$AdtoSaTaas.animate({scrollTop: $("#h3Cal2014").offset().top + 37});
 	});
 	
@@ -910,7 +916,8 @@ $(document).on("pagecreate", "#photogallery", function () {
 			$( this ).html( "Hide" );
 		}
 		$AdtoSaTaas.animate({scrollTop: $("#h3Cal2014").offset().top});
-	});	
+	});
+
 	/*
 	$("#sunodpbayPicGamay").on("click", function () {
 		console.log( "img height : " + $(".imgGagmay img").height() );
@@ -962,6 +969,19 @@ $(document).on("pagecreate", "#photogallery", function () {
 			changePlayStopLabel( "Play", this );
 		}
 	});
+
+	//Popup display size
+	$( ".photopopup" ).on({
+		popupbeforeposition: function() {
+			var maxHeight = $( window ).height() - 30 + "px",
+				maxWidth = $( window ).width() - 40 + "px";
+
+			$( ".photopopup img" ).css( {
+				"maxHeight": maxHeight,
+				"maxWidth": maxWidth
+			});
+		}
+    });
 
 	// Change Play/Stop buttom label
 	function changePlayStopLabel( PlayStop, elementPlayStop ){
