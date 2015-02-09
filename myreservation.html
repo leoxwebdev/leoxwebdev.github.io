@@ -124,7 +124,7 @@
 					<h3>My prefered room type(s)</h3>
 				</div>
 				<div class="ui-body ui-body-a">	
-					<ul id="prefRooms"></ul>
+					<ul id="prefRooms"><!-- preferred room(s) here!--></ul>
 					<a href="rooms.html" class="btnCls ui-link ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-shadow ui-corner-all ui-mini" data-ajax="false">Add preferred room type</a>
 				</div>
 			</div>
@@ -132,16 +132,19 @@
 			
 			<!-- Pop-up -->
 			<div id="confirm" class="ui-content" data-role="popup">
-				<hr>
-				<p id="question">Are you sure you want to delete</p>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a id="yes" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">Yes</a>
-					</div>
-					<div class="ui-block-b">
-						<a id="cancel" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">No</a>
-					</div>
+				<div class="popHead">
+					<p id="question">Are you sure you want to delete</p>
 				</div>
+				<div class="popSudlanan">
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<a id="yes" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">Yes</a>
+						</div>
+						<div class="ui-block-b">
+							<a id="cancel" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">No</a>
+						</div>
+					</div>
+				</div>	
 			</div><!-- /popup -->
 			<button data-inline="true" name="resCheckAvailability" id="resCheckAvailability">CHECK AVAILABILITY</button>
 			<br /><br /><br />
@@ -764,83 +767,98 @@
 							</table>
 
 							<div data-role="popup" id="resAddVEP" data-overlay-theme="b" class="ui-content" data-history="false">
-								<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-								<h3 class="iCenter">VIP Express Package</h3>
-								<h2 class="iCenter Tealcolor">US$ 50 nett one-time charge per room</h2>
-								<p class="iCenter"><i>Comfort. Convenience. Discretion</i>.</p>
-								<div class="iCenter">
-									<div class="IpatungaInlineBlock iTop" style="width:500px;">
-										<ul class="iLeft" style="margin-top:0;padding-top:0;">
-											<p class="Tealcolor" style="margin-top:0;padding-top:0;"><strong>Inclusions :</strong></p>
-											<li>A private chauffeur-driven car to and from the hotel (directly to your room without passing the lobby)</li>
-											<li>Check-in and check-out in the privacy of your room</li>
-											<li>Upgraded room amenities</li>
-											<li><strong>Feel even more glamorous in a luxury Jaguar XJL.Add US$ 50.</strong></li>		
-										</ul>
-									</div>
-									<div class="IpatungaInlineBlock iTop">
-										<img class="IpatungaDblock" src="pbayImages/Vip.jpg" alt="VIP Express Package" title="VIP Express Package" />
-									</div>
+								<div class="popHead">
+									<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+									<h1 class="iCenter txtDarkGreen">VIP Express Package</h1>
 								</div>
-								<p><strong class="txtDarkGreen">Note:</strong> To ensure airport pick-up, please provide your flight details above. If you do not have the information yet, please send your flight details with your confirmation number as the Subject of your email to rsvns@plantationbay.com at least 48 hours prior to arrival.</p>
-								<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow">Close</a>
+								<div class="popSudlanan">
+									<h3 class="iCenter txtDarkGreen">US$ 50 nett one-time charge per room</h3>
+									<p class="iCenter"><i>Comfort. Convenience. Discretion</i>.</p>
+									<div class="iCenter">
+										<div class="IpatungaInlineBlock iTop" style="width:500px;">
+											<ul class="iLeft" style="margin-top:0;padding-top:0;">
+												<p class="txtDarkGreen" style="margin-top:0;padding-top:0;"><strong>Inclusions :</strong></p>
+												<li>A private chauffeur-driven car to and from the hotel (directly to your room without passing the lobby)</li>
+												<li>Check-in and check-out in the privacy of your room</li>
+												<li>Upgraded room amenities</li>
+												<li><strong>Feel even more glamorous in a luxury Jaguar XJL.Add US$ 50.</strong></li>		
+											</ul>
+										</div>
+										<div class="IpatungaInlineBlock iTop">
+											<img class="IpatungaDblock" src="pbayImages/Vip.jpg" alt="VIP Express Package" title="VIP Express Package" />
+										</div>
+									</div>
+									<p><strong class="txtDarkGreen">Note:</strong> To ensure airport pick-up, please provide your flight details above. If you do not have the information yet, please send your flight details with your confirmation number as the Subject of your email to rsvns@plantationbay.com at least 48 hours prior to arrival.</p>
+									<a href="#" data-rel="back" data-role="button" data-mini="true" data-inline="true" data-icon="delete">Close</a>
+								</div>
 							</div>
 							<div data-role="popup" id="resAddRRP" data-overlay-theme="b" class="ui-content" data-history="false">
-								<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-								<h3 class="iCenter">Romantic Rendezvous Package</h3>
-								<h2 class="iCenter Tealcolor">US$ 120 nett one-time charge per room</h2>
-								<p class="iCenter"><i>If you want to impress that special someone, this is the package for you!</i>.</p>
-								<div class="iCenter">
-									<div class="IpatungaInlineBlock iTop" style="width:500px;">
-										<ul class="iLeft" style="margin-top:0;padding-top:0;">
-											<p class="Tealcolor" style="margin-top:0;padding-top:0;"><strong>Inclusions :</strong></p>
-											<li>Soft lights, sweet music, and a rose petal bath with scented candles <br />for a sensual evening (please arrange two days in advance)</li>
-											<li>A dozen long-stemmed roses (please arrange a day in advance)</li>
-											<li>Premium sparkling wine and home-made chocolates upon arrival. (Add $60 for champagne)</li>
-											<li>Candlelight dinner for two in any location, with serenaders, served by a private butler, <br />including a romantic set-up (Does not include the cost of food. Please arrange two days in advance.)</li>
-										</ul>
-									</div>
-									<div class="IpatungaInlineBlock iTop">
-										<img class="IpatungaDblock" src="pbayImages/RRP2.jpg" alt="Romantic Rendezvous Package" title="Romantic Rendezvous Package" />
-									</div>
+								<div class="popHead">
+									<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+									<h1 class="iCenter txtDarkGreen">Romantic Rendezvous Package</h1>
 								</div>
-								<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow">Close</a>
+								<div class="popSudlanan">
+									<h3 class="iCenter txtDarkGreen">US$ 120 nett one-time charge per room</h3>
+									<p class="iCenter"><i>If you want to impress that special someone, this is the package for you!</i>.</p>
+									<div class="iCenter">
+										<div class="IpatungaInlineBlock iTop" style="width:500px;">
+											<ul class="iLeft" style="margin-top:0;padding-top:0;">
+												<p class="txtDarkGreen" style="margin-top:0;padding-top:0;"><strong>Inclusions :</strong></p>
+												<li>Soft lights, sweet music, and a rose petal bath with scented candles <br />for a sensual evening (please arrange two days in advance)</li>
+												<li>A dozen long-stemmed roses (please arrange a day in advance)</li>
+												<li>Premium sparkling wine and home-made chocolates upon arrival. (Add $60 for champagne)</li>
+												<li>Candlelight dinner for two in any location, with serenaders, served by a private butler, <br />including a romantic set-up (Does not include the cost of food. Please arrange two days in advance.)</li>
+											</ul>
+										</div>
+										<div class="IpatungaInlineBlock iTop">
+											<img class="IpatungaDblock" src="pbayImages/RRP2.jpg" alt="Romantic Rendezvous Package" title="Romantic Rendezvous Package" />
+										</div>
+									</div>
+									<a href="#" data-rel="back" data-role="button" data-mini="true" data-inline="true" data-icon="delete">Close</a>
+								</div>	
 							</div>
 							<div data-role="popup" id="resAddPAP" data-overlay-theme="b" class="ui-content" data-history="false">
-								<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-								<h3 class="iCenter">Personal Assistant Package</h3>							
-								<h2 class="iCenter Tealcolor">US$ 50 nett per assistant (12hours)</h2>
-								
-								<div class="iCenter">
-									<div class="IpatungaInlineBlock iTop" style="max-width:200px;">
-										<img class="IpatungaInlineBlock" src="pbayImages/PersonalAssitant2.jpg" alt="Personal Assistant Package" title="Personal Assistant Package" />											
-										<p class="iLeft">Make your stay even more comfortable and worry-free.</p>							
-									</div>
-									<div class="IpatungaInlineBlock iTop" style="max-width:200px;">
-										<img class="IpatungaInlineBlock" src="pbayImages/PersonalAssitant1.jpg" alt="Personal Assistant Package" title="Personal Assistant Package" />
-										<p class="iLeft">For baby-sitting, running errands, sightseeing, shopping, or assisting the elderly, a full-time personal assistant can make all the difference.</p>							
-									</div>	
+								<div class="popHead">
+									<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+									<h1 class="iCenter txtDarkGreen">Personal Assistant Package</h1>
 								</div>
-								<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow">Close</a>
+								<div class="popSudlanan">
+									<h3 class="iCenter txtDarkGreen">US$ 50 nett per assistant (12hours)</h3>
+									<div class="iCenter">
+										<div class="IpatungaInlineBlock iTop" style="max-width:200px;">
+											<img class="IpatungaInlineBlock" src="pbayImages/PersonalAssitant2.jpg" alt="Personal Assistant Package" title="Personal Assistant Package" />											
+											<p class="iLeft">Make your stay even more comfortable and worry-free.</p>							
+										</div>
+										<div class="IpatungaInlineBlock iTop" style="max-width:200px;">
+											<img class="IpatungaInlineBlock" src="pbayImages/PersonalAssitant1.jpg" alt="Personal Assistant Package" title="Personal Assistant Package" />
+											<p class="iLeft">For baby-sitting, running errands, sightseeing, shopping, or assisting the elderly, a full-time personal assistant can make all the difference.</p>							
+										</div>	
+									</div>
+									<a href="#" data-rel="back" data-role="button" data-mini="true" data-inline="true" data-icon="delete">Close</a>
+								</div>	
 							</div>
 							<div data-role="popup" id="resAddCCP" data-overlay-theme="b" class="ui-content" data-history="false">
-								<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-								<h3 class="iCenter">Cook with the Chef Package </h3>
-								<h2 class="iCenter Tealcolor">US$ 50 nett up to 5 persons</h2>
-								<p class="iCenter">Learn how to cook a Plantation Bay specialty dish. <i>(Please arrange a day in advance. Between 10AM-5PM only.)</i></p>
-								<div class="iCenter">
-									<div class="InlineBlock iTop">
-										<ul class="iLeft">						
-											<p class="Tealcolor"><strong>Inclusions :</strong></p>
-											<li>Cook your favorite dish from the Chef&#8217;s menu</li>
-											<li>Toque and apron as a keepsake</li>
-										</ul>
-									</div>
-									<div class="InlineBlock">
-										<img class="IpatungaDblock" src="pbayImages/CookwiththeChef.jpg" alt="Cook with the Chef Package" title="Cook with the Chef Package" />
-									</div>
+								<div class="popHead">
+									<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+									<h1 class="iCenter">Cook with the Chef Package </h1>
 								</div>
-								<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow">Close</a>
+								<div class="popSudlanan">
+									<h3 class="iCenter txtDarkGreen">US$ 50 nett up to 5 persons</h3>
+									<p class="iCenter">Learn how to cook a Plantation Bay specialty dish. <i>(Please arrange a day in advance. Between 10AM-5PM only.)</i></p>
+									<div class="iCenter">
+										<div class="InlineBlock iTop">
+											<ul class="iLeft">						
+												<p class="txtDarkGreen"><strong>Inclusions :</strong></p>
+												<li>Cook your favorite dish from the Chef&#8217;s menu</li>
+												<li>Toque and apron as a keepsake</li>
+											</ul>
+										</div>
+										<div class="InlineBlock">
+											<img class="IpatungaDblock" src="pbayImages/CookwiththeChef.jpg" alt="Cook with the Chef Package" title="Cook with the Chef Package" />
+										</div>
+									</div>
+									<a href="#" data-rel="back" data-role="button" data-mini="true" data-inline="true" data-icon="delete">Close</a>
+								</div>	
 							</div>
 					</div>
 				</div>		

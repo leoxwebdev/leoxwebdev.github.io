@@ -2448,6 +2448,11 @@ p.angComment::before {
 	max-width: 580px;
 }
 
+#myreservation label.ui-btn,
+#PreferedRoomsHead .ui-btn{
+	border-width: 0;
+}
+
 #resDates{
 	text-align:center;
 	margin:0 auto;
