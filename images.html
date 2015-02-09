@@ -87,6 +87,7 @@
 					<div class="iCenter leoxSudlanan" style="max-width:700px;">
 						<div id="imageDakupbayPic" class="imageDaku">
 							<img id="pbayPicDaku" src="pbayImages/photoGallery/Weddingpeninsula.jpg" />
+							<!--<a href="#imgPop" data-rel="popup" data-position-to="window" style="float: right;margin-right: 5px;margin-top: -65px;z-index: 100;position: relative;">Click here to enlarge</a>-->
 							<div id="pbayPicDakuSliding" class="itago"><!--Naa diri ang dagko nga sliding hulagway, pero dili makita.-->
 							</div>
 							<div id="sendDetalyebayPic" class="sendDetalye">
@@ -125,9 +126,7 @@
 							<!--<a id="balikpbayPicGamay" style="float:left;" href="javascript:void(null)" class="btnsx ui-btn ui-icon-carat-l ui-btn-icon-left">Previous</a>-->
 							<a href="javascript:void(null);" class="sendPostcardpbayPic btnsx ui-btn ui-icon-mail ui-btn-icon-right">Email</a>
 							<a id="tananpbayPicGamay" href="javascript:void(null)" class="btnsx ui-btn ui-icon-grid ui-btn-icon-right">All</a>
-							<a id="ipaslidepbayPic" href="javascript:void(null)" class="btnsx ui-btn ui-icon-video ui-btn-icon-right">Play</a>
-							<!--<a id="slideshowpbayPic" href="javascript:void(null)" class="btnsx ui-btn ui-icon-video ui-btn-icon-left">Slide show</a>-->
-							<!--<a id="sunodpbayPicGamay" style="float:right;" href="javascript:void(null)" class="btnsx ui-btn ui-icon-carat-r ui-btn-icon-right">Next</a>-->
+							<!--<a id="ipaslidepbayPic" href="javascript:void(null)" class="btnsx ui-btn ui-icon-video ui-btn-icon-right">Play</a>-->
 						</div>
 					
 						
@@ -190,6 +189,7 @@
 								<div class="iCenter imgGroup">
 									<div id="imageDakuCalPic2015" class="imageDaku">
 										<img id="CalPic2015Daku" class="IpatungaDblock" src="pbayImages/calendar2015/kielah2.jpg" />
+										<a href="#imgPop" data-rel="popup" data-position-to="window" style="float: right;margin-right: 5px;margin-top: -65px;z-index: 100;position: relative;">Click here to enlarge</a>
 										<div id="CalPic2015DakuSliding" class="itago"><!--Naa diri ang dagko nga sliding hulagway, pero dili makita.-->
 										</div>
 										<div id="sendDetalyeCalPic2015" class="sendDetalye">
@@ -235,15 +235,18 @@
 									<div class="action2015 iCenter" style="margin-top:3px;">
 										<a href="javascript:void(null);" class="sendPostcardCalPic2015 btnsx ui-btn ui-icon-mail ui-btn-icon-right">Email</a>
 										<a id="tananCalPic2015Gamay" href="javascript:void(null)" class="btnsx ui-btn ui-icon-grid ui-btn-icon-right">All</a>
-										<a id="ipaslideCalPic2015" href="javascript:void(null)" class="btnsx ui-btn ui-icon-video ui-btn-icon-right">Play</a>
+										<!--<a id="ipaslideCalPic2015" href="javascript:void(null)" class="btnsx ui-btn ui-icon-video ui-btn-icon-right">Play</a>-->
 									</div>
 								</div>
 							</div>
 							<div id="h3Cal2014" data-role="collapsible" data-collapsed="true">
 								<h2>2014 CALENDAR GIRLS</h2>
 								<div class="iCenter imgGroup">
-									<div id="imageDakuCalPic2014" class="imageDaku">
+									<div id="imageDakuCalPic2014" class="imageDaku">										
 										<img id="CalPic2014Daku" class="IpatungaDblock" src="pbayImages/calendar2014/doty2.jpg" />
+										<a href="#imgPop" data-rel="popup" data-position-to="window" style="float: right;margin-right: 5px;margin-top: -65px;z-index: 100;position: relative;">Click here to enlarge</a>
+										<!--<a href="#imgPop" data-rel="popup" data-role="button" data-icon="plus" data-inline="true" data-mini="true" data-icontext="false">Show Big</a>
+									-->
 										<div id="CalPic2014DakuSliding" style="display:none;"><!--Naa diri ang dagko nga sliding hulagway, pero dili makita.--></div>
 										<div id="sendDetalyeCalPic2014" class="sendDetalye">
 											<hr>
@@ -287,13 +290,14 @@
 									<div class="action2014 iCenter" style="margin-top:3px;">
 										<a href="javascript:void(null);" class="sendPostcardCalPic2014 btnsx ui-btn ui-icon-mail ui-btn-icon-right">Email</a>
 										<a id="tananCalPic2014Gamay" href="javascript:void(null)" class="btnsx ui-btn ui-icon-grid ui-btn-icon-right">All</a>
-										<a id="ipaslideCalPic2014" href="javascript:void(null)" class="btnsx ui-btn ui-icon-video ui-btn-icon-right">Play</a>
+										<!--<a id="ipaslideCalPic2014" href="javascript:void(null)" class="btnsx ui-btn ui-icon-video ui-btn-icon-right">Play</a>-->
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
 				<div data-role="popup" id="imagesDaku" data-position-to="window" class="pop700px">
 					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 					<img id="leoImageDaku" style="margin:5px;width:98%;" class="IpatungaInlineBlock" title="" alt="" src="" />
@@ -423,7 +427,13 @@
 					</fieldset>
 				</div>
 			</div>
-		</div>	
+		</div>
+
+		<div id="imgPop" data-role="popup" class="photopopup" data-them="b" data-overlay-theme="b" data-corners="false">
+			<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+			<img src="pbayImages/calendar2014/doty2.jpg" alt="Doty">
+		</div>
+
     </div>
 	<div data-role="footer">
 		<div class="iCenter">

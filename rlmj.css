@@ -78,7 +78,8 @@ li{
 	
 .ui-page .ui-header .ui-btn,
 .ui-page .ui-footer a.ui-btn,
-.ui-page .sidebarButtons a.ui-btn{
+.ui-page .sidebarButtons a.ui-btn,
+.ui-page .ui-popup a.ui-btn{
 	margin: 0 -4px 5px 0;
 	background:teal;
 	text-shadow:none;
@@ -96,7 +97,8 @@ li{
 	}
 	.ui-page .ui-header a.ui-btn:hover,
 	.ui-page .ui-footer a.ui-btn:hover,
-	.ui-page .sidebarButtons a.ui-btn:hover{
+	.ui-page .sidebarButtons a.ui-btn:hover,
+	.ui-page .ui-popup a.ui-btn:hover{
 		background-color:#58FAAC;
 		color:rgb(1,75,66);
 		border: 2px solid rgba(0, 128, 128, 0.27);
