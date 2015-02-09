@@ -779,6 +779,8 @@ $(document).on("pagecreate", "#photogallery", function () {
 		
 		$AdtoSaTaas = $("html, body");
 
+	var isPbayPic,is2014Pic,is2015Pic;	
+
 	$(".leoxYourHereMainMenu").on( "change", function () {
 		window.location.assign( this.value );
 	});
@@ -918,6 +920,9 @@ $(document).on("pagecreate", "#photogallery", function () {
 		$AdtoSaTaas.animate({scrollTop: $("#h3Cal2014").offset().top});
 	});
 
+	$(".popClickToDaku").on("click", function(){
+
+	});
 	/*
 	$("#sunodpbayPicGamay").on("click", function () {
 		console.log( "img height : " + $(".imgGagmay img").height() );
