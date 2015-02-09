@@ -3004,10 +3004,8 @@ p.angComment::before {
 		/*border: 8px solid #d2bd86;*/
 		display: block;
 		margin: 0 auto;
-		/*max-width:96%;*/
 		max-width:100%;
-		/*margin-top: -5px;*/
-		padding-top:10px;
+		padding-top:0;
 	}
 
 .imgGagmay{
