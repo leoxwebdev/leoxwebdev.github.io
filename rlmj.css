@@ -1062,6 +1062,7 @@ li{
 .L_YourAreHere{
 	float: right;
 	margin-top:8px;
+	padding-right:8px;
 	padding-bottom: 0;
 	}
 .E_YourAreHere{
