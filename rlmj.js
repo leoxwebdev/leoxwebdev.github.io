@@ -779,8 +779,6 @@ $(document).on("pagecreate", "#photogallery", function () {
 		
 		$AdtoSaTaas = $("html, body");
 
-	var isPbayPic,is2014Pic,is2015Pic;	
-
 	$(".leoxYourHereMainMenu").on( "change", function () {
 		window.location.assign( this.value );
 	});
@@ -881,7 +879,6 @@ $(document).on("pagecreate", "#photogallery", function () {
 	
 	$("#imgGagmayCalPic2015 img").on("click", function () {
 		$("#CalPic2015Daku").attr("src", this.name );
-		$("#imgPop").find("img").attr("src",this.name);
 		$AdtoSaTaas.animate({scrollTop: $("#h3Cal2015").offset().top + 37});
 	});
 	
@@ -905,7 +902,6 @@ $(document).on("pagecreate", "#photogallery", function () {
 	
 	$("#imgGagmayCalPic2014 img").on("click", function () {
 		$("#CalPic2014Daku").attr("src", this.name );
-		$("#imgPop").find("img").attr("src",this.name);
 		$AdtoSaTaas.animate({scrollTop: $("#h3Cal2014").offset().top + 37});
 	});
 	
@@ -921,7 +917,9 @@ $(document).on("pagecreate", "#photogallery", function () {
 	});
 
 	$(".popClickToDaku").on("click", function(){
-
+		//console.log( $(this).closest("img").attr("src") );
+		//console.log(this);
+		$("#imgPop").find("img").attr("src",$(this).prev().attr("src"));
 	});
 	/*
 	$("#sunodpbayPicGamay").on("click", function () {
