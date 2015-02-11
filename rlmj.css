@@ -887,7 +887,7 @@ li{
 		float:right;
 		margin: 0px 10px 0px auto;
 		padding-left: 10px;
-		width:	30.333333333333%;
+		width:	28.333333333333%;
 		}
 	.mobile_page_menu{ display: none; }
 	.L_YourAreHere{ margin-bottom: 0; }
@@ -923,7 +923,7 @@ li{
 		float:right;
 		margin: 0px 10px 0px auto;
 		padding-left: 10px;
-		width:	30.333333333333%;
+		width:	28.333333333333%;
 		}
 	.mobile_page_menu{ display: none; }
 	.L_YourAreHere{ margin-bottom: 0; }
@@ -931,6 +931,14 @@ li{
 }
 
 @media only screen and (min-width: 967px){
+	.pbayslogan{
+		float:left;
+		margin-left:208px;
+		margin-top:8px;
+		width:500px;
+	}			
+}
+@media only screen and (min-width: 984px){
 	.pbayslogan{
 		float:left;
 		margin-left:208px;
@@ -1009,7 +1017,7 @@ li{
 		float:right;
 		margin: 0px 10px 0px auto;
 		padding-left: 10px;
-		width:25.333333333333%;
+		width:24.333333333333%;
 		}
 		
 	.mobile_page_menu{ display: none; }
