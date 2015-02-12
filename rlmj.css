@@ -370,7 +370,7 @@ li{
 	background-color: #fff;
 }
 
-/*
+
 @media only screen and (min-width: 180px){
 	.ui-page .ui-header{
 		background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("images/banner0320/13_aerialnight.jpg") no-repeat;
@@ -517,7 +517,7 @@ li{
 		background-size: 100% 100%;
 	}
 }
-*/
+
 .headerwhole{
 	clear:both;
 	width:100%;
@@ -2339,7 +2339,7 @@ h1.pbayheadlogo{
 
 
 p.angComment{
-	background-color: #fff;
+	background-color: rgb(258, 238, 218);
 	border-radius: 5px;
 	box-shadow: 0 0 6px #B2B2B2;
 	display: inline-block;
@@ -2351,7 +2351,7 @@ p.angComment{
 }
 
 p.angComment::before {
-	background-color: #fff;
+	background-color: rgb(258, 238, 218);
 	content: "\00a0";
 	display: block;
 	height: 25px;
