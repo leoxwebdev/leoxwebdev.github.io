@@ -2535,7 +2535,8 @@ p.angComment::before {
 
 #prefRooms{
 	font-weight:bold;
-	list-style:square url('pbayImages/favicon.ico');
+	list-style:square url('pbayImages/bullet.png');
+	/*background: url(pbayImages/bullet.png) no-repeat 0 10px;*/
 }
 
 #BfastPkage div.ui-checkbox label{
