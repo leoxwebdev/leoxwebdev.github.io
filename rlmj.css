@@ -2090,7 +2090,63 @@ h1.pbayheadlogo{
 		display: inline-block;
 		margin: 0 auto;
 		max-width: 380px;
+	}
+	/*
+	.DiningCulinarySuperlativesIMGxxx{
+	display:inline-block;
+	margin:0 auto;
+	max-width:250px;
+	vertical-align:top;
+	margin-bottom: 3px;
+	vertical-align: center;
+	margin-top: 10px;
+	background-color: #fff;	
+	padding-top: 5px;
+	}
+	.DiningCulinarySuperlativesIMG p{
+		text-align:justify;
+		}
+		.DiningCulinarySuperlativesIMG p strong,
+		.DiningCulinarySuperlativesIMG p span{
+			color:rgb(1,75,66);
+		}
+	.DiningCulinarySuperlativesIMG:hover{
+		border: 2px solid rgba(1,75,66,0.1);
+	}
+*/
+
+.themeddinnerbox{
+	display: inline-block;
+	margin: 0 auto;
+	max-width: 228px;
+	background-color: #fff;
+	vertical-align: top;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 38px;
+	margin-top: 20px;
+	border-radius: 3px;
+	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
+	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
+	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);	
+	transition: box-shadow 0.2s ease-out;
+	}
+	.themeddinnerbox h4{
+		margin-top:0;
+		color: rgb(1,75,66);
+		text-align:center;
+		background: url(pbayImages/gauze.png) #ececec;
+		padding: 3px;
+		}
+	.themeddinnerbox p{
+		text-align: left;
+	}
+	.themeddinnerbox:hover{
+		-moz-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
+		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
+		box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);		
 	}	
+
 /* ---------------------------- Tumoy sa DINING ---------------------------------- */
 
 /* -----------------------------spa.html   SUGOD --------------------------------- */
