@@ -226,7 +226,6 @@
 			//Check if list is empty
 			var prefRoomslistCount = $( "#prefRooms" ).find( ">li" );
 			
-			//console.log(prefRoomslistCount.length);
 			if ( prefRoomslistCount.length < 1 ){	//Empty
 				$( "#prefRooms" ).append( "<li>All Available</li>" );
 				localStorage.showAllRooms = 1;
@@ -235,7 +234,7 @@
 		
 		// Remove active state and unbind when the cancel button is clicked
 		$( "#confirm #cancel" ).on( "click", function(){
-			//$( "#confirm #yes" ).off();
+			$( "#confirm #yes" ).off();
 			$( "#confirm" ).popup( "close" );
 		});
 	}

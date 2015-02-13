@@ -117,8 +117,8 @@
 					<p class="iCenter"><em>Most Rooms accommodate 2 Adults and 2 Children</em></p>
 				</div>
 			</div>
+
 			<div class="spacer15px"></div>
-			
 			<div id="PreferedRoomsHead" class="ui-corner-all">
 				<div class="ui-bar ui-bar-a">				
 					<h3>My prefered room type(s)</h3>
@@ -128,14 +128,13 @@
 					<a href="rooms.html" class="btnCls ui-link ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-shadow ui-corner-all ui-mini" data-ajax="false">Add preferred room type</a>
 				</div>
 			</div>
+
 			<div class="spacer15px"></div>
-			
-			<!-- Pop-up -->
+			<!-- Remove preferred room(s) popup -->
 			<div id="confirm" data-role="popup">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
 				<div class="popHead">
 					<p id="question">Are you sure you want to delete</p>
-			
-				<!--<div class="popSudlanan">-->
 					<div class="ui-grid-a">
 						<div class="ui-block-a">
 							<a id="yes" data-role="button" data-mini="true">Yes</a>
@@ -144,7 +143,6 @@
 							<a id="cancel" data-role="button" data-mini="true">No</a>
 						</div>
 					</div>
-				<!--</div>-->
 				</div>
 			</div><!-- /popup -->
 			<button data-inline="true" name="resCheckAvailability" id="resCheckAvailability">CHECK AVAILABILITY</button>
