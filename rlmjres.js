@@ -234,8 +234,9 @@
 		});
 		
 		// Remove active state and unbind when the cancel button is clicked
-		$( "#confirm #cancel" ).on( "click", function() {
-			$( "#confirm #yes" ).off();
+		$( "#confirm #cancel" ).on( "click", function(){
+			//$( "#confirm #yes" ).off();
+			$( "#confirm" ).popup( "close" );
 		});
 	}
 
