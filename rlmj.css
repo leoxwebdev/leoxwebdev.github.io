@@ -1995,7 +1995,7 @@ h1.pbayheadlogo{
 	vertical-align: center;
 	/*margin-top: 10px;*/
 	background-color: #fff;	
-	/*border: 2px solid rgba(1,75,66,0.1);*/
+	border-radius: 3px;
 	padding-top: 5px;
 	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
 	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
@@ -2016,12 +2016,15 @@ h1.pbayheadlogo{
 		/*-moz-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
 		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
 		box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);		*/
+		-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);	
 	}	
 
 .DiningRestaurantsIMG{
 	display:inline-block;
 	margin:auto 10px auto;
-	/*border: 2px solid rgba(1,75,66,0.1);*/
+	border-radius: 3px;
 	max-width:280px;
 	vertical-align:top;
 	margin-bottom:15px;
@@ -2065,6 +2068,9 @@ h1.pbayheadlogo{
 		/*-moz-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
 		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
 		box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);		*/
+		-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
 		
 	}
 		
@@ -2141,7 +2147,7 @@ h1.pbayheadlogo{
 	border-radius: 3px;
 	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
 	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
-	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);	
+	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
 	transition: box-shadow 0.2s ease-out;
 	}
 	.themeddinnerbox h4{
@@ -2158,6 +2164,9 @@ h1.pbayheadlogo{
 		/*-moz-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
 		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
 		box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);		*/
+		-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
 	}	
 
 /* ---------------------------- Tumoy sa DINING ---------------------------------- */
