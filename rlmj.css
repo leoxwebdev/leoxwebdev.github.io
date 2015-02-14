@@ -550,9 +550,8 @@ li{
 			margin-right:1px;
 		}
 	.top-menus { display:none; }
-	.L_YourAreHere{ 
-		margin-bottom:10px;
-	}	
+	.L_YourAreHere{margin-bottom:10px;}
+	.popClickToDaku{display: none;}
 }
 
 @media only screen and (min-width: 300px){
@@ -581,9 +580,8 @@ li{
 			margin-right:1px;
 		}
 	.top-menus { display:none; }
-	.L_YourAreHere{ 
-		margin-bottom:10px;
-	}	
+	.L_YourAreHere{margin-bottom:10px;}
+	.popClickToDaku{display: none;}
 }
 
 @media only screen and (min-width: 348px){
@@ -614,9 +612,8 @@ li{
 			margin-right:1px;
 		}
 	.top-menus { display:none; }
-	.L_YourAreHere{ 
-		margin-bottom:10px;
-	}	
+	.L_YourAreHere{margin-bottom:10px;}
+	.popClickToDaku{display: none;}
 }
 
 @media only screen and (min-width: 370px){
@@ -648,9 +645,8 @@ li{
 			margin-right:1px;
 		}
 	.top-menus { display:none; }
-	.L_YourAreHere{ 
-		margin-bottom:10px;
-	}	
+	.L_YourAreHere{margin-bottom:10px;}
+	.popClickToDaku{display: none;}
 }
 @media only screen and (min-width: 387px){
 	.pbayslogan{
@@ -661,14 +657,14 @@ li{
 	}
 }
 @media only screen and (min-width: 418px){
-	
+
 	.langOptions li:first-child{ display: none; }
 	.pbayslogan{
 		float:left;
 		margin-left:2px;
 		margin-top:7em;
 		width:200px;
-	}		
+	}
 	h1.pbayheadlogo{ left:2px; }
 	.headerwhole{
 		height:140px;
@@ -679,9 +675,8 @@ li{
 			margin-right:1px;
 		}
 	.top-menus { display:none; }
-	.L_YourAreHere{ 
-		margin-bottom:10px;
-	}	
+	.L_YourAreHere{margin-bottom:10px;}
+	.popClickToDaku{display: none;}
 }
 @media only screen and (min-width: 438px){
 	
@@ -702,9 +697,8 @@ li{
 			margin-right:1px;
 		}
 	.top-menus { display:none; }
-	.L_YourAreHere{ 
-		margin-bottom:10px;
-	}	
+	.L_YourAreHere{margin-bottom:10px;}
+	.popClickToDaku{display: none;}
 }
 @media only screen and (min-width: 448px){
 /*
@@ -732,9 +726,8 @@ li{
 			margin-right:10px;
 		}
 	.top-menus { display:none; }
-	.L_YourAreHere{ 
-		margin-bottom:10px;
-	}	
+	.L_YourAreHere{margin-bottom:10px;}
+	.popClickToDaku{display: none;}
 }
 @media only screen and (min-width: 508px){
 /*
@@ -761,9 +754,8 @@ li{
 			margin-right:10px;
 		}
 	.top-menus { display:none; }
-	.L_YourAreHere{ 
-		margin-bottom:10px;
-	}	
+	.L_YourAreHere{margin-bottom:10px;}
+	.popClickToDaku{display: none;}
 }
 
 @media only screen and (min-width: 514px){
@@ -800,9 +792,8 @@ li{
 			margin-right:10px;
 		}
 	.top-menus { display:none; }
-	.L_YourAreHere{ 
-		margin-bottom:10px;
-	}	
+	.L_YourAreHere{margin-bottom:10px; }
+	.popClickToDaku{display: none;}
 }
 
 @media only screen and (min-width: 531px){
@@ -831,9 +822,8 @@ li{
 			margin-right:10px;
 		}
 	.top-menus{ display:none; }
-	.L_YourAreHere{ 
-		margin-bottom:10px;
-	}	
+	.L_YourAreHere{margin-bottom:10px;}
+	.popClickToDaku{display: none;}
 }
 @media only screen and (min-width: 641px){
 	.langOptions li:first-child{ display: inline-block; }
@@ -854,9 +844,8 @@ li{
 		}
 	.top-menus { display:none; }
 	.panelMenu{ margin-top:112px; }
-	.L_YourAreHere{ 
-		margin-bottom:10px;
-	}	
+	.L_YourAreHere{ margin-bottom:10px;}
+	.popClickToDaku{display: none;}
 }
 
 @media only screen and (min-width: 740px){
@@ -892,6 +881,10 @@ li{
 	.mobile_page_menu{ display: none; }
 	.L_YourAreHere{ margin-bottom: 0; }
 	.E_YourAreHere{display: none;}
+	.popClickToDaku{
+		display: inline;
+		margin-top:-50px;
+	}
 }
 @media only screen and (min-width: 840px){
 	.langOptions li:first-child{ display: inline-block; }
@@ -928,6 +921,10 @@ li{
 	.mobile_page_menu{ display: none; }
 	.L_YourAreHere{ margin-bottom: 0; }
 	.E_YourAreHere{ display: none; }
+	.popClickToDaku{
+		display: inline;
+		margin-top:-50px;
+	}
 }
 
 @media only screen and (min-width: 967px){
@@ -1023,6 +1020,10 @@ li{
 	.mobile_page_menu{ display: none; }
 	.L_YourAreHere{ margin-bottom: 0; }
 	.E_YourAreHere{ display: none; }
+	.popClickToDaku{
+		display: inline;
+		margin-top:-65px;
+	}
 }
 @media only screen and (min-width: 1440px){
 	.langOptions li:first-child{ display: inline-block; }
@@ -1035,8 +1036,11 @@ li{
 	}
 	.mobile_page_menu{ display: none; }
 	.L_YourAreHere{ margin-bottom: 0; }
-	.E_YourAreHere{
-		display: none; }
+	.E_YourAreHere{display: none; }
+	.popClickToDaku{
+		display: inline;
+		margin-top:-65px;
+	}
 }
 .YourAreHereUbos{
 	width:100%;
@@ -1463,6 +1467,7 @@ h1.pbayheadlogo{
 	margin-bottom: 15px;
 	max-width: 100%;
 	background-color: #fff;
+	background-color: rgb(258, 238, 218);
 	/*vertical-align: top;*/
 	text-align: left;
 	padding: 3px 5px 5px 5px;
@@ -3118,7 +3123,7 @@ p.angComment::before {
 	.imgGagmay div{
 		display: inline-block;
 		margin: 0 auto;
-		max-width: 18%;
+		max-width: 19%;
 		margin-top:3px;
 	}
 
