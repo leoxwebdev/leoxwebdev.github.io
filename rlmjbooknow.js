@@ -316,43 +316,43 @@ $(document).on("pagecreate", "#myreservation", function () {
 		switch ( rmTypeId ){
 			case "numresWER":
 				roomDetails[ 0 ].resRooms = rmTypeVal;
-				document.getElementById("WER").value = rmTypeVal;
+				$("#WER").val( rmTypeVal );
 				break;
 			case "numresLSR":
 				roomDetails[ 1 ].resRooms = rmTypeVal;
-				document.getElementById("LSR").value = rmTypeVal;
+				$("#LSR").val( rmTypeVal );
 				break;
 			case "numresLVR":
 				roomDetails[ 2 ].resRooms = rmTypeVal;
-				document.getElementById("LVR").value = rmTypeVal;
+				$("#LVR").val( rmTypeVal );
 				break;
 			case "numresPSR":
 				roomDetails[ 3 ].resRooms = rmTypeVal;
-				document.getElementById("PS").value = rmTypeVal;
+				$("#PS").val( rmTypeVal );
 				break;
 			case "numresSIR":
 				roomDetails[ 4 ].resRooms = rmTypeVal;
-				document.getElementById("SIR").value = rmTypeVal;
+				$("#SIR").val( rmTypeVal );
 				break;
 			case "numresFR":
 				roomDetails[ 5 ].resRooms = rmTypeVal;
-				document.getElementById("FR").value = rmTypeVal;
+				$("#FR").val( rmTypeVal );
 				break;
 			case "numres1BS":
 				roomDetails[ 6 ].resRooms = rmTypeVal;
-				document.getElementById("OneBS").value = rmTypeVal;
+				$("#OneBS").val( rmTypeVal );
 				break;
 			case "numres2BS":
 				roomDetails[ 7 ].resRooms = rmTypeVal;
-				document.getElementById("TwoBS").value = rmTypeVal;
+				$("#TwoBS").val( rmTypeVal );
 				break;
 			case "numresQV":
 				roomDetails[ 8 ].resRooms = rmTypeVal;
-				document.getElementById("QV").value = rmTypeVal;
+				$("#QV").val( rmTypeVal );
 				break;
 			case "numresRS":
 				roomDetails[ 9 ].resRooms = rmTypeVal;
-				document.getElementById("RB").value = rmTypeVal;
+				$("#RB").val( rmTypeVal );
 				break;		
 		}
 	});
