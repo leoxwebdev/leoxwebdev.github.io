@@ -340,7 +340,7 @@ $(document).on("pagecreate", "#myreservation", function () {
 				break;
 			case "numresQV":
 				roomDetails[ 8 ].resRooms = rmTypeVal;
-				break;
+				break;2
 			case "numresRS":
 				roomDetails[ 9 ].resRooms = rmTypeVal;
 				break;		
@@ -362,7 +362,7 @@ $(document).on("pagecreate", "#myreservation", function () {
 		for ( i = 0; i < roomDetailsAll; i = i + 1 ){
 					
 			var	rmNumSelected = roomDetails[ i ].resRooms;	// Number of rooms to be reserve
-			
+			console.log(rmNumSelected);
 			if ( rmNumSelected > 0 ){ //Check if number of rooms to be reserve is greater than zero(0).
 
 				foundNumRmReserve = 1;
@@ -1072,7 +1072,7 @@ $(document).on("pagecreate", "#myreservation", function () {
 		
 			for ( var i = 0; i < roomDetailsAll; i = i + 1){
 				var rowToMove = roomDetails[ i ].displayId, // 2 = the room type row in the table
-					isAvailable = roomDetails[ i ].isAvailable;					
+					isAvailable = roomDetails[ i ].isAvailable;
 				ShowRoomType( isAvailable, rowToMove, 0 ); // (3||0) - Availability (1=available/0=not available and (0||1) 0 all, 1 available room type only
 			}
 			
@@ -1216,6 +1216,10 @@ $(document).on("pagecreate", "#myreservation", function () {
 			document.getElementById( "resparamStay" ).value = dateRangeText;
 			document.getElementById( "resArrivalDate" ).value = resDateArrival;
 			document.getElementById( "resDepartureDate" ).value = resDateDeparture;
+			
+			document.getElementById( "resparamAdult" ).value = resDetails.resAdults;
+			document.getElementById( "resparamChild" ).value = resDetails.resChildren;
+
 			
 			if ( resDetails.resAdults > 1 ){
 				
