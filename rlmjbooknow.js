@@ -8,93 +8,7 @@ var roomTypes = [ "WER","LSR","LVR","PS","SIR","FR","OneBS","TwoBS","QV","RB" ],
 	localStorageSupported, roomTypeSelected = [], hasFoundPreferredRmType = false, theDate = new Date(); //Date Today;
 	
 	localStorageSupported = localStorage ? 1 : 0;
-	
-	//This maybe temporary because db records are not the same in room details for Maximum capacity (Adults,Children and Extra Person).
-	/*function setRoomCapacity( Adult, Children, Extra, RmType ){
-		switch ( RmType ){
-			case "WER":
-				if ( Adult ){ 
-					return 2;
-				} else if ( Children ){ 
-					return 2;
-				} else { //Extra
-					return 2;
-				}	
-			case "LSR":
-				if ( Adult ){ 
-					return 2;
-				} else if ( Children ){
-					return 2;
-				} else { //Extra
-					return 2;
-				}	
-			case "LVR":
-				if ( Adult ){ 
-					return 2;
-				} else if ( Children ){
-					return 2;
-				} else { //Extra
-					return 2;
-				}	
-			case "PS":
-				if ( Adult ){ 
-					return 2;
-				} else if ( Children ){
-					return 2;
-				} else { //Extra
-					return 2;
-				}	
-			case "SIR":
-				if ( Adult ){ 
-					return 2;
-				} else if ( Children ){
-					return 0;
-				} else { //Extra
-					return 0;
-				}	
-			case "FR":
-				if ( Adult ){ 
-					return 4;
-				} else if ( Children ){
-					return 2;
-				} else { //Extra
-					return 0;
-				}	
-			case "OneBS":
-				if ( Adult ){ 
-					return 3;
-				} else if ( Children ){
-					return 2;
-				} else { //Extra
-					return 2;
-				}
-			case "TwoBS":
-				if ( Adult ){ 
-					return 6; //regardless of age
-				} else if ( Children ){
-					return 0;
-				} else { //Extra
-					return 2;
-				}	
-			case "QV":
-				if ( Adult ){ 
-					return 8;
-				} else if ( Children ){
-					return 8;
-				} else { //Extra
-					return 4;
-				}	
-			case "RB":
-				if ( Adult ){ 
-					return 6; // regardless of age
-				} else if ( Children ){
-					return 0;
-				} else { //Extra
-					return 2;
-				}	
-		}
-	}
-	*/
+
 	var roomDetailsAll = roomDetails.length;
 
 	for ( var L = 0; L < roomDetailsAll; L = L + 1 ){
@@ -104,7 +18,7 @@ var roomTypes = [ "WER","LSR","LVR","PS","SIR","FR","OneBS","TwoBS","QV","RB" ],
 			displayId : roomTypesRow[ L ],
 			//isAvailable	: 1, // 1 - default, Yes Available on preferred Dates
 			isAvailable	: 0, // 0 - default, Room is not Available on preferred Dates. change 12/29/2014
-			resRooms : 1, //Number of rooms to be reserve on preferred Dates
+			resRooms : 0, //Number of rooms to be reserve on preferred Dates
 			roomNightsAvailable	: 0, // number of available room nights on preferred dates.
 			priceNP	: 0,
 			priceP : 0,
@@ -316,43 +230,43 @@ $(document).on("pagecreate", "#myreservation", function () {
 		switch ( rmTypeId ){
 			case "numresWER":
 				roomDetails[ 0 ].resRooms = rmTypeVal;
-				$("#WER").val( rmTypeVal );
+				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 0 ].resRooms );
 				break;
 			case "numresLSR":
 				roomDetails[ 1 ].resRooms = rmTypeVal;
-				$("#LSR").val( rmTypeVal );
+				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 1 ].resRooms );
 				break;
 			case "numresLVR":
 				roomDetails[ 2 ].resRooms = rmTypeVal;
-				$("#LVR").val( rmTypeVal );
+				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 2 ].resRooms );
 				break;
 			case "numresPSR":
 				roomDetails[ 3 ].resRooms = rmTypeVal;
-				$("#PS").val( rmTypeVal );
+				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 3 ].resRooms );
 				break;
 			case "numresSIR":
 				roomDetails[ 4 ].resRooms = rmTypeVal;
-				$("#SIR").val( rmTypeVal );
+				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 4 ].resRooms );
 				break;
 			case "numresFR":
 				roomDetails[ 5 ].resRooms = rmTypeVal;
-				$("#FR").val( rmTypeVal );
+				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 5 ].resRooms );
 				break;
 			case "numres1BS":
 				roomDetails[ 6 ].resRooms = rmTypeVal;
-				$("#OneBS").val( rmTypeVal );
+				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 6 ].resRooms );
 				break;
 			case "numres2BS":
 				roomDetails[ 7 ].resRooms = rmTypeVal;
-				$("#TwoBS").val( rmTypeVal );
+				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 7 ].resRooms );
 				break;
 			case "numresQV":
 				roomDetails[ 8 ].resRooms = rmTypeVal;
-				$("#QV").val( rmTypeVal );
+				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 8 ].resRooms );
 				break;
 			case "numresRS":
 				roomDetails[ 9 ].resRooms = rmTypeVal;
-				$("#RB").val( rmTypeVal );
+				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 9 ].resRooms );
 				break;		
 		}
 	});
@@ -372,7 +286,7 @@ $(document).on("pagecreate", "#myreservation", function () {
 		for ( i = 0; i < roomDetailsAll; i = i + 1 ){
 					
 			var	rmNumSelected = roomDetails[ i ].resRooms;	// Number of rooms to be reserve
-			console.log(rmNumSelected);
+			//console.log(rmNumSelected);
 			if ( rmNumSelected > 0 ){ //Check if number of rooms to be reserve is greater than zero(0).
 
 				foundNumRmReserve = 1;
@@ -1189,6 +1103,7 @@ $(document).on("pagecreate", "#myreservation", function () {
 
 	function KuhaaAngPagkaanaaSaKwarto( L ){
 
+		
 		document.getElementById( "numresWER" ).options.length = 0;
 		document.getElementById( "numresLSR" ).options.length = 0;
 		document.getElementById( "numresLVR" ).options.length = 0;
@@ -1199,7 +1114,7 @@ $(document).on("pagecreate", "#myreservation", function () {
 		document.getElementById( "numres2BS" ).options.length = 0;
 		document.getElementById( "numresQV" ).options.length = 0;
 		document.getElementById( "numresRS" ).options.length = 0;
-
+		
 		//Corresponding roomtypes index
 		//"0=WER","1=LSR","2=LVR","3=PS","4=SIR","5=FR","6=OneBS","7=TwoBS","8=QV","9=RB"
 
@@ -1230,42 +1145,40 @@ $(document).on("pagecreate", "#myreservation", function () {
 			document.getElementById( "resparamAdult" ).value = resDetails.resAdults;
 			document.getElementById( "resparamChild" ).value = resDetails.resChildren;
 
-			
+			for (var i = 0; i<10; i++){
+				console.log(roomDetails[i].resRooms);
+			}
+
+			document.getElementById( "WER" ).value = roomDetails[ 0 ].resRooms;
+			document.getElementById( "LSR" ).value = roomDetails[ 1 ].resRooms;
+			document.getElementById( "LVR" ).value = roomDetails[ 2 ].resRooms;
+			document.getElementById( "PS" ).value = roomDetails[ 3 ].resRooms;
+			document.getElementById( "SIR" ).value = roomDetails[ 4 ].resRooms;
+			document.getElementById( "FR" ).value = roomDetails[ 5 ].resRooms;
+			document.getElementById( "OneBS" ).value = roomDetails[ 6 ].resRooms;
+			document.getElementById( "TwoBS" ).value = roomDetails[ 7 ].resRooms;
+			document.getElementById( "QV" ).value = roomDetails[ 8 ].resRooms;
+			document.getElementById( "RB" ).value = roomDetails[ 9 ].resRooms;
+
 			if ( resDetails.resAdults > 1 ){
 				
 				if ( resDetails.resChildren === 0 ){ //Adults
-
-					//$( "#reservationGuests" ).html("<strong class='Tealcolor'>" + resDetails.resAdults + " : </strong> Adults" );
 					$( "#reservationGuests" ).html("<strong>" + resDetails.resAdults + " : </strong> Adults" );
 				} else if ( resDetails.resChildren === 1 ){ //Adults - Child
-
-					//$( "#reservationGuests1" ).html("<strong class='Tealcolor'>" + resDetails.resAdults + " : </strong>" + " Adults" );
-					//$( "#reservationGuests" ).html("<strong class='Tealcolor'>" + resDetails.resChildren + ":</strong>" + " Child" );
 					$( "#reservationGuests1" ).html("<strong>" + resDetails.resAdults + " : </strong>" + " Adults" );
 					$( "#reservationGuests" ).html("<strong>" + resDetails.resChildren + ":</strong>" + " Child" );
 				} else {//Adults - Children
-
-					//$( "#reservationGuests1" ).html("<strong class='Tealcolor'>" + resDetails.resAdults + " : </strong>" + " Adults" );
-					//$( "#reservationGuests" ).html("<strong class='Tealcolor'>" + resDetails.resChildren + ":</strong>" + " Children" );
 					$( "#reservationGuests1" ).html("<strong>" + resDetails.resAdults + " : </strong>" + " Adults" );
 					$( "#reservationGuests" ).html("<strong>" + resDetails.resChildren + ":</strong>" + " Children" );
 				}
 			} else if ( resDetails.resAdults === 1 ){
 
 				if ( resDetails.resChildren === 0 ){ //Adult
-				
-					//$( "#reservationGuests" ).html("<strong class='Tealcolor'>" + resDetails.resAdults + " : </strong> Adult" );
 					$( "#reservationGuests" ).html("<strong>" + resDetails.resAdults + " : </strong> Adult" );
 				} else if ( resDetails.resChildren === 1 ){ //Adult - Child
-				
-					//$( "#reservationGuests1" ).html("<strong class='Tealcolor'>" + resDetails.resAdults + " : </strong>" + " Adult" );
-					//$( "#reservationGuests" ).html("<strong class='Tealcolor'>" + resDetails.resChildren + ":</strong>" + " Child" );
 					$( "#reservationGuests1" ).html("<strong>" + resDetails.resAdults + " : </strong>" + " Adult" );
 					$( "#reservationGuests" ).html("<strong>" + resDetails.resChildren + ":</strong>" + " Child" );
 				} else { //Adult - Children
-				
-					//$( "#reservationGuests1" ).html("<strong class='Tealcolor'>" + resDetails.resAdults + " : </strong>" + " Adult" );
-					//$( "#reservationGuests" ).html("<strong class='Tealcolor'>" + resDetails.resChildren + ":</strong>" + " Children" );
 					$( "#reservationGuests1" ).html("<strong>" + resDetails.resAdults + " : </strong>" + " Adult" );
 					$( "#reservationGuests" ).html("<strong>" + resDetails.resChildren + ":</strong>" + " Children" );
 				}
@@ -1292,7 +1205,6 @@ $(document).on("pagecreate", "#myreservation", function () {
 					GDRNotApply = L[ i ].GDRNotApply;
 
 				if ( parseInt( roomNightsAvailable ) === parseInt( resDetails.resRoomNights ) ){
-				
 					if ( roomsAvailable === "null" ) {					
 						isNightsAvailable = 0;
 					} else {
@@ -1535,7 +1447,6 @@ $(document).on("pagecreate", "#myreservation", function () {
 					roomDetails[ 5 ].GDRNotApply = GDRNotApply;				
 					if ( isNightsAvailable ){
 						populateAvailableroomsCount( "#numresFR", roomsAvailable );
-						//roomTypes[ 5 ][ 3 ] = 1;
 						roomDetails[ 5 ].isAvailable = 1;
 						$( "#numresFR" ).show( "fast" );
 					} else {
