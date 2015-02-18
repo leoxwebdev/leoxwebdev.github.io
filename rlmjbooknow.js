@@ -340,7 +340,7 @@ $(document).on("pagecreate", "#myreservation", function () {
 				break;
 			case "numresQV":
 				roomDetails[ 8 ].resRooms = rmTypeVal;
-				break;2
+				break;
 			case "numresRS":
 				roomDetails[ 9 ].resRooms = rmTypeVal;
 				break;		
