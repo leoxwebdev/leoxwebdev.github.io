@@ -16,8 +16,7 @@ var roomTypes = [ "WER","LSR","LVR","PS","SIR","FR","OneBS","TwoBS","QV","RB" ],
 			roomType : roomDetails[ L ],
 			isPreferred	: 1, // 1 - default, Yes
 			displayId : roomTypesRow[ L ],
-			//isAvailable	: 1, // 1 - default, Yes Available on preferred Dates
-			isAvailable	: 0, // 0 - default, Room is not Available on preferred Dates. change 12/29/2014
+			isAvailable	: 0, // 0 - default, Room is not Available on preferred Dates.
 			resRooms : 0, //Number of rooms to be reserve on preferred Dates
 			roomNightsAvailable	: 0, // number of available room nights on preferred dates.
 			priceNP	: 0,
@@ -26,9 +25,6 @@ var roomTypes = [ "WER","LSR","LVR","PS","SIR","FR","OneBS","TwoBS","QV","RB" ],
 			newPriceP : 0,
 			newRateStartDate : 0,
 			priceGDR : 0,
-			/*adults : setRoomCapacity(1,0,0,roomDetails[ L ]),
-			children : setRoomCapacity(0,1,0,roomDetails[ L ]),
-			maxextra : setRoomCapacity(0,0,1,roomDetails[ L ]),*/
 			adults : 2,
 			children : 2,
 			maxextra : 2,
@@ -120,11 +116,12 @@ $(document).on("pagecreate", "#myreservation", function () {
 		$resAdults = $("#resAdults"),
 		$resChildren = $("#resChildren");
 		
-	
+	$("[data-role=panel]").panel().enhanceWithin(); // use for panel enhancement
+
 	$("#resCheckAvailability").on("click", function () {
 
 		$("#resDatesAndDetails").hide();
-		$("#availableRooms").show();
+		//$("#availableRooms").show();
 
 		var ArrYear = $ArrYear.find(":selected").val(),
 			ArrMonth = $ArrMonth.find(":selected").val(),
@@ -157,8 +154,9 @@ $(document).on("pagecreate", "#myreservation", function () {
 				KuhaaAngPagkaanaaSaKwarto( roomData );
 			}
 		},
-
-			function(){ alert( "Error Loading Room Availability!" ); }
+			function(){ alert( "Error Loading Room Availability!" );
+		},
+			function(){ $("#availableRooms").show(); }
 		);
 
 	});
@@ -178,15 +176,17 @@ $(document).on("pagecreate", "#myreservation", function () {
 		} else {//Show preferred only
 
 			if ( $ShowAvailableRoomTypes.is( ":checked" ) ){
+
 				BookNowRmTypeToShow( "PreferredAvailable" );  // Show preferred room type and is available.
 			} else {
+
 				BookNowRmTypeToShow( "PreferredAll" ); // Show All preferred room types, including not available.
 			}
 		}
 	});
 
 	//SHOW AVAILABLE ONLY, checkbox
-	$ShowAvailableRoomTypes.on("click",function(){
+	$ShowAvailableRoomTypes.on( "click", function(){
 
 		if ( $( this ).is( ":checked" ) ){
 
@@ -221,7 +221,7 @@ $(document).on("pagecreate", "#myreservation", function () {
 	});
 
 	$( ".resNumReserveThis" ).on( "change", function(){
-		//index=roomTypes = "0=WER","1=LSR","2=LVR","3=PS","4=SIR","5=FR","6=OneBS","7=TwoBS","8=QV","9=PhS","10=RB"
+		//index=roomTypes = "0=WER","1=LSR","2=LVR","3=PS","4=SIR","5=FR","6=OneBS","7=TwoBS","8=QV","9=RB"
 		var rmTypeId = this.id,
 			rmTypeValue = parseInt( this.value );			
 			//console.log( this.value );
@@ -230,43 +230,33 @@ $(document).on("pagecreate", "#myreservation", function () {
 		switch ( rmTypeId ){
 			case "numresWER":
 				roomDetails[ 0 ].resRooms = rmTypeVal;
-				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 0 ].resRooms );
 				break;
 			case "numresLSR":
 				roomDetails[ 1 ].resRooms = rmTypeVal;
-				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 1 ].resRooms );
 				break;
 			case "numresLVR":
 				roomDetails[ 2 ].resRooms = rmTypeVal;
-				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 2 ].resRooms );
 				break;
 			case "numresPSR":
 				roomDetails[ 3 ].resRooms = rmTypeVal;
-				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 3 ].resRooms );
 				break;
 			case "numresSIR":
 				roomDetails[ 4 ].resRooms = rmTypeVal;
-				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 4 ].resRooms );
 				break;
 			case "numresFR":
 				roomDetails[ 5 ].resRooms = rmTypeVal;
-				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 5 ].resRooms );
 				break;
 			case "numres1BS":
 				roomDetails[ 6 ].resRooms = rmTypeVal;
-				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 6 ].resRooms );
 				break;
 			case "numres2BS":
 				roomDetails[ 7 ].resRooms = rmTypeVal;
-				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 7 ].resRooms );
 				break;
 			case "numresQV":
 				roomDetails[ 8 ].resRooms = rmTypeVal;
-				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 8 ].resRooms );
 				break;
 			case "numresRS":
 				roomDetails[ 9 ].resRooms = rmTypeVal;
-				console.log("selected=" + rmTypeVal + ", save=" + roomDetails[ 9 ].resRooms );
 				break;		
 		}
 	});
@@ -276,17 +266,16 @@ $(document).on("pagecreate", "#myreservation", function () {
 		var allAdult = resDetails.resAdults, 
 			allChild = resDetails.resChildren, 
 			roomDetailsAll = roomDetails.length,
-			foundNumRmReserve = 0, enoughRooms = 0, withWaterEdgeRm = 0;
-		
-		var remainingAdult = allAdult,
-			remainingChild = allChild;
-		
-		var maxGuests = 0, maxAdult = 0, maxChildren = 0;
+			foundNumRmReserve = 0,
+			enoughRooms = 0,
+			withWaterEdgeRm = 0,
+			remainingAdult = allAdult, remainingChild = allChild,
+			maxGuests = 0, maxAdult = 0, maxChildren = 0;
 			
 		for ( i = 0; i < roomDetailsAll; i = i + 1 ){
-					
+
 			var	rmNumSelected = roomDetails[ i ].resRooms;	// Number of rooms to be reserve
-			//console.log(rmNumSelected);
+
 			if ( rmNumSelected > 0 ){ //Check if number of rooms to be reserve is greater than zero(0).
 
 				foundNumRmReserve = 1;
@@ -377,27 +366,22 @@ $(document).on("pagecreate", "#myreservation", function () {
 						}
 					}	
 				} else if ( rmTypeSelected === "1BK" ){
-					// OneBS 3 2 0 ????????????????????????????????????????????????????
 					// OneBS 3 2 2 
 					maxGuests = rmNumSelected * 5;
 					maxAdult = rmNumSelected * 3;
 					maxChildren = rmNumSelected * 2;
 
 					if ( ( remainingAdult <= maxGuests ) && ( ( remainingAdult + remainingChild ) <= maxGuests ) ){
-						//console.log("( remainingAdult <= maxGuests ) && ( ( remainingAdult + remainingChild ) <= maxGuests )");
 						remainingAdult = 0;
 						remainingChild = 0;
 					} else if ( remainingAdult > maxAdult && remainingChild <= maxChildren ){
-						//console.log(" remainingAdult > maxAdult && remainingChild <= maxChildren ");
 						var childToAdult = maxChildren - remainingChild;
 						remainingAdult = remainingAdult - maxAdult - childToAdult;
 						remainingChild = 0;
 					} else if ( remainingAdult > maxAdult && remainingChild > maxChildren ){
-						//console.log("remainingAdult > maxAdult && remainingChild > maxChildren");
 						remainingAdult = remainingAdult - maxAdult;
 						remainingChild = remainingChild - maxChildren;
 					} else if ( remainingAdult <= maxAdult && remainingChild > maxChildren ){
-						//console.log("remainingAdult <= maxAdult && remainingChild > maxChildren");
 						adultToChild = maxAdult - remainingAdult;
 						remainingChild = remainingChild - maxChildren - adultToChild;
 						remainingAdult = 0;
@@ -473,20 +457,16 @@ $(document).on("pagecreate", "#myreservation", function () {
 					maxChildren = rmNumSelected * 2;
 
 					if ( ( remainingAdult <= maxGuests ) && ( ( remainingAdult + remainingChild ) <= maxGuests ) ){
-						//console.log("( remainingAdult <= maxGuests ) && ( ( remainingAdult + remainingChild ) <= maxGuests )");
 						remainingAdult = 0;
 						remainingChild = 0;
 					} else if ( remainingAdult > maxAdult && remainingChild <= maxChildren ){
-						//console.log(" remainingAdult > maxAdult && remainingChild <= maxChildren ");
 						var childToAdult = maxChildren - remainingChild;
 						remainingAdult = remainingAdult - maxAdult - childToAdult;
 						remainingChild = 0;
 					} else if ( remainingAdult > maxAdult && remainingChild > maxChildren ){
-						//console.log("remainingAdult > maxAdult && remainingChild > maxChildren");
 						remainingAdult = remainingAdult - maxAdult;
 						remainingChild = remainingChild - maxChildren;
 					} else if ( remainingAdult <= maxAdult && remainingChild > maxChildren ){
-						//console.log("remainingAdult <= maxAdult && remainingChild > maxChildren");
 						adultToChild = maxAdult - remainingAdult;
 						remainingChild = remainingChild - maxChildren - adultToChild;
 						remainingAdult = 0;
@@ -499,15 +479,6 @@ $(document).on("pagecreate", "#myreservation", function () {
 		if ( foundNumRmReserve ){ //With room(s)
 		
 			if ( enoughRooms ){
-			
-				/*
-				$( ":mobile-pagecontainer" ).pagecontainer( "change", "#myreservationGDetails", {
-					transition: "flip",
-					changeHash: false,
-					reverse: false,
-					showLoadMsg: true
-				});
-				*/
 				
 				$("#GResDetails").show();
 				$("#availableRooms").hide();
@@ -532,10 +503,11 @@ $(document).on("pagecreate", "#myreservation", function () {
 					var lenStat = roomStat.length - 1, rmStat = 0, cntNP = 0, cntP = 0, cntPeak = 0, cntBO = 0, 
 						startP = 0, endP = 0, startBO = 0, endBO = 0, foundSpa = 0, found1kind = 0, totalNights = 0,
 						prevStat = "", prevDate = "";
-						//prevStat = "", prevDate = "", SelectedRooms = "";
 					
 					$.each( roomStat, function( i, item ){
+
 						rmStat = item.Dstat;
+
 						if ( rmStat === "P" ){
 						
 							cntP = cntP + 1;
@@ -598,7 +570,6 @@ $(document).on("pagecreate", "#myreservation", function () {
 							maxExtraTotal = maxExtraTotal + ( roomDetails[ rmTypeSelectedIndex ].maxextra * rmNumSelected );
 							totalRoomCount = totalRoomCount + rmNumSelected;
 							document.getElementById( roomTypes[ rmTypeSelectedIndex ] ).value = rmNumSelected; // Assing Room type number of rooms to be recerved.
-							//console.log( roomTypes[ rmTypeSelectedIndex ] + " = " + rmNumSelected );
 							$( "#divbfast" + roomTypes[ rmTypeSelectedIndex ] ).show();
 							
 							selectedRmType = selectedRmType + roomTypesId[ rmTypeSelectedIndex ]  + ":" + rmNumSelected + ","
@@ -615,7 +586,7 @@ $(document).on("pagecreate", "#myreservation", function () {
 
 									amtGDR = rateGDR * cntNP * rmNumSelected;
 											
-									rmCompute = rmCompute + "<tr><td colspan=2 style='text-align:right;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Great Discounted Rate (Non-Peak) $ " + rateGDR + " x " + cntNP + " " + correctNightWord + " x " + rmNumSelected + " " + correctRoomWord + " </td><td> " + AddComma( amtGDR.toFixed(2) ) + "</td></tr>";					
+									rmCompute = rmCompute + "<tr><td colspan=2 style='text-align:right;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Great Discounted Rate (Non-Peak) $ " + rateGDR + " x " + cntNP + " " + correctNightWord + " x " + rmNumSelected + " " + correctRoomWord + " </td><td> " + AddComma( amtGDR.toFixed(2) ) + "</td></tr>";
 								}
 										
 								if ( cntBO ){

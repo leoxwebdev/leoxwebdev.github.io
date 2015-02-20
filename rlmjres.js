@@ -1,10 +1,6 @@
-	
-		//resMonthName = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ], 	// Store month names in array	
-		//roomTypes = [ "WER","LSR","LVR","PS","SIR","FR","OneBS","TwoBS","QV","PhS","RB" ],
-		//hasFoundPreferredRmType,
-	var theDate = new Date(), //Date Today;
-		dateToday = new Date( theDate.getFullYear() + "/" + (theDate.getMonth() + 1) + "/" + theDate.getDate() );
-	
+var theDate = new Date(), //Date Today;
+	dateToday = new Date( theDate.getFullYear() + "/" + (theDate.getMonth() + 1) + "/" + theDate.getDate() );
+
 /*	
 	//Check for localstorage support
 	if ( localStorage ){
@@ -304,9 +300,9 @@
 				document.getElementById( "resNights" ).value = newArrNights;
 
 				$( "#resNights" ).selectmenu( "refresh" );
-				$("#ArrMonth").selectmenu("refresh");
-				$("#ArrDay").selectmenu("refresh");
-				$("#ArrYear").selectmenu("refresh");
+				$( "#ArrMonth" ).selectmenu( "refresh" );
+				$( "#ArrDay" ).selectmenu( "refresh" );
+				$( "#ArrYear" ).selectmenu( "refresh" );
 		
 				//Save to localstorage
 				if ( localStorageSupported ){
@@ -376,17 +372,17 @@
 			
 				SetDefaultDates(); // Set Default dates.
 			}
-			
+
 		} else { //No previous arrival date preference
 			SetDefaultDates(); // Set Default dates.
 		}
-		
+
 	} else { //local storage not supported. 
 			//IMPORTANT: CREATE SOME FALLBACK LATER.
 			SetDefaultDates(); // Set Default dates.
 			$( "#PreferedRoomsHead" ).hide(); // Hide options to select preferred room types.
 	}
-	
+
 	if ( !hasFoundPreferredRmType ) {
 		$( "#prefRooms" ).append( "<li>All Available</li>" );
 	}
