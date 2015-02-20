@@ -98,7 +98,7 @@ RoomTypeShort(11)=RB
 
 dim RoomTypeId(11)
 '"WER=7","LSR=6","LVR=5","PS=1","SIR=13","FR=15","OneBS=8","TwoBS=9","QV=12","PhS=11","RB=10"
-RoomTypeId(1)= 7''
+RoomTypeId(1)= 7
 RoomTypeId(2)= 6
 RoomTypeId(3)= 5
 RoomTypeId(4)= 1
@@ -167,14 +167,14 @@ sqlString = "INSERT INTO guestrecord (GuestPrefix,OtherPrefix,GuestLast,GuestFir
 objCmd.CommandText = sqlString
 objCmd.Execute
 
-strSQL = "SELECT LAST_INSERT_ID() as GuestID"				
+strSQL = "SELECT LAST_INSERT_ID() as GuestID"
 objCmd.CommandText = strSQL
 Set objRec = objCmd.Execute
 
-if not objRec.EOF then				
+if not objRec.EOF then
 	Session("GuestID")=objrec("GuestID")
 end if
-			
+
 for RoomTypeCnt=1 to 11
 	if RoomTypeShort(RoomTypeCnt)<>"" then
 		'Save Rooms Reserve by Guest @ guestreservert

@@ -9,6 +9,7 @@ var theDate = new Date(), //Date Today;
 		localStorageSupported = 0;
 	}	
 */
+
 	function SetDefaultDates(){
 	
 		// Default Arrival Date
@@ -234,13 +235,14 @@ var theDate = new Date(), //Date Today;
 			$( "#confirm" ).popup( "close" );
 		});
 	}
-
+/*
 	$( document ).on( "click" , "#prefRooms li" , function() {
 	
 		if ( ( this.id ).length > 0 ){
 			iDeleteNi( this.id,this.innerHTML )
 		}
 	});
+
 	//On Arrival Date Or Room Nights Change
 	$( document ).on( "change" , ".clsArrivalDate" , function( event, ui ) {
 	
@@ -324,7 +326,7 @@ var theDate = new Date(), //Date Today;
 		}
 		
 	});	
-
+*/
 	if ( localStorageSupported ){
 		
 		if ( localStorage.ArrivalDate ){ //check for previous Arrival date preference.

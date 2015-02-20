@@ -118,10 +118,103 @@ $(document).on("pagecreate", "#myreservation", function () {
 		
 	$("[data-role=panel]").panel().enhanceWithin(); // use for panel enhancement
 
+	//$( document ).on( "click" , "#prefRooms li" , function() {
+	$( "#prefRooms li" ).on( "click" , function() {	
+	
+		if ( ( this.id ).length > 0 ){
+			iDeleteNi( this.id,this.innerHTML )
+		}
+	});
+
+	//On Arrival Date Or Room Nights Change
+	//$( document ).on( "change" , ".clsArrivalDate" , function( event, ui ) {
+	$( ".clsArrivalDate" ).on( "change" , function( event, ui ) {
+	
+		var changeArrYear = document.getElementById( "ArrYear" ).value,
+			changeArrMonth = document.getElementById( "ArrMonth" ).value,
+			changeArrDay = document.getElementById( "ArrDay" ).value;
+			
+		//new Arrival Date
+		var changeArrDate = new Date( changeArrYear + "/" + changeArrMonth + "/" + changeArrDay );
+
+		if ( changeArrDate < dateToday ){ //the new arrival date is Past Date
+			//Change the year
+			document.getElementById( "ArrYear" ).value = parseInt( changeArrYear ) + 1;
+			$( "#ArrYear" ).selectmenu( "refresh" );
+		}
+		
+		//Update departure Date
+		UpdateDepartureDate();
+	});
+
+	//On Departure Date Change
+	//$( document ).on( "change" , ".clsDepartureDate" , function( event, ui ) {
+	$( ".clsDepartureDate" ).on( "change" , function( event, ui ) {
+		
+		var changeDepYear = document.getElementById( "DepYear" ).value,
+			changeDepMonth = document.getElementById( "DepMonth" ).value,
+			changeDepDay = document.getElementById( "DepDay" ).value,
+			Nights = document.getElementById( "resNights" ).value;
+		
+		//new Departure Date
+		var changeDepDate = new Date( changeDepYear + "/" + changeDepMonth + "/" + changeDepDay );
+		
+		if ( changeDepDate <= dateToday){ //the new Departure date is Past Date or Today
+			//Change the year
+			document.getElementById( "DepYear" ).value = parseInt( changeDepYear ) + 1;
+			$( "#DepYear" ).selectmenu( "refresh" );
+			
+			UpdateArrivalDateAndRoomNights();
+		} else { // new Departure date is future date
+
+			var	newArrDate = changeDepDate;
+				
+			newArrDate.setDate( newArrDate.getDate() - Nights );
+			
+			if ( newArrDate >= dateToday ){
+				
+				UpdateArrivalDateAndRoomNights();
+			} else {
+
+				var	NewArrivalDate = changeDepDate;
+				
+				//reduce nights stay
+				newArrNights = Nights - (dateToday.getDate() - NewArrivalDate.getDate());
+
+				document.getElementById("ArrMonth").value = dateToday.getMonth() + 1;
+				document.getElementById("ArrDay").value = dateToday.getDate();
+				document.getElementById("ArrYear").value = dateToday.getFullYear();
+				document.getElementById( "resNights" ).value = newArrNights;
+
+				$( "#resNights" ).selectmenu( "refresh" );
+				$( "#ArrMonth" ).selectmenu( "refresh" );
+				$( "#ArrDay" ).selectmenu( "refresh" );
+				$( "#ArrYear" ).selectmenu( "refresh" );
+		
+				//Save to localstorage
+				if ( localStorageSupported ){
+					localStorage.ArrivalDate = dateToday;
+					localStorage.Nights = newArrNights;
+				}
+			}
+		}
+		
+	});
+	
+	//On number of Adults Change
+	//$( document ).on( "change" , ".clsAdultChildren" , function(event, ui) {
+	$( ".clsAdultChildren" ).on( "change" , function(event, ui) {
+	
+		if ( this.id === "resAdults" ){
+			localStorage.Adults = this.value;
+		} else {//Children
+			localStorage.Children = this.value;
+		}
+	});	
+
 	$("#resCheckAvailability").on("click", function () {
 
 		$("#resDatesAndDetails").hide();
-		//$("#availableRooms").show();
 
 		var ArrYear = $ArrYear.find(":selected").val(),
 			ArrMonth = $ArrMonth.find(":selected").val(),
@@ -152,13 +245,12 @@ $(document).on("pagecreate", "#myreservation", function () {
 			if ( roomData.length ){
 
 				KuhaaAngPagkaanaaSaKwarto( roomData );
+				$("#availableRooms").show();
 			}
 		},
-			function(){ alert( "Error Loading Room Availability!" );
-		},
-			function(){ $("#availableRooms").show(); }
+			function(){ alert( "Error Loading Room Availability!" );}
+		
 		);
-
 	});
 
 	// SHOW ALL ROOM TYPES, checkbox
@@ -230,33 +322,53 @@ $(document).on("pagecreate", "#myreservation", function () {
 		switch ( rmTypeId ){
 			case "numresWER":
 				roomDetails[ 0 ].resRooms = rmTypeVal;
+				document.getElementById(roomDetails[ 0 ].roomType).value = rmTypeVal;
+				console.log( " array save=" + roomDetails[ 0 ].resRooms + ", roomtype=" + roomDetails[ 0 ].roomType + ", value=" + rmTypeVal + ", save value=" + document.getElementById(roomDetails[ 0 ].roomType).value );
 				break;
 			case "numresLSR":
 				roomDetails[ 1 ].resRooms = rmTypeVal;
+				document.getElementById(roomDetails[ 1 ].roomType).value = rmTypeVal;
+				console.log( " array save=" + roomDetails[ 1 ].resRooms + ", roomtype=" + roomDetails[ 1 ].roomType + ", value=" + rmTypeVal + ", save value=" + document.getElementById(roomDetails[ 1 ].roomType).value );
 				break;
 			case "numresLVR":
 				roomDetails[ 2 ].resRooms = rmTypeVal;
+				document.getElementById(roomDetails[ 2 ].roomType).value = rmTypeVal;
+				console.log( " array save=" + roomDetails[ 2 ].resRooms + ", roomtype=" + roomDetails[ 2 ].roomType + ", value=" + rmTypeVal + ", save value=" + document.getElementById(roomDetails[ 2 ].roomType).value );
 				break;
 			case "numresPSR":
 				roomDetails[ 3 ].resRooms = rmTypeVal;
+				document.getElementById(roomDetails[ 3 ].roomType).value = rmTypeVal;
+				console.log( " array save=" + roomDetails[ 3 ].resRooms + ", roomtype=" + roomDetails[ 3 ].roomType + ", value=" + rmTypeVal + ", save value=" + document.getElementById(roomDetails[ 3 ].roomType).value );
 				break;
 			case "numresSIR":
 				roomDetails[ 4 ].resRooms = rmTypeVal;
+				document.getElementById(roomDetails[ 4 ].roomType).value = rmTypeVal;
+				console.log( " array save=" + roomDetails[ 4 ].resRooms + ", roomtype=" + roomDetails[ 4 ].roomType + ", value=" + rmTypeVal + ", save value=" + document.getElementById(roomDetails[ 4 ].roomType).value );
 				break;
 			case "numresFR":
 				roomDetails[ 5 ].resRooms = rmTypeVal;
+				document.getElementById(roomDetails[ 5 ].roomType).value = rmTypeVal;
+				console.log( " array save=" + roomDetails[ 5 ].resRooms + ", roomtype=" + roomDetails[ 5 ].roomType + ", value=" + rmTypeVal + ", save value=" + document.getElementById(roomDetails[ 5 ].roomType).value );
 				break;
 			case "numres1BS":
 				roomDetails[ 6 ].resRooms = rmTypeVal;
+				document.getElementById(roomDetails[ 6 ].roomType).value = rmTypeVal;
+				console.log( " array save=" + roomDetails[ 6 ].resRooms + ", roomtype=" + roomDetails[ 6 ].roomType + ", value=" + rmTypeVal + ", save value=" + document.getElementById(roomDetails[ 6 ].roomType).value );
 				break;
 			case "numres2BS":
 				roomDetails[ 7 ].resRooms = rmTypeVal;
+				document.getElementById(roomDetails[ 7 ].roomType).value = rmTypeVal;
+				console.log( " array save=" + roomDetails[ 7 ].resRooms + ", roomtype=" + roomDetails[ 7 ].roomType + ", value=" + rmTypeVal + ", save value=" + document.getElementById(roomDetails[ 7 ].roomType).value );
 				break;
 			case "numresQV":
 				roomDetails[ 8 ].resRooms = rmTypeVal;
+				document.getElementById(roomDetails[ 8 ].roomType).value = rmTypeVal;
+				console.log( " array save=" + roomDetails[ 8 ].resRooms + ", roomtype=" + roomDetails[ 8 ].roomType + ", value=" + rmTypeVal + ", save value=" + document.getElementById(roomDetails[ 8 ].roomType).value );
 				break;
 			case "numresRS":
 				roomDetails[ 9 ].resRooms = rmTypeVal;
+				document.getElementById(roomDetails[ 9 ].roomType).value = rmTypeVal;
+				console.log( " array save=" + roomDetails[ 9 ].resRooms + ", roomtype=" + roomDetails[ 9 ].roomType + ", value=" + rmTypeVal + ", save value=" + document.getElementById(roomDetails[ 9 ].roomType).value );
 				break;		
 		}
 	});
@@ -569,7 +681,11 @@ $(document).on("pagecreate", "#myreservation", function () {
 							childTotal = childTotal + ( roomDetails[ rmTypeSelectedIndex ].children * rmNumSelected );
 							maxExtraTotal = maxExtraTotal + ( roomDetails[ rmTypeSelectedIndex ].maxextra * rmNumSelected );
 							totalRoomCount = totalRoomCount + rmNumSelected;
-							document.getElementById( roomTypes[ rmTypeSelectedIndex ] ).value = rmNumSelected; // Assing Room type number of rooms to be recerved.
+							
+							//document.getElementById( roomTypes[ rmTypeSelectedIndex ] ).value = rmNumSelected; // Assing Room type number of rooms to be recerved.
+
+							//console.log( "room type = " + roomTypes[ rmTypeSelectedIndex ] + ", value=" + rmNumSelected + ", save value=" + document.getElementById( roomTypes[ rmTypeSelectedIndex ] ).value );
+
 							$( "#divbfast" + roomTypes[ rmTypeSelectedIndex ] ).show();
 							
 							selectedRmType = selectedRmType + roomTypesId[ rmTypeSelectedIndex ]  + ":" + rmNumSelected + ","
@@ -1116,21 +1232,6 @@ $(document).on("pagecreate", "#myreservation", function () {
 			document.getElementById( "resparamAdult" ).value = resDetails.resAdults;
 			document.getElementById( "resparamChild" ).value = resDetails.resChildren;
 
-			for (var i = 0; i<10; i++){
-				console.log(roomDetails[i].resRooms);
-			}
-
-			document.getElementById( "WER" ).value = roomDetails[ 0 ].resRooms;
-			document.getElementById( "LSR" ).value = roomDetails[ 1 ].resRooms;
-			document.getElementById( "LVR" ).value = roomDetails[ 2 ].resRooms;
-			document.getElementById( "PS" ).value = roomDetails[ 3 ].resRooms;
-			document.getElementById( "SIR" ).value = roomDetails[ 4 ].resRooms;
-			document.getElementById( "FR" ).value = roomDetails[ 5 ].resRooms;
-			document.getElementById( "OneBS" ).value = roomDetails[ 6 ].resRooms;
-			document.getElementById( "TwoBS" ).value = roomDetails[ 7 ].resRooms;
-			document.getElementById( "QV" ).value = roomDetails[ 8 ].resRooms;
-			document.getElementById( "RB" ).value = roomDetails[ 9 ].resRooms;
-
 			if ( resDetails.resAdults > 1 ){
 				
 				if ( resDetails.resChildren === 0 ){ //Adults
@@ -1474,374 +1575,10 @@ $(document).on("pagecreate", "#myreservation", function () {
 		}
 	}
 
-	//KuhaaAngPagkaanaaSaKwarto();
-
-/*
-});
-$( "#myreservationGDetails" ).on( "pagecreate", function( event ) {
-*/
-
-/*
-	var selectedRmType = "", SelectedRooms = "", totalRoomCount=0;
-	
-	
-	function AddComma(Num) {
-		var n= Num.toString().split(".");
-		n[0] = n[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		return n.join(".");
-	}
-		
-	var resArrStat = resDetails.resArrYear + "-" + resDetails.resArrMonth + "-" + resDetails.resArrDay;
-	var resDepStat = new Date( resDetails.resDepYear + "/" + resDetails.resDepMonth + "/" + ( resDetails.resDepDay) );
-	var resDepStatless1 = resDetails.resDepYear + "-" + resDetails.resDepMonth + "-" + ( resDepStat.getDate() -1 ) // -1 for date sql between query
-
-	// Determine if (NP/P/BO) Dates	
-	$.getJSON( "tatSetaRmooRteg.php", { resArr: resArrStat, resDep: resDepStatless1 }, function( roomStat ) {
-	
-		var lenStat = roomStat.length - 1, rmStat = 0, cntNP = 0, cntP = 0, cntPeak = 0, cntBO = 0, 
-			startP = 0, endP = 0, startBO = 0, endBO = 0, foundSpa = 0, found1kind = 0, totalNights = 0,
-			prevStat = "", prevDate = "";
-			//prevStat = "", prevDate = "", SelectedRooms = "";
-		
-		$.each( roomStat, function( i, item ){
-			rmStat = item.Dstat;
-			if ( rmStat === "P" ){
-			
-				cntP = cntP + 1;
-				totalNights = totalNights + 1;
-				
-				if ( !startP ){ startP = item.cdate; }
-				
-				if ( i === lenStat ){ endP = item.cdate; }
-				
-				if ( prevStat === "BO" ){ endBO = prevDate; }
-				
-				prevStat = "P";	//don't change the line postion, this should be at end of this block;
-				
-			} else if ( rmStat === "BO" ){
-			
-				cntBO = cntBO + 1;
-				totalNights = totalNights + 1;
-				
-				if ( !startBO ){ startBO = item.cdate; }
-				
-				if ( i === lenStat ){ endBO = item.cdate; }
-				
-				if ( prevStat === "P" ){ endP = prevDate; }
-				
-				prevStat = "BO";	//don't change the line postion, this should be at end of this block;
-				
-			} else { //NP
-			
-				cntNP = cntNP + 1;
-				totalNights = totalNights + 1;
-				
-				if ( prevStat === "P" ){
-					endP = prevDate;
-				} else if ( prevStat === "BO" ){ 
-					endBO = prevDate; 
-				}
-				
-				prevStat = "NP";	//don't change the line postion, this should be at end of this block;
-			}
-			
-			prevDate = item.cdate;	//don't change the line postion, this should be at end of this block;
-		});
-
-		//console.log( "NP = " + cntNP + " , P = " + cntP + " , BO = " + cntBO + " , startP = " + startP + " , endP = " + endP + "  , startBO = " + startBO + ", endBO = " + endBO );
-
-		var roomTypesSelected = roomTypeSelected.length, rmCompute = "", extraAdults = 0,
-			amtNP = 0, amtP = 0, amtBO = 0, amtGDR = 0, roomTotal = 0, grandTotal = 0, totalRequiredAmt = 0, OnekindSpa = 0,
-			adultTotal = 0, childTotal = 0, maxExtraTotal = 0,amtExtraAdult = 0, resAdultTotal = 0, foundPHRB2KK = 0;
-			
-		for ( rmSelectCnt = 0; rmSelectCnt < roomTypesSelected; rmSelectCnt = rmSelectCnt + 1 ){
-				
-			var rmTypeSelected = roomTypeSelected[ rmSelectCnt ],	// Room Type
-				rmTypeSelectedIndex = roomTypesDb.indexOf( rmTypeSelected ),
-				rmNumSelected = roomDetails[ rmTypeSelectedIndex ].resRooms; //Number of rooms to be reserve
-
-			if ( rmNumSelected ){ // Check if there is Number of rooms to be reserve
-						
-				adultTotal = adultTotal + ( roomDetails[ rmTypeSelectedIndex ].adults * rmNumSelected );
-				childTotal = childTotal + ( roomDetails[ rmTypeSelectedIndex ].children * rmNumSelected );
-				maxExtraTotal = maxExtraTotal + ( roomDetails[ rmTypeSelectedIndex ].maxextra * rmNumSelected );
-				totalRoomCount = totalRoomCount + rmNumSelected;
-				document.getElementById( roomTypes[ rmTypeSelectedIndex ] ).value = rmNumSelected; // Assing Room type number of rooms to be recerved.
-						
-				$( "#divbfast" + roomTypes[ rmTypeSelectedIndex ] ).show();
-				
-				selectedRmType = selectedRmType + roomTypesId[ rmTypeSelectedIndex ]  + ":" + rmNumSelected + ","
-				rmCompute = rmCompute + "<tr><td colspan=3 class='iBold Tealcolor'>" + roomTypesDesc[ rmTypeSelectedIndex ] + "</td></tr>";
-						
-				var correctRoomWord = AddRemoveSs( "room", rmNumSelected );
-				if ( totalNights >= 6 ){ // GDR
-						
-					var rateGDR = roomDetails[ rmTypeSelectedIndex ].priceGDR;
-
-					if ( cntNP ){
-								
-						var correctNightWord = AddRemoveSs( "night", cntNP );
-
-						amtGDR = rateGDR * cntNP * rmNumSelected;
-								
-						rmCompute = rmCompute + "<tr><td colspan=2 style='text-align:right;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Great Discounted Rate (Non-Peak) $ " + rateGDR + " x " + cntNP + " " + correctNightWord + " x " + rmNumSelected + " " + correctRoomWord + " </td><td> " + AddComma( amtGDR.toFixed(2) ) + "</td></tr>";					
-					}
-							
-					if ( cntBO ){
-								
-						var boDateRange = getDateRangeText( startBO, endBO, 1);
-						var correctNightWord = AddRemoveSs( "night", cntBO );
-						var correctDateWord = AddRemoveSs( "date", cntBO );
-								
-						amtBO = rateGDR * cntBO * rmNumSelected;
-								
-						rmCompute = rmCompute + "<tr><td colspan=2 style='text-align:right;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Black out " + correctDateWord + " ( " + boDateRange + " ) $ " + rateGDR + " x " + cntBO + " " + correctNightWord + " x " + rmNumSelected + " " + correctRoomWord + " </td><td> " + AddComma( amtBO.toFixed(2) ) + "</td></tr>";
-					}
-				} else { //NP
-						
-					var rateNP = roomDetails[ rmTypeSelectedIndex ].priceNP;
-					if ( cntNP ){
-							
-						var correctNightWord = AddRemoveSs( "night", cntNP );
-						amtNP = rateNP * cntNP * rmNumSelected;
-								
-						//Required amount for QV,PH,RB & SPA days that did not belong to Peak, Black-out and GDR days
-						if ( rmTypeSelected == "QV" || rmTypeSelected == "PH" || rmTypeSelected == "RB" || rmTypeSelected == "SPA" ){
-							OnekindSpa = OnekindSpa + amtNP ;
-						}
-																
-						rmCompute = rmCompute + "<tr><td colspan=2 style='text-align:right;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ " + rateNP + " x " + cntNP + " " + correctNightWord + " x " + rmNumSelected + " " + correctRoomWord + " </td><td> " + AddComma( amtNP.toFixed(2) ) + "</td></tr>";
-					}
-					if ( cntBO ){
-						amtBO = rateNP * cntBO * rmNumSelected;
-						var boDateRange = getDateRangeText( startBO, endBO, 1);
-						var correctNightWord = AddRemoveSs( "night", cntBO );
-						var correctDateWord = AddRemoveSs( "date", cntBO );
-						rmCompute = rmCompute + "<tr><td colspan=2 style='text-align:right;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Black out " + correctDateWord + " ( " + boDateRange + " ) $ " + rateNP + " x " + cntBO + " " + correctNightWord + " x " + rmNumSelected + " " + correctRoomWord + " </td><td> " + AddComma( amtBO.toFixed(2) ) + "</td></tr>";
-					}
-				}
-
-				if ( cntP ){ //Peak
-						
-					amtP = roomDetails[ rmTypeSelectedIndex ].priceP * cntP * rmNumSelected;
-					var peakDateRange = getDateRangeText( startP, endP, 1 );
-					var correctNightWord = AddRemoveSs( "night", cntP );
-							
-					rmCompute = rmCompute + "<tr><td colspan=2 style='text-align:right;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Peak rate applies for ( " + peakDateRange + " ) $ " + roomDetails[ rmTypeSelectedIndex ].priceP + " x " + cntP + " " + correctNightWord + " x " + rmNumSelected + " " + correctRoomWord + " </td><td> " + AddComma( amtP.toFixed(2) ) + "</td></tr>";
-				}
-						
-				roomTotal = roomTotal + amtNP + amtP + amtBO + amtGDR;
-				totalRequiredAmt = totalRequiredAmt + OnekindSpa + amtP + amtBO + amtGDR;
-						
-				// for Spa and One-of-a-kind guarantee, check.
-				if ( rmTypeSelected === "QV" || rmTypeSelected === "PH" || rmTypeSelected === "RB" ){
-					found1kind = 1;
-				} else if (  rmTypeSelected === "SPA" ){
-					foundSpa = 1;
-				}
-						
-				// 6 person regardless of age room type, check.
-				if ( rmTypeSelected === "PH" || rmTypeSelected === "RB" || rmTypeSelected === "2KK" ){ // 6 persons regardless of age.
-					foundPHRB2KK = foundPHRB2KK + 1;
-				}
-			}
-		} //end for loop...
-		
-		// CHECK for PH, RB, 2KK : 6 0 2 - 6 person regardless of age, 2 extra person charge.
-		if ( foundPHRB2KK ){ 
-			if ( ( roomTypesSelected > 1 ) && ( foundPHRB2KK !== roomTypesSelected ) ){ // NOT all room types selected are PH, RB or 2KK.
-				var ageRegardless = foundPHRB2KK * 6; // 6 person regardless of age.
-
-				if ( resDetails.resAdults < ageRegardless ){
-				
-					resAdultTotal = resDetails.resAdults + resDetails.resChildren;
-				} else {
-					resAdultTotal = resDetails.resAdults
-				}
-
-			} else { // room types selected are PH or RB or 2KK
-				resAdultTotal = resDetails.resAdults + resDetails.resChildren;
-			}
-
-		} else { // NO PH, RB & 2KK room type selected
-			resAdultTotal = resDetails.resAdults;
-		}
-		//Check for Extra Adult
-		if ( resAdultTotal > adultTotal ){
-			extraAdults = resAdultTotal - adultTotal; // number of extra adult(s)
-			amtExtraAdult = 20 * totalNights * extraAdults; // 20 - for $20 1 extra adult.
-			
-			var correctPersonWord = AddRemoveSs( "person", extraAdults );
-			var correctNightWord = AddRemoveSs( "night", totalNights );
-			
-			roomTotal = roomTotal + amtExtraAdult; // add amount to room total.
-			rmCompute = rmCompute + "<tr><td colspan=2 style='text-align:right;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extra " + correctPersonWord + " charge $20 x " + resDetails.resRoomNights + " " + correctNightWord + " x " + extraAdults + " " + correctPersonWord + " </td><td> " + AddComma( amtExtraAdult.toFixed(2) ) + "</td></tr>";
-		}
-		
-		rmCompute = rmCompute + "<tr id='resroomTaxSc'><td colspan=2 style='text-align:right;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Room Tax &amp; Service charge</i></td><td>" + AddComma( ( roomTotal * .232 ).toFixed(2) ) + "</td></tr>";
-		rmCompute = rmCompute + "<tr id='resTotalRm' class='iBold Tealcolor'><td colspan=2>Total room rates</td><td> $ " + AddComma( ( roomTotal * 1.232 ).toFixed(2) ) + "</td></tr>";		
-		rmCompute = rmCompute + "<tr id='trgrandTotal' class='iBold Tealcolor'><td colspan=2>Grand Total (USD)</td><td id='grandTotal'> $ " + AddComma( ( roomTotal * 1.232 ).toFixed(2) ) + "</td>";
-		
-		if ( totalRequiredAmt ){
-
-			rmCompute = rmCompute + "<tr id='trRequiredAmnt' class='iBold ' style='color:red;'><td colspan=2>Required Advance Payment (USD)</td><td id='requiredAmtTotal'> $ " + AddComma( ( totalRequiredAmt * 1.232 ).toFixed(2) ) + "</td>";
-			//rmCompute = rmCompute + "<tr><td colspan=4 style='text-align:right;font-size:14px;font-style:italic;color:#000;'>Room conversion rate is @" + parseInt( RoomConversion ).toFixed(2) + " Php = 1 USD</td></tr>";
-		}
-		
-		$( "#resComputations" ).append( rmCompute );
-		
-		//Show Free Treats for 4 & 5 nights only.
-		if ( lenStat === 3 || lenStat === 4 ){ //3&4 instead of 4&5 bec. lenStat - 1 above.
-			$( "#FreeTreats" ).show();
-		}
-
-		//Determine Satisfaction Guarantee to display
-		// 1 - Peak, 2 - blackout, 3 - One Of a kind, 4 - Spa, 5 - GDR , 6 - Non peak
-		var cancelNotice = "";
-		if ( cntP ){
-			$( "#resGuaranteeP" ).show();
-			cancelNotice = "1";
-		} else if ( ( cntNP + cntBO ) >= 6 ){ //GDR
-			$( "#resGuaranteeGDR" ).show();
-			cancelNotice = "5";
-		} else if ( cntBO ){
-			$( "#resGuaranteeBlackOut" ).show();	
-			cancelNotice = "2";
-		} else {
-			if ( found1kind ){
-				$( "#resGuarantee1Kind" ).show();
-				cancelNotice = "3";
-			} else if ( foundSpa ){
-				$( "#resGuaranteeSpa" ).show();
-				cancelNotice = "4";
-			} else { //Non-peak
-				$( "#resGuaranteeNP" ).show();
-				cancelNotice = "6";
-			}
-		}
-		document.getElementById( "cancelNotice" ).value = cancelNotice;
-	});
-	
-	$( ".bfastChecks" ).on( "change", function( event ){
-	
-		var BfastchkId = this.id, bfastValue = parseFloat( this.value );
-		
-		var bfRmType = BfastchkId.substring(5); //extract room type from id
-		
-		var bfRmTypeIndex = roomTypes.indexOf( bfRmType ); // get index of room type from roomTypes array
-		
-		var bfastAmount = bfastValue * resDetails.resRoomNights * roomDetails[ bfRmTypeIndex ].resRooms,
-			curGrandTotal = parseFloat( $( "#grandTotal" ).html().substring(2).replace(/\,/g,'') ), //existing grand total
-			$naaBfast = $ ( "#hasBfast" );
-			
-		if ( $("#" + BfastchkId ).is( ":checked" ) ){ //add bfast.
-		
-			var correctNightsWord = AddRemoveSs( "night", resDetails.resRoomNights );
-			var correctRoomWord = AddRemoveSs( "room", roomDetails[ bfRmTypeIndex ].resRooms );
-			
-			if ( $naaBfast.length ){ //with existing bfast
-			
-				var	oldbfastTotal = parseFloat( $( "#bfastTotal" ).html().substring(2).replace(/\,/g,'') ), // existing bfast total
-					bfastTaxSCTotal = parseFloat( $( "#resbfastTaxSc" ).html().replace(/\,/g,'') ); //existing bfast tax & sc
-				// add bfast row
-				$( "#hasBfast" ).after(" <tr id='" + BfastchkId + "1'><td colspan=2 style='text-align:right;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + roomTypesDesc[ bfRmTypeIndex ] + " $ " + bfastValue + " x " + resDetails.resRoomNights + " " + correctNightsWord + " x " + roomDetails[ bfRmTypeIndex ].resRooms + " " + correctRoomWord + " </td><td> " + AddComma( bfastAmount.toFixed(2) ) + "</td></tr>" );
-				// add to bfast total
-				$( "#bfastTotal" ).html( "$ " + AddComma( ( oldbfastTotal + ( bfastAmount * 1.232 ) ).toFixed(2) ) );
-				// add to bfast tax and sc
-				$( "#resbfastTaxSc" ).html( AddComma( ( bfastTaxSCTotal + ( bfastAmount * .232 ) ).toFixed(2) ) );
-				//add to grand total
-				$( "#grandTotal" ).html( "$ " + AddComma( ( curGrandTotal + ( bfastAmount * 1.232 ) ).toFixed(2) ) )
-			} else { // first bfast
-			
-				$( "#resTotalRm" ).after( "<tr id='trBfastTotal' class='iBold Tealcolor'><td colspan='2'>Breakfast Package Total</td><td id='bfastTotal'> $ " + AddComma( ( bfastAmount * 1.232 ).toFixed(2) ) + "</td></tr>" );
-				$( "#resTotalRm" ).after( "<tr id='trBfastTaxSC'><td colspan=2 style='text-align:right;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Food Tax &amp; Service charge</i></td><td id='resbfastTaxSc'>" + AddComma( ( bfastAmount * .232 ).toFixed(2) ) + "</td></tr>" );
-				$( "#resTotalRm" ).after(" <tr id='" + BfastchkId + "1'><td colspan=2 style='text-align:right;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + roomTypesDesc[ bfRmTypeIndex ] + " $ " + bfastValue + " x " + resDetails.resRoomNights + " " + correctNightsWord + " x " + roomDetails[ bfRmTypeIndex ].resRooms + " " + correctRoomWord + " </td><td> " + AddComma( bfastAmount.toFixed(2) ) + "</td></tr>" );
-				$( "#resTotalRm" ).after(" <tr id='hasBfast'><td colspan=3 class='iBold Tealcolor'>Special Offer Breakfast Buffet Package </td></tr>" );
-				//add to grand total
-				$( "#grandTotal" ).html( "$ " + AddComma( ( curGrandTotal + ( bfastAmount * 1.232 ) ).toFixed(2) ) )
-			}
-		
-		} else { //remove bfast
-			var	oldbfastTotal = parseFloat( $( "#bfastTotal" ).html().substring(2).replace(/\,/g,'') ), // existing bfast total
-				bfastTaxSCTotal = parseFloat( $( "#resbfastTaxSc" ).html().replace(/\,/g,'') ); //existing bfast tax & sc
-			//deduct total bfast tax and sc
-			$( "#resbfastTaxSc" ).html( AddComma( ( bfastTaxSCTotal - ( bfastAmount * .232 ) ).toFixed(2) ) );
-			//deduct total bfast
-			$( "#bfastTotal" ).html( "$ " + AddComma( ( oldbfastTotal - ( bfastAmount * 1.232 ) ).toFixed(2) ) );
-			//deduct grantotal
-			$( "#grandTotal" ).html( "$ " + AddComma( ( curGrandTotal - ( bfastAmount * 1.232 ) ).toFixed(2) ) )
-			//remove bfast row
-			$( "#" + BfastchkId + "1" ).remove();
-			
-			//check for currentBfast total
-			if ( ( parseInt ( $( "#bfastTotal" ).html().substring(2).replace(/\,/g,'') ) ) < 1 ){
-				$( "#trBfastTotal" ).remove();
-				$( "#trBfastTaxSC" ).remove();
-				$( "#hasBfast" ).remove();
-			}
-		}
-	});
-	
-	$( ".resAddONChoice" ).on( "click", function( event ){
-	
-		var AddOnchkId = this.id, 
-			addOnAmt = parseFloat( this.value ),
-			addOnRmTotal = addOnAmt * totalRoomCount;
-			curGrandTotal = parseFloat( $( "#grandTotal" ).html().substring(2).replace(/\,/g,'') ),
-			withRequiredAmnt = $( "#trRequiredAmnt" ); // check if required amount row exist?
-			
-		if ( $( "#" + AddOnchkId ).is( ":checked" ) ){ //Add
-
-			var vepId = this.id, pkgName = "",
-				correctRoomWord = AddRemoveSs( "room", totalRoomCount );
-			
-			if ( vepId === "chkresAddVEP" ){
-					pkgName = "VIP Express Package";
-			} else if ( vepId === "chkresAddRRP" ){
-					pkgName = "Romantic Rendezvous Package";
-			} else if ( vepId === "chkresAddPAP" ){
-					pkgName = "Personal Assistant Package";
-			} else if ( vepId === "chkresAddCCP" ){
-					pkgName = "Cook with the Chef Package";
-			}
-			// insert add-on line
-			$( "#trgrandTotal" ).before("<tr id='" + this.id + "1'><td colspan=2>" + pkgName + " ( $" + addOnAmt + "nett x " + totalRoomCount + " " + correctRoomWord + ")</td><td> " + addOnRmTotal.toFixed(2) + "</td></tr>");
-			// add add-on amount to grand total. Nett
-			$( "#grandTotal" ).html( "$ " + AddComma( ( curGrandTotal + addOnRmTotal ).toFixed(2) ) )
-			
-			if ( withRequiredAmnt.length ){
-			
-				var CurrequiredAmtTotal = parseFloat( $( "#requiredAmtTotal" ).html().substring(2).replace(/\,/g,'') );
-				$( "#requiredAmtTotal" ).html( "$ " + AddComma( ( CurrequiredAmtTotal + addOnRmTotal ).toFixed(2) ) )
-			} else {
-			
-				$( "#trgrandTotal" ).after( "<tr id='trRequiredAmnt' class='iBold ' style='color:red;'><td colspan=2>Required Advance Payment (USD)</td><td id='requiredAmtTotal'> $ " + AddComma( addOnRmTotal.toFixed(2) ) + "</td>" );
-			}
-			
-		} else { //Remove add-on
-		
-			//deduct from grand total
-			$( "#grandTotal" ).html( "$ " + AddComma( ( curGrandTotal - addOnRmTotal ).toFixed(2) ) )
-			// remove add-on line
-			$( "#" + this.id + "1" ).remove();
-			
-			if ( withRequiredAmnt.length ){
-			
-				var CurrequiredAmtTotal = parseFloat( $( "#requiredAmtTotal" ).html().substring(2).replace(/\,/g,'') );
-				var NewrequiredAmtTotal = CurrequiredAmtTotal - addOnRmTotal;
-				
-				if ( NewrequiredAmtTotal ){
-					
-					$( "#requiredAmtTotal" ).html( "$ " + AddComma( NewrequiredAmtTotal.toFixed(2) ) )
-				} else {
-				
-					$( "#trRequiredAmnt" ).remove();//remove required amount row
-				}				
-			}
-		}
-	});
-	*/
 	$( "#reservationDetails" ).submit( function( event ){
+
+		console.log( document.getElementById( "PS" ).value );
+		console.log( document.getElementById( "LSR" ).value );
 	
 		function validateEmail( email ){
 			//simple regular expression to validate an email address. It will accept email address in upper case also.
