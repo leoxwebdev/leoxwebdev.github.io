@@ -1,20 +1,9 @@
 var theDate = new Date(), //Date Today;
 	dateToday = new Date( theDate.getFullYear() + "/" + (theDate.getMonth() + 1) + "/" + theDate.getDate() );
 
-/*	
-	//Check for localstorage support
-	if ( localStorage ){
-		localStorageSupported = 1;
-	} else {
-		localStorageSupported = 0;
-	}	
-*/
-
 	function SetDefaultDates(){
-	
-		// Default Arrival Date
+
 		var defaultArrDate = theDate;
-		
 		defaultArrDate.setDate( defaultArrDate.getDate() + 2 );
 
 		document.getElementById( "ArrMonth" ).value = theDate.getMonth() + 1; // javascript date ranges from 0 - 11
@@ -33,31 +22,29 @@ var theDate = new Date(), //Date Today;
 		document.getElementById( "DepMonth" ).value = theDate.getMonth() + 1;
 		document.getElementById( "DepDay" ).value = theDate.getDate();
 		document.getElementById( "DepYear" ).value = theDate.getFullYear();
-		
 		//disablePastDays();	
 	}
 
-	function UpdateDepartureDate(){
-	
+	function UpdateDepartureDate() {
+
 		var ArrMonth = document.getElementById( "ArrMonth" ).value,
 			ArrDay = document.getElementById( "ArrDay" ).value,
 			ArrYear = document.getElementById( "ArrYear" ).value,
 			Nights = document.getElementById( "resNights" ).value,
-			
 			NewArrDate = new Date( ArrYear + "/" + ArrMonth + "/" + ArrDay );
 
 		//Save to localstorage
-		if ( localStorageSupported ){
+		if ( localStorageSupported ) {
 			localStorage.ArrivalDate = NewArrDate;
 			localStorage.RoomNights = Nights;
 		}
-		
+
 		// Get arrival month name
 		var resArrMonthName = resMonthName[ NewArrDate.getMonth() ];
-				
+
 		//New Departure Date
 		NewArrDate.setDate( NewArrDate.getDate() + parseInt( Nights ));
-		
+
 		var NewDepartureMonth = NewArrDate.getMonth() + 1,
 			NewDepartureDay = NewArrDate.getDate(),
 			NewDepartureYear = NewArrDate.getFullYear();
@@ -65,21 +52,20 @@ var theDate = new Date(), //Date Today;
 		document.getElementById("DepMonth").value = NewDepartureMonth;
 		document.getElementById("DepDay").value = NewDepartureDay;
 		document.getElementById("DepYear").value = NewDepartureYear;
-		
+
 		$( "#DepMonth" ).selectmenu( "refresh" );
 		$( "#DepDay" ).selectmenu( "refresh" );
 		$( "#DepYear" ).selectmenu( "refresh" );
-		
+
 		disablePastDays();
 	}
 
-	function UpdateArrivalDateAndRoomNights(){
+	function UpdateArrivalDateAndRoomNights() {
 	
 		var NewDepartureMonth = document.getElementById( "DepMonth" ).value,
 			NewDepartureDay = document.getElementById( "DepDay" ).value,
 			NewDepartureYear = document.getElementById( "DepYear" ).value,	
 			Nights = document.getElementById( "resNights" ).value,
-
 			NewArrivalDate = new Date(NewDepartureYear + "/" + NewDepartureMonth + "/" + NewDepartureDay);
 
 		NewArrivalDate.setDate(NewArrivalDate.getDate() - parseInt(Nights));
@@ -91,25 +77,25 @@ var theDate = new Date(), //Date Today;
 		$("#ArrMonth").selectmenu("refresh");
 		$("#ArrDay").selectmenu("refresh");
 		$("#ArrYear").selectmenu("refresh");
-		
+
 		//Save to localstorage
-		if ( localStorageSupported ){
+		if ( localStorageSupported ) {
 			localStorage.ArrivalDate = NewArrivalDate;
 		}
 
 		disablePastDays();
 	}
 
-	function LeapYearNi(pYear){
-		if (0 == pYear % 400) return true;
-		if (0 == pYear % 100) return false;
-		return (0 == pYear % 4) ? true : false;
+	function LeapYearNi( pYear ) {
+		if ( 0 == pYear % 400 ) return true;
+		if ( 0 == pYear % 100 ) return false;
+		return ( 0 == pYear % 4 ) ? true : false;
 	}
 
-	function disablePastDays(){
-		var dateKaron = new Date();
+	function disablePastDays() {
+		var dateKaron = new Date(),
 
-		var DayKaron = dateKaron.getDate(),
+			DayKaron = dateKaron.getDate(),
 			YearKaron = dateKaron.getFullYear(),
 			MonthKaron = dateKaron.getMonth() + 1,
 
@@ -125,8 +111,8 @@ var theDate = new Date(), //Date Today;
 			departureDate = new Date(departureYear + "/" + departureMonth + "/" + departureDay);
 
 		//Disable ang arrival date past Days
-		if ( ( MonthKaron === arrivalMonth ) && ( YearKaron === arrivalYear ) ){
-			for ( var sugod = 1; sugod < DayKaron; sugod++ ){
+		if ( ( MonthKaron === arrivalMonth ) && ( YearKaron === arrivalYear ) ) {
+			for ( var sugod = 1; sugod < DayKaron; sugod++ ) {
 				$( "#ArrDay option[value=" + sugod + "]" ).attr( "disabled", true );
 			}
 			//Currently selected day was disabled na, move to today
@@ -136,34 +122,34 @@ var theDate = new Date(), //Date Today;
 		} else {
 
 			//Enable Days 1 to 28
-			for ( var day = 1; day <= 28; day++ ){
-				if ( $("#ArrDay option[value=" + day + "]" ).attr( "disabled" ) ){
+			for ( var day = 1; day <= 28; day++ ) {
+				if ( $("#ArrDay option[value=" + day + "]" ).attr( "disabled" ) ) {
 					$( "#ArrDay option[value=" + day + "]").attr( "disabled", false );
 				}
 			}
 		}
 
 		//Disable ang Departure date past Days
-		if ( ( MonthKaron === departureMonth ) && ( YearKaron === departureYear ) ){
-			for ( var sugod=1; sugod < DayKaron; sugod++ ){
-				$("#DepDay option[value=" + sugod + "]").attr("disabled",true);
+		if ( ( MonthKaron === departureMonth ) && ( YearKaron === departureYear ) ) {
+			for ( var sugod=1; sugod < DayKaron; sugod++ ) {
+				$( "#DepDay option[value=" + sugod + "]" ).attr( "disabled", true );
 			}
 			//Currently selected day was disabled na, move to today + room nights
-			roomNights = document.getElementById( "resNights" ).value
+			roomNights = document.getElementById( "resNights" ).value;
 			if ( document.getElementById( "DepDay" ).value < DayKaron ){
 				document.getElementById( "DepDay" ).value = DayKaron + parseInt( Nights );
 			}
 		} else { //Enable Days 1 to 28
 		
-			for ( var day = 1; day <= 28; day++ ){
+			for ( var day = 1; day <= 28; day++ ) {
 				if ( $("#DepDay option[value=" + day + "]" ).attr( "disabled" ) ){
 					$( "#DepDay option[value=" + day + "]" ).attr( "disabled", false );
 				}
 			}
 		}
 
-		disableWalayApilSaMonthNgaDays("ArrDay");//Disable Days nga dili apil sa arrival date
-		disableWalayApilSaMonthNgaDays("DepDay");//Disable Days nga dili apil sa Departure date
+		disableWalayApilSaMonthNgaDays( "ArrDay" );//Disable Days nga dili apil sa arrival date
+		disableWalayApilSaMonthNgaDays( "DepDay" );//Disable Days nga dili apil sa Departure date
 		
 		$( "#ArrDay" ).selectmenu( "refresh" );
 		$( "#DepDay" ).selectmenu( "refresh" );
@@ -171,10 +157,10 @@ var theDate = new Date(), //Date Today;
 	}
 
 	//IMPORTANT, CHECK IF DAY TODAY IS NOT 29,30 OR 31
-	function disableWalayApilSaMonthNgaDays( pReservationDateDay ){
-	
+	function disableWalayApilSaMonthNgaDays( pReservationDateDay ) {
+
 		//var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31], // gidaghanon sa adlaw sa buwan
-		if ( pReservationDateDay.slice( 0, 3 ) === "Arr" ){ //Arrival day
+		if ( pReservationDateDay.slice( 0, 3 ) === "Arr" ) { //Arrival day
 			var theMonth = document.getElementById( "ArrMonth" ).value,
 				theDay = "ArrDay";
 		} else {//Departure Day
@@ -211,18 +197,18 @@ var theDate = new Date(), //Date Today;
 		
 		// Proceed when the user confirms
 		$( "#confirm #yes" ).on( "click", function() {
-			
+
 			$( "#" + listItemId ).remove();
-			
-			if ( localStorageSupported ){
+
+			if ( localStorageSupported ) {
 				localStorage.removeItem( listItemId );
 			}
-			
+
 			$( "#confirm" ).popup( "close" );
-			
+
 			//Check if list is empty
 			var prefRoomslistCount = $( "#prefRooms" ).find( ">li" );
-			
+
 			if ( prefRoomslistCount.length < 1 ){	//Empty
 				$( "#prefRooms" ).append( "<li>All Available</li>" );
 				localStorage.showAllRooms = 1;
@@ -230,112 +216,22 @@ var theDate = new Date(), //Date Today;
 		});
 		
 		// Remove active state and unbind when the cancel button is clicked
-		$( "#confirm #cancel" ).on( "click", function(){
+		$( "#confirm #cancel" ).on( "click", function() {
 			$( "#confirm #yes" ).off();
 			$( "#confirm" ).popup( "close" );
 		});
 	}
-/*
-	$( document ).on( "click" , "#prefRooms li" , function() {
-	
-		if ( ( this.id ).length > 0 ){
-			iDeleteNi( this.id,this.innerHTML )
-		}
-	});
 
-	//On Arrival Date Or Room Nights Change
-	$( document ).on( "change" , ".clsArrivalDate" , function( event, ui ) {
-	
-		var changeArrYear = document.getElementById( "ArrYear" ).value,
-			changeArrMonth = document.getElementById( "ArrMonth" ).value,
-			changeArrDay = document.getElementById( "ArrDay" ).value;
-			
-		//new Arrival Date
-		var changeArrDate = new Date( changeArrYear + "/" + changeArrMonth + "/" + changeArrDay );
-
-		if ( changeArrDate < dateToday ){ //the new arrival date is Past Date
-			//Change the year
-			document.getElementById( "ArrYear" ).value = parseInt( changeArrYear ) + 1;
-			$( "#ArrYear" ).selectmenu( "refresh" );
-		}
+	if ( localStorageSupported ) {
 		
-		//Update departure Date
-		UpdateDepartureDate();
-	});
-
-	//On Departure Date Change
-	$( document ).on( "change" , ".clsDepartureDate" , function( event, ui ) {
-		
-		var changeDepYear = document.getElementById( "DepYear" ).value,
-			changeDepMonth = document.getElementById( "DepMonth" ).value,
-			changeDepDay = document.getElementById( "DepDay" ).value,
-			Nights = document.getElementById( "resNights" ).value;
-		
-		//new Departure Date
-		var changeDepDate = new Date( changeDepYear + "/" + changeDepMonth + "/" + changeDepDay );
-		
-		if ( changeDepDate <= dateToday){ //the new Departure date is Past Date or Today
-			//Change the year
-			document.getElementById( "DepYear" ).value = parseInt( changeDepYear ) + 1;
-			$( "#DepYear" ).selectmenu( "refresh" );
-			
-			UpdateArrivalDateAndRoomNights();
-		} else { // new Departure date is future date
-
-			var	newArrDate = changeDepDate;
-				
-			newArrDate.setDate( newArrDate.getDate() - Nights );
-			
-			if ( newArrDate >= dateToday ){
-				
-				UpdateArrivalDateAndRoomNights();
-			} else {
-
-				var	NewArrivalDate = changeDepDate;
-				
-				//reduce nights stay
-				newArrNights = Nights - (dateToday.getDate() - NewArrivalDate.getDate());
-
-				document.getElementById("ArrMonth").value = dateToday.getMonth() + 1;
-				document.getElementById("ArrDay").value = dateToday.getDate();
-				document.getElementById("ArrYear").value = dateToday.getFullYear();
-				document.getElementById( "resNights" ).value = newArrNights;
-
-				$( "#resNights" ).selectmenu( "refresh" );
-				$( "#ArrMonth" ).selectmenu( "refresh" );
-				$( "#ArrDay" ).selectmenu( "refresh" );
-				$( "#ArrYear" ).selectmenu( "refresh" );
-		
-				//Save to localstorage
-				if ( localStorageSupported ){
-					localStorage.ArrivalDate = dateToday;
-					localStorage.Nights = newArrNights;
-				}
-			}
-		}
-		
-	});
-	
-	//On number of Adults Change
-	$( document ).on( "change" , ".clsAdultChildren" , function(event, ui) {
-	
-		if ( this.id === "resAdults" ){
-			localStorage.Adults = this.value;
-		} else {//Children
-			localStorage.Children = this.value;
-		}
-		
-	});	
-*/
-	if ( localStorageSupported ){
-		
-		if ( localStorage.ArrivalDate ){ //check for previous Arrival date preference.
+		if ( localStorage.ArrivalDate ) { //check for previous Arrival date preference.
 
 			localstorageArrivalDate = localStorage.ArrivalDate;
-			
+
 			var oldArrivalDate = new Date( localstorageArrivalDate );
-			
-			if ( oldArrivalDate > theDate ){ //Not past dates
+
+			if ( oldArrivalDate > theDate ) { //Not past dates
+
 				var localstorageRoomNights = localStorage.RoomNights ? parseInt ( localStorage.RoomNights ) : 3,
 					localstorageAdults = localStorage.Adults ? parseInt ( localStorage.Adults ) : 0,
 					localstorageChildren = localStorage.Children ? parseInt ( localStorage.Children ) : 0;
@@ -360,11 +256,13 @@ var theDate = new Date(), //Date Today;
 				document.getElementById( "DepYear" ).value = oldArrivalDate.getFullYear();
 				
 				//Preferred Room Type(s), Check if their is peferred room type.
-				for ( var i = 0; i < roomTypes.length; i++ ){
-					var prefRmType = roomTypes[i];
-					var roomTypeExist = localStorage.getItem( prefRmType );	
-					//console.log(localStorage.getItem( prefRmType ));
-					if ( roomTypeExist ){
+				for ( var i = 0; i < roomTypes.length; i++ ) {
+
+					var prefRmType = roomTypes[i],
+						roomTypeExist = localStorage.getItem( prefRmType );	
+
+					if ( roomTypeExist ) {
+
 						hasFoundPreferredRmType = 1;
 						$( "#prefRooms" ).append( "<li id=" + prefRmType + "><span>" + roomTypeExist + " </span><img src='images/remove.png' alt='remove' /></li>" );
 					}
@@ -376,6 +274,7 @@ var theDate = new Date(), //Date Today;
 			}
 
 		} else { //No previous arrival date preference
+
 			SetDefaultDates(); // Set Default dates.
 		}
 
