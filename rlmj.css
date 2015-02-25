@@ -2435,6 +2435,7 @@ p.angComment{
 	vertical-align: top;
 	margin: 3px 0 20px 0;
 	text-align: left !important;
+	box-shadow: 0 5px 0 #dce8ed;
 }
 
 p.angComment::before {
@@ -2450,7 +2451,8 @@ p.angComment::before {
 	-ms-transform: rotate(47deg) skew(5deg);
 	-o-transform: rotate(47deg) skew(5deg);
 	-webkit-transform: rotate(47deg) skew(5deg);
-	box-shadow: 1px 1px 1px 0 rgba( 178, 178, 178, .4 );
+	/*box-shadow: 1px 1px 1px 0 rgba( 178, 178, 178, .4 );*/
+	box-shadow: 0 5px 0 #dce8ed;
 }
 
 
