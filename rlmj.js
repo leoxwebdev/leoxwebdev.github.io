@@ -15,8 +15,8 @@ $(document).on( "pagecreate", function () {
 
 		that = $( this );
 
-		var timeoutId = setTimeout(function () { 
-			fncAnimate() 
+		var timeoutId = setTimeout(function () {
+			fncAnimate()
 		}, 100);
 	}
 	
@@ -147,6 +147,52 @@ $( document ).on( "pagecreate", "#home", function () {
 		$( selectedComments[ sideCommentssugod % commentsCnt ] ).hide();
 		$( selectedComments[ ++sideCommentssugod % commentsCnt ] ).show();
 	}
+
+	function getHtmlData( pUrl ) {
+
+		return $.ajax({
+			cache: false,
+			dataType: "HTML",
+			type: "GET",
+			url: pUrl
+		//data: pData
+	});
+}
+
+	$( "#satisfactionLink" ).on( "click", function( event ){
+
+		event.preventDefault();
+
+		getHtmlData( "satisfactionguarantee.html" ).then( function ( satisfactionguarantee ) {
+
+			if ( satisfactionguarantee.length ) {
+
+				$( "#satisfaction" ).find(".popSudlanan").html( satisfactionguarantee );
+			}
+
+			$( "#satisfaction" ).popup( "open" );
+		},
+			function (){ alert( "Error Loading Satisfaction Guarantee!" ); }
+		);
+	});
+
+	$( "#samplepricesLink" ).on( "click", function( event ){
+
+		event.preventDefault();
+
+		getHtmlData( "sampleprices.html" ).then( function ( samplePrices ) {
+
+			if ( samplePrices.length ) {
+
+				$( "#samplePrices" ).find(".popSudlanan").html( samplePrices );
+			}
+
+			$( "#samplePrices" ).popup( "open" );
+		},
+			function (){ alert( "Error Loading Sample Prices!" ); }
+		);
+	});
+
 });
 
 /* rooms */
