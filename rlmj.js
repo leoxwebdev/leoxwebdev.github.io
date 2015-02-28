@@ -29,6 +29,16 @@ $(document).on( "pagecreate", function () {
 	$( "[data-role=panel]" ).panel().enhanceWithin();
 
 	CollapsibleHeaderMoveToTop(); 	//For collapsible-set to auto-croll to top.
+
+	$( ".popupLink" ).on( "click", function( event ){
+
+		event.preventDefault();
+
+		var $thisElem = $( this );
+
+		showPopup( $thisElem.data( "srcfile" ), $thisElem.attr( "href" ) );
+
+	});	
 });
 
 /* Index */
@@ -100,23 +110,31 @@ $( document ).on( "pagecreate", "#home", function () {
 	} );
 
 	//Reserve now Click handling from home
-	$( "#homeReserveNow" ).on( "click", function ( leo ) {
+	$( "#homeReserveNow" ).on( "click", function ( event ) {
+
+		event.preventDefault();
 		localStorage.AngNagTawagNiRoomPage = this.id;
 	});
 
 	//Show videos Click handling from home
-	$( ".homevideo" ).on( "click", function ( leo ) {
+	$( ".homevideo" ).on( "click", function ( event ) {
+
+		event.preventDefault();
 		localStorage.AngNagTawagNiImages = "homevideo";
 	});
 
 	//View more guest comments Click handling from home
-	$( "#homeGotoGuestComments" ).on( "click", function ( leo ) {
+	$( "#homeGotoGuestComments" ).on( "click", function ( event ) {
+
+		event.preventDefault();
 		localStorage.AngNagTawagNiContactPage = this.id;
 	});
 	// END - View more guest comments Click handling from home
 
 	//View more guest comments Click handling from home
-	$( "#homeCulinary" ).on( "click", function ( leo ) {
+	$( "#homeCulinary" ).on( "click", function ( event ) {
+
+		event.preventDefault();
 		localStorage.AngNagTawagNiDiningPage = this.id;
 	});
 	// END - View more guest comments Click handling from home	
@@ -148,16 +166,6 @@ $( document ).on( "pagecreate", "#home", function () {
 		$( selectedComments[ ++sideCommentssugod % commentsCnt ] ).show();
 	}
 
-	$( "#satisfactionLink, #samplepricesLink" ).on( "click", function( event ){
-
-		event.preventDefault();
-
-		var $thisElem = $( this );
-
-		showPopup( $thisElem.data("srcfile"), $thisElem.attr("href") );
-
-	});
-
 });
 
 /* rooms */
@@ -174,9 +182,9 @@ $( document ).on( "pagecreate", "#rooms", function () {
 		$rmSpecialty = $( "#rmSpecialty" ),
 		$rmDiscountRates = $( "#rmDiscountRates" ),
 		$rmAmenities = $( "#rmAmenities" ),
-		
+
 		$WERShowDetails = $( "#WERShowDetails" ),
-		
+
 		//$AdtoSaTaas = $("html, body");
 		$AdtoSaTaas = $( "html, body" );
 		
@@ -313,15 +321,6 @@ $( document ).on( "pagecreate", "#rooms", function () {
 		}
 	});
 
-	$( "#satisfactionLink" ).on( "click", function( event ) {
-
-		event.preventDefault();
-
-		var $thisElem = $( this );
-
-		showPopup( $thisElem.data("srcfile"), $thisElem.attr("href") );
-
-	});
 });
 
 // packages
@@ -502,16 +501,6 @@ $( document ).on( "pagecreate", "#dining", function () {
 	
 	$dining_mobile_menu.on( "change", function () {
 		displayDiningItem( this.value );
-	});
-
-	$( "#satisfactionLink" ).on( "click", function( event ) {
-
-		event.preventDefault();
-
-		var $thisElem = $( this );
-
-		showPopup( $thisElem.data("srcfile"), $thisElem.attr("href") );
-		
 	});
 
 });
@@ -1132,29 +1121,34 @@ $( document ).on( "pagecreate", "#photogallery", function () {
 });
 
 
-	function getHtmlData( pUrl ) {
+function getHtmlData( pUrl ) {
 
-		return $.ajax({
-			cache: false,
-			dataType: "HTML",
-			type: "GET",
-			url: pUrl
-		//data: pData
-		});
-	}
+	return $.ajax({
+		cache: false,
+		dataType: "HTML",
+		type: "GET",
+		url: pUrl
+	//data: pData
+	});
+}
 
-	function showPopup( pUrl, pElemToPop ){
+function showPopup( pUrl, pElemToPop ){
 
-		getHtmlData( pUrl ).then( function ( htmlData ) {
+	getHtmlData( pUrl ).then( function ( htmlData ) {
 
-			if ( htmlData.length ) {
+		if ( htmlData.length ) {
 
-				$( pElemToPop ).find(".popSudlanan").html( htmlData );
-			}
+			$( pElemToPop ).find(".popSudlanan").prepend( htmlData );
+		}
 
-			$( pElemToPop ).popup( "open" );
-		},
+		$( pElemToPop ).popup( "open" );
+	},
 
-			function (){ alert( "Error Loading Data!" ); }
-		);
-	}
+		function (){ 
+			alert( "Error Loading Data!" );
+	}/*,
+		function (){
+			$( pElemToPop ).find("a.ui-btn").button().button("refresh");
+		}*/
+	);
+}
