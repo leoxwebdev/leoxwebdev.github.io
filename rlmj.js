@@ -148,49 +148,14 @@ $( document ).on( "pagecreate", "#home", function () {
 		$( selectedComments[ ++sideCommentssugod % commentsCnt ] ).show();
 	}
 
-	function getHtmlData( pUrl ) {
-
-		return $.ajax({
-			cache: false,
-			dataType: "HTML",
-			type: "GET",
-			url: pUrl
-		//data: pData
-	});
-}
-
-	$( "#satisfactionLink" ).on( "click", function( event ){
+	$( "#satisfactionLink, #samplepricesLink" ).on( "click", function( event ){
 
 		event.preventDefault();
 
-		getHtmlData( "satisfactionguarantee.html" ).then( function ( satisfactionguarantee ) {
+		var $thisElem = $( this );
 
-			if ( satisfactionguarantee.length ) {
+		showPopup( $thisElem.data("srcfile"), $thisElem.attr("href") );
 
-				$( "#satisfaction" ).find(".popSudlanan").html( satisfactionguarantee );
-			}
-
-			$( "#satisfaction" ).popup( "open" );
-		},
-			function (){ alert( "Error Loading Satisfaction Guarantee!" ); }
-		);
-	});
-
-	$( "#samplepricesLink" ).on( "click", function( event ){
-
-		event.preventDefault();
-
-		getHtmlData( "sampleprices.html" ).then( function ( samplePrices ) {
-
-			if ( samplePrices.length ) {
-
-				$( "#samplePrices" ).find(".popSudlanan").html( samplePrices );
-			}
-
-			$( "#samplePrices" ).popup( "open" );
-		},
-			function (){ alert( "Error Loading Sample Prices!" ); }
-		);
 	});
 
 });
@@ -346,7 +311,17 @@ $( document ).on( "pagecreate", "#rooms", function () {
 		if ( localStorage.getItem( roomType ) === null ) {
 			localStorage.setItem( roomType, roomTypeName );
 		}
-	});	
+	});
+
+	$( "#satisfactionLink" ).on( "click", function( event ) {
+
+		event.preventDefault();
+
+		var $thisElem = $( this );
+
+		showPopup( $thisElem.data("srcfile"), $thisElem.attr("href") );
+
+	});
 });
 
 // packages
@@ -527,6 +502,16 @@ $( document ).on( "pagecreate", "#dining", function () {
 	
 	$dining_mobile_menu.on( "change", function () {
 		displayDiningItem( this.value );
+	});
+
+	$( "#satisfactionLink" ).on( "click", function( event ) {
+
+		event.preventDefault();
+
+		var $thisElem = $( this );
+
+		showPopup( $thisElem.data("srcfile"), $thisElem.attr("href") );
+		
 	});
 
 });
@@ -1145,3 +1130,31 @@ $( document ).on( "pagecreate", "#photogallery", function () {
 		});
 	}
 });
+
+
+	function getHtmlData( pUrl ) {
+
+		return $.ajax({
+			cache: false,
+			dataType: "HTML",
+			type: "GET",
+			url: pUrl
+		//data: pData
+		});
+	}
+
+	function showPopup( pUrl, pElemToPop ){
+
+		getHtmlData( pUrl ).then( function ( htmlData ) {
+
+			if ( htmlData.length ) {
+
+				$( pElemToPop ).find(".popSudlanan").html( htmlData );
+			}
+
+			$( pElemToPop ).popup( "open" );
+		},
+
+			function (){ alert( "Error Loading Data!" ); }
+		);
+	}
