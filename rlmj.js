@@ -30,15 +30,6 @@ $(document).on( "pagecreate", function () {
 
 	CollapsibleHeaderMoveToTop(); 	//For collapsible-set to auto-croll to top.
 
-	$( ".popupLink" ).on( "click", function( event ){
-
-		event.preventDefault();
-
-		var $thisElem = $( this );
-
-		showPopup( $thisElem.data( "srcfile" ), $thisElem.attr( "href" ) );
-
-	});	
 });
 
 /* Index */
@@ -46,11 +37,6 @@ $( document ).on( "pagecreate", "#home", function () {
 
 	var $slidingImage = $("#homeBack .homebackground"),
 		$slidingImageCaption = $(".captionWrap").find(".slideImageCaption");
-		
-	/*
-	var $slidingImage = $("#homeBack .homebackground"),
-		$slidingImageCaption = $(".captionWrap .slideImageCaption");
-	*/	
 
 	function updateSlidingImagePath() { //Function to detect screen with and change path of sliding image to load.
 
@@ -93,10 +79,15 @@ $( document ).on( "pagecreate", "#home", function () {
 	updateSlidingImagePath();
 
 	function rollDayon() {
-		$( "#homeBack .homebackground" ).first().appendTo( '.homeBack' ).fadeOut( 2000 );
+		/*$( "#homeBack .homebackground" ).first().appendTo( '.homeBack' ).fadeOut( 2000 );
 		$( ".captionWrap .slideImageCaption" ).first().appendTo( '.captionWrap' ).fadeOut( 2000 );
 		$( "#homeBack .homebackground" ).first().fadeIn( 2000 );
 		$( ".captionWrap .slideImageCaption" ).first().fadeIn( 2000 );
+		*/
+		$( "#homeBack" ).find( ".homebackground" ).first().appendTo( '.homeBack' ).fadeOut( 2000 );
+		$( ".captionWrap" ).find( ".slideImageCaption" ).first().appendTo( '.captionWrap' ).fadeOut( 2000 );
+		$( "#homeBack" ).find( ".homebackground" ).first().fadeIn( 2000 );
+		$( ".captionWrap" ).find( ".slideImageCaption" ).first().fadeIn( 2000 );
 
 		setTimeout(rollDayon, 9000);
 	}
@@ -105,7 +96,9 @@ $( document ).on( "pagecreate", "#home", function () {
 
 	rollDayon(); //Animate na. Home background animation: Easy lang :)
 
-	$( window ).resize( function ( event ) { 
+	$( window ).resize( function ( event ) {
+
+		event.preventDefault();
 		updateSlidingImagePath(); 
 	} );
 
@@ -166,6 +159,11 @@ $( document ).on( "pagecreate", "#home", function () {
 		$( selectedComments[ ++sideCommentssugod % commentsCnt ] ).show();
 	}
 
+	getHtmlData( "indexsidebar.html" ).then( function( indexsidebarHtml ) {
+
+		//$( ".homesidebar" ).html( indexsidebarHtml ).trigger( "create" );
+		$( ".homesidebar" ).html( indexsidebarHtml ).trigger( "create" );
+	});
 });
 
 /* rooms */
@@ -175,6 +173,7 @@ $( document ).on( "pagecreate", "#rooms", function () {
 		$specialtyPage = $( ".specialtyPage" ),
 		$amenitiesPage = $( ".amenitiesPage" ),
 		$discountPage = $( ".discountPage" ),
+		//$roomsidebar = $( ".homesidebar" ),
 
 		$rooms_mobile_menu = $( ".rooms_mobile_menu" ),
 
@@ -254,12 +253,17 @@ $( document ).on( "pagecreate", "#rooms", function () {
 			$("select.rooms_mobile_menu").val( pRoomItem ).selectmenu( "refresh" );			
 		});
 	}
-	
+
 	$conventionalPage.on("click", function () { displayRoomsItem( "CONVENTIONALROOMS" ); });
 	$specialtyPage.on("click", function () { displayRoomsItem( "SPECIALTYROOMSandSUITES" ); });
 	$amenitiesPage.on("click", function () { displayRoomsItem( "HOTELandROOMAMENITIES" ); });
 	$discountPage.on("click", function () { displayRoomsItem( "DISCOUNTRATES" ); });
-
+/*
+	$roomsidebar.on( "click", $(".conventionalPage"), function () { displayRoomsItem( "CONVENTIONALROOMS" ); });
+	$roomsidebar.on( "click", $(".specialtyPage"), function () { displayRoomsItem( "SPECIALTYROOMSandSUITES" ); });
+	$roomsidebar.on( "click", $(".amenitiesPage"), function () { displayRoomsItem( "HOTELandROOMAMENITIES" ); });
+	$roomsidebar.on( "click", $(".discountPage"), function () { displayRoomsItem( "DISCOUNTRATES" ); });
+*/
 	if ( localStorage.AngNagTawagNiRoomPage === "homeReserveNow" ){
 		localStorage.AngNagTawagNiRoomPage = "LeoGwapo";
 		displayRoomsItem( "DISCOUNTRATES" );
@@ -320,7 +324,12 @@ $( document ).on( "pagecreate", "#rooms", function () {
 			localStorage.setItem( roomType, roomTypeName );
 		}
 	});
+/*
+	getHtmlData( "roomsidebar.html" ).then( function( indexsidebarHtml ) {
 
+		$( ".homesidebar" ).html( indexsidebarHtml ).trigger( "create" );
+	});
+*/
 });
 
 // packages
@@ -1119,36 +1128,3 @@ $( document ).on( "pagecreate", "#photogallery", function () {
 		});
 	}
 });
-
-
-function getHtmlData( pUrl ) {
-
-	return $.ajax({
-		cache: false,
-		dataType: "HTML",
-		type: "GET",
-		url: pUrl
-	//data: pData
-	});
-}
-
-function showPopup( pUrl, pElemToPop ){
-
-	getHtmlData( pUrl ).then( function ( htmlData ) {
-
-		if ( htmlData.length ) {
-
-			$( pElemToPop ).find(".popSudlanan").prepend( htmlData );
-		}
-
-		$( pElemToPop ).popup( "open" );
-	},
-
-		function (){ 
-			alert( "Error Loading Data!" );
-	}/*,
-		function (){
-			$( pElemToPop ).find("a.ui-btn").button().button("refresh");
-		}*/
-	);
-}
