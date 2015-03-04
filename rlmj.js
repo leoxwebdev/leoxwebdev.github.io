@@ -1,5 +1,5 @@
 // Para sa tanan pages
-$(document).on( "pagecreate", function () {
+$( document ).on( "pagecreate", function() {
 	
 	// For collapsible-set to auto-croll sa taas. 
 	var that = "";
@@ -20,8 +20,8 @@ $(document).on( "pagecreate", function () {
 		}, 100);
 	}
 	
-	function CollapsibleHeaderMoveToTop () { 
-		$("a.ui-collapsible-heading-toggle").on("click", fncClick);
+	function CollapsibleHeaderMoveToTop() { 
+		$( "a.ui-collapsible-heading-toggle" ).on( "click", fncClick );
 	}
 	// Function end collapsible-set to auto-croll to top
 
@@ -35,8 +35,8 @@ $(document).on( "pagecreate", function () {
 /* Index */
 $( document ).on( "pagecreate", "#home", function () {
 
-	var $slidingImage = $("#homeBack .homebackground"),
-		$slidingImageCaption = $(".captionWrap").find(".slideImageCaption");
+	var $slidingImage = $( "#homeBack .homebackground" ),
+		$slidingImageCaption = $( ".captionWrap" ).find( ".slideImageCaption" );
 
 	function updateSlidingImagePath() { //Function to detect screen with and change path of sliding image to load.
 
@@ -45,33 +45,33 @@ $( document ).on( "pagecreate", "#home", function () {
 			imgSize = currentPath.slice( 13, 17 );
 
 		if (screenWidth <= 353.5) {
-			if (imgSize !== "0320") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "0320"); }); }
+			if (imgSize !== "0320") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "0320" ); }); }
 		} else if (screenWidth >= 353.51 && screenWidth <= 433.50) {
-			if (imgSize !== "0387") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "0387"); }); }
+			if (imgSize !== "0387") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "0387" ); }); }
 		} else if (screenWidth >= 433.51 && screenWidth <= 540) {
-			if (imgSize !== "0480") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "0480"); }); }
+			if (imgSize !== "0480") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "0480" ); }); }
 		} else if (screenWidth >= 540.01 && screenWidth <= 620) {
-			if (imgSize !== "0600") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "0600"); }); }
+			if (imgSize !== "0600") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "0600" ); }); }
 		} else if (screenWidth >= 620.01 && screenWidth <= 660) {
-			if (imgSize !== "0640") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "0640"); }); }
+			if (imgSize !== "0640") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "0640" ); }); }
 		} else if (screenWidth >= 660.01 && screenWidth <= 724) {
-			if (imgSize !== "0680") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "0680"); }); }
+			if (imgSize !== "0680") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "0680" ); }); }
 		} else if (screenWidth >= 724.01 && screenWidth <= 784) {
-			if (imgSize !== "0768") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "0768"); }); }
+			if (imgSize !== "0768") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "0768" ); }); }
 		} else if (screenWidth >= 784.01 && screenWidth <= 880) {
-			if (imgSize !== "0800") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "0800"); }); }
+			if (imgSize !== "0800") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "0800" ); }); }
 		} else if (screenWidth >= 880.01 && screenWidth <= 979) {
-			if (imgSize !== "0960") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "0960"); }); }
+			if (imgSize !== "0960") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "0960" ); }); }
 		} else if (screenWidth >= 979.01 && screenWidth <= 1011) {
-			if (imgSize !== "0998") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "0998"); }); }
+			if (imgSize !== "0998") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "0998" ); }); }
 		} else if (screenWidth >= 1011.01 && screenWidth <= 1052) {
-			if (imgSize !== "1024") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "1024"); }); }
+			if (imgSize !== "1024") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "1024" ); }); }
 		} else if (screenWidth >= 1052.01 && screenWidth <= 1108.5) {
-			if (imgSize !== "1080") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "1080"); }); }
+			if (imgSize !== "1080") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "1080" ); }); }
 		} else if (screenWidth >= 1108.51 && screenWidth <= 1208.5) {
-			if (imgSize !== "1137") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "1137"); }); }
+			if (imgSize !== "1137") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "1137" ); }); }
 		} else if (screenWidth > 1208.51) {
-			if (imgSize !== "1280") { $slidingImage.attr('src', function (index, attr) { return attr.replace(imgSize, "1280"); }); }
+			if (imgSize !== "1280") { $slidingImage.attr( 'src', function(index, attr) { return attr.replace( imgSize, "1280" ); }); }
 		}
 	}
 
@@ -79,11 +79,7 @@ $( document ).on( "pagecreate", "#home", function () {
 	updateSlidingImagePath();
 
 	function rollDayon() {
-		/*$( "#homeBack .homebackground" ).first().appendTo( '.homeBack' ).fadeOut( 2000 );
-		$( ".captionWrap .slideImageCaption" ).first().appendTo( '.captionWrap' ).fadeOut( 2000 );
-		$( "#homeBack .homebackground" ).first().fadeIn( 2000 );
-		$( ".captionWrap .slideImageCaption" ).first().fadeIn( 2000 );
-		*/
+
 		$( "#homeBack" ).find( ".homebackground" ).first().appendTo( '.homeBack' ).fadeOut( 2000 );
 		$( ".captionWrap" ).find( ".slideImageCaption" ).first().appendTo( '.captionWrap' ).fadeOut( 2000 );
 		$( "#homeBack" ).find( ".homebackground" ).first().fadeIn( 2000 );
@@ -105,21 +101,18 @@ $( document ).on( "pagecreate", "#home", function () {
 	//Reserve now Click handling from home
 	$( "#homeReserveNow" ).on( "click", function ( event ) {
 
-		event.preventDefault();
 		localStorage.AngNagTawagNiRoomPage = this.id;
 	});
 
 	//Show videos Click handling from home
 	$( ".homevideo" ).on( "click", function ( event ) {
 
-		event.preventDefault();
 		localStorage.AngNagTawagNiImages = "homevideo";
 	});
 
 	//View more guest comments Click handling from home
 	$( "#homeGotoGuestComments" ).on( "click", function ( event ) {
 
-		event.preventDefault();
 		localStorage.AngNagTawagNiContactPage = this.id;
 	});
 	// END - View more guest comments Click handling from home
@@ -131,20 +124,7 @@ $( document ).on( "pagecreate", "#home", function () {
 		localStorage.AngNagTawagNiDiningPage = this.id;
 	});
 	// END - View more guest comments Click handling from home	
-/*
-	// Hide and show Main page menu. The listview transparent one. :)
-	$("#HomeMenuList").on("click", function () {
-		if ($("#homeMenu").is(":visible")) {
-			$("#homeMenu").hide(500);
-			$(".homeMain").css("margin-top", "10px");		//Change top border		
-		} else {
-			$("#homeMenu").show(500);
-			$(".homeMain").css("margin-top", "78px");		//Back to original
 
-		}
-	});
-	// END - Hide and show Main page menu
-*/
 	//sliding home page selected comments
 	var selectedComments = $( ".theComment" ),
 		commentsCnt = selectedComments.length,
@@ -161,8 +141,7 @@ $( document ).on( "pagecreate", "#home", function () {
 
 	getHtmlData( "indexsidebar.html" ).then( function( indexsidebarHtml ) {
 
-		//$( ".homesidebar" ).html( indexsidebarHtml ).trigger( "create" );
-		$( ".homesidebar" ).html( indexsidebarHtml ).trigger( "create" );
+		$( ".homesidebar" ).prepend( indexsidebarHtml ).trigger( "create" );
 	});
 });
 
