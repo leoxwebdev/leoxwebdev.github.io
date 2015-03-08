@@ -1881,7 +1881,7 @@ h1.pbayheadlogo{
 		border: 1px solid teal;
 	}
 	#rmDiscountRates .ui-collapsible-content{
-		background: transparent;
+		background: rgb(253, 248, 230);
 		padding: 8px;
 		/*border: 1px solid teal*/
 		border: none;
