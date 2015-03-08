@@ -1087,6 +1087,7 @@ li{
 	.O_YourAreHere label{
 		font: bold 12px Arial;
 		color: rgb(1,75,66);
+		font-style: italic !important;
 	}
 	.L_YourAreHere span.arrowleo,
 	.E_YourAreHere span.arrowleo,
@@ -1483,9 +1484,9 @@ h1.pbayheadlogo{
 	padding: 3px 5px 5px 5px;
 	margin-bottom: 35px;
 	/*border-radius: 3px;*/
-	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 5px 5px 3px 0px rgba(0,75,66,0.50);
-	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 5px 5px 3px 0px rgba(0,75,66,0.50);
-	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 5px 5px 3px 0px rgba(0,75,66,0.50);
+	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 5px 5px 3px 0px rgba(0,75,66,0.50);
+	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 5px 5px 3px 0px rgba(0,75,66,0.50);
+	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 5px 5px 3px 0px rgba(0,75,66,0.50);
 	transition: box-shadow 0.2s ease-out;
 
 
@@ -2016,9 +2017,9 @@ h1.pbayheadlogo{
 	background-color: #fff;	
 	border-radius: 3px;
 	padding-top: 5px;
-	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
-	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
-	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);	
+	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
+	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
+	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);	
 	transition: box-shadow 0.5s ease-out;
 	}
 	.DiningCulinarySuperlativesIMG p{
@@ -2035,9 +2036,9 @@ h1.pbayheadlogo{
 		/*-moz-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
 		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
 		box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);		*/
-		-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
-		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
-		box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);	
+		-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.5);	
 	}	
 
 .DiningRestaurantsIMG{
@@ -2048,9 +2049,9 @@ h1.pbayheadlogo{
 	vertical-align:top;
 	margin-bottom:15px;
 	padding: 5px;
-	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
-	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
-	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);	
+	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
+	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
+	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);	
 	transition: box-shadow 0.5s ease-out;
 	/*transition: border 0.5s ease-out;*/
 	}
@@ -2087,9 +2088,9 @@ h1.pbayheadlogo{
 		/*-moz-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
 		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
 		box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);		*/
-		-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
-		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
-		box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.5);
 		
 	}
 		
@@ -2118,7 +2119,8 @@ h1.pbayheadlogo{
 		}
 
 		#diningCulinarySuper .ui-collapsible-content{
-			background: transparent;
+			/*background: transparent;*/
+			background-color: rgb(253, 248, 230);
 			padding: 8px;
 			/*border: 1px solid teal*/
 			border: none;
@@ -2164,9 +2166,9 @@ h1.pbayheadlogo{
 	margin-bottom: 38px;
 	margin-top: 20px;
 	border-radius: 3px;
-	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
-	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
-	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
+	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
+	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
+	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
 	transition: box-shadow 0.2s ease-out;
 	}
 	.themeddinnerbox h4{
@@ -2183,9 +2185,9 @@ h1.pbayheadlogo{
 		/*-moz-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
 		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
 		box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);		*/
-		-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
-		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
-		box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.5);
+		box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.5);
 	}	
 
 /* ---------------------------- Tumoy sa DINING ---------------------------------- */
@@ -2274,7 +2276,7 @@ h1.pbayheadlogo{
 
 		#spaTreatMents .ui-collapsible-content,
 		#spaLovingLife .ui-collapsible-content{
-			background: transparent;
+			background: rgb(253, 248, 230);
 			padding: 8px;
 			/*border: 1px solid teal*/
 			border: none;
@@ -2437,7 +2439,7 @@ h1.pbayheadlogo{
 
 p.angComment{
 	background-color: rgb(258, 238, 218);
-	border-radius: 5px;
+	border-radius: 15px;
 	box-shadow: 0 0 6px #B2B2B2;
 	display: inline-block;
 	padding: 10px 25px;
