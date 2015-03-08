@@ -38,8 +38,8 @@ li{
 	margin:0 auto;
 	max-width:1300px;	
 	background-color: #fff;
-	/*box-shadow: inset rgba(1,75,66,1) 0 0 5px;*/
-	box-shadow: inset rgba(0,0,0,0.5) 0 0 10px;
+	box-shadow: inset rgba(1,75,66,1) 0 0 5px;
+	/*box-shadow: inset rgba(0,0,0,0.5) 0 0 10px;*/
 	}
 	.ui-content p{
 		font-size: 14px;
@@ -54,7 +54,9 @@ li{
 	/*background: url(pbayImages/bg_big.gif) #ececec;*/
 	/*background: url(pbayImages/bg_white.jpg) #ececec;*/
 	/*background: url(pbayImages/bg_light_gray.jpg) #ececec;*/
-	background-color: rgb(258, 238, 218);
+	
+	/*background-color: rgb(253, 248, 230);*/
+	
 	/*background-color: rgb(248,213,166);*/
 	/*background-color: rgb(255,214,159);*/
 
@@ -1202,22 +1204,23 @@ li{
 .leoxSudlanan{
 	margin: 0 auto;
 	max-width: 100%;
-	background-color: #fff;
+	/*background-color: #fff;*/
+	background-color: rgb(253, 248, 230);
 	vertical-align: top;
 	text-align: left;
 	padding: 10px 5px 5px 5px;
 	margin-bottom: 35px;
 	border-radius: 3px;
-	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 5px 5px 3px 0px rgba(0,75,66,0.10);
-	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 5px 5px 3px 0px rgba(0,75,66,0.10);
-	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 5px 5px 3px 0px rgba(0,75,66,0.10);
+	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 5px 5px 3px 0px rgba(0,75,66,0.10);
+	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 5px 5px 3px 0px rgba(0,75,66,0.10);
+	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 5px 5px 3px 0px rgba(0,75,66,0.10);
 	transition: box-shadow 0.2s ease-out;
 	}
 	.leoxSudlanan:hover{
 		/*box-shadow: inset rgba(0,128,128,0.8) 0 0 5px;*/
-		-moz-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
-		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
-		box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
+		-moz-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.3), 5px 5px 3px 0px rgba(0,128,128,0.20);
+		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.3), 5px 5px 3px 0px rgba(0,128,128,0.20);
+		box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.3), 5px 5px 3px 0px rgba(0,128,128,0.20);
 	}
 	
 h1.pbayheadlogo{
@@ -1309,8 +1312,10 @@ h1.pbayheadlogo{
 	box-shadow: 1px -3px 3px 1px rgba(0,128,128,0.10), 1px 3px 3px 1px rgba(0,128,128,0.15);
 	padding: 0 8px 8px 8px;
 	background-color: #fff;
-	background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.00, #e8e8e8), color-stop(0.25, #fff), color-stop(0.50, #fff), color-stop(0.80, #fff), color-stop(1.00, #e8e8e8) );
-	background-image: -moz-linear-gradient( center bottom, #ebebeb 0%, #fff 20%, #fff 50%, #fff 80%, #ebebeb 100% );
+	/*background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.00, #e8e8e8), color-stop(0.25, #fff), color-stop(0.50, #fff), color-stop(0.80, #fff), color-stop(1.00, #e8e8e8) );*/
+	/*background-image: -moz-linear-gradient( center bottom, #ebebeb 0%, #fff 20%, #fff 50%, #fff 80%, #ebebeb 100% );*/
+	background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.00, rgb(253, 248, 230)), color-stop(0.25, #fff), color-stop(0.50, #fff), color-stop(0.80, #fff), color-stop(1.00, rgb(253, 248, 230)) );*/
+	background-image: -moz-linear-gradient( center bottom, rgb(253, 248, 230) 0%, #fff 20%, #fff 50%, #fff 80%, rgb(253, 248, 230) 100% );
 	border: 1px solid #fff;
 	clear: right;
 	-moz-transition: -moz-box-shadow 0.2s ease-out;
@@ -1471,7 +1476,8 @@ h1.pbayheadlogo{
 	/*margin-top:3px;*/
 	margin-bottom: 15px;
 	max-width: 100%;
-	background-color: #fff;
+	/*background-color: #fff;*/
+	background-color: rgb(253, 248, 230);
 	/*vertical-align: top;*/
 	text-align: left;
 	padding: 3px 5px 5px 5px;
@@ -1511,7 +1517,8 @@ h1.pbayheadlogo{
 	padding-left:10px;}
 
 .HomePlan{
-	background-color: #fff;
+	/*background-color: #fff;*/
+	background-color: rgb(253, 248, 230);
 	/*margin-top: 18px;*/
 	/*box-shadow: inset rgba(1,75,66,1) 0 0 5px;*/
 	}
@@ -1593,7 +1600,8 @@ h1.pbayheadlogo{
 .homePlanABCBody{
 	margin: 0 auto;
 	max-width: 100%;
-	background-color: #fff;
+	/*background-color: #fff;*/
+	background-color: rgb(253, 248, 230);
 	vertical-align: top;
 	text-align: left;
 	padding: 10px 5px 5px 5px;
@@ -1605,9 +1613,10 @@ h1.pbayheadlogo{
 	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.10);
 	box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.10);*/
 	transition: box-shadow 0.2s ease-out;	
-	
+	/*
 	background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.00, #e8e8e8), color-stop(0.25, #fff), color-stop(0.50, #fff), color-stop(0.80, #fff) );
 	background-image: -moz-linear-gradient( center bottom, #ebebeb 0%, #fff 20%, #fff 50%, #fff 80%);
+	*/
 }
 
 .testimonial-bubble {
@@ -1708,7 +1717,8 @@ h1.pbayheadlogo{
 .divRoomCategory{
 	margin: 0 auto;
 	max-width: 570px;
-	background-color: #fff;
+	/*background-color: #fff;*/
+	background-color: rgb(253, 248, 230);
 	vertical-align: top;
 	text-align: left;
 	padding: 10px;
@@ -1718,11 +1728,17 @@ h1.pbayheadlogo{
 	/*-moz-box-shadow: 0 -1px 3px 0 rgba(0,128,128,0.08), 5px 5px 3px 0 rgba(0,128,128,0.10);
 	-webkit-box-shadow: 0 -1px 3px 0 rgba(0,128,128,0.08), 5px 5px 3px 0 rgba(0,128,128,0.10);
 	box-shadow: 0 -1px 3px 0 rgba(0,128,128,0.08), 5px 5px 3px 0 rgba(0,128,128,0.10);*/
-	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
-	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);
-	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.08), 8px 12px 15px 0px rgba(0,75,66,0.35);	
+	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
+	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
+	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);	
 	transition: box-shadow 0.2s ease-out;
 	}
+		.divRoomCategory:hover{
+		/*box-shadow: inset rgba(0,128,128,1) 0 0 5px;*/
+		-moz-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.3), 5px 5px 3px 0px rgba(0,128,128,0.20);
+		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.3), 5px 5px 3px 0px rgba(0,128,128,0.20);
+		box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.3), 5px 5px 3px 0px rgba(0,128,128,0.20);		
+		}
 	.divRoomCategory hr{
 		border-color: rgba(255,255,204,0.2);
 	}
@@ -1772,12 +1788,6 @@ h1.pbayheadlogo{
 	}
 	.divRoomCategory img.rmDetails{
 		cursor: pointer;
-	}
-	.divRoomCategory:hover{
-		/*box-shadow: inset rgba(0,128,128,1) 0 0 5px;*/
-		-moz-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
-		-webkit-box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);
-		box-shadow: 0px -1px 3px 0px rgba(0,128,128,0.08), 5px 5px 3px 0px rgba(0,128,128,0.20);		
 	}
 
 .roomDetailsTbl{
