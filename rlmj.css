@@ -1210,7 +1210,7 @@ li{
 	vertical-align: top;
 	text-align: left;
 	padding: 10px 5px 5px 5px;
-	margin-bottom: 35px;
+	margin-bottom: 40px;
 	border-radius: 3px;
 	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 5px 5px 3px 0px rgba(0,75,66,0.10);
 	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 5px 5px 3px 0px rgba(0,75,66,0.10);
@@ -1594,6 +1594,7 @@ h1.pbayheadlogo{
 	padding-top: 5px;
 	padding-bottom: 5px;
 	/*border-radius: 1px;*/
+	margin-top: 40px;
 	margin-bottom: 0;
 	/*box-shadow: inset rgba(1,75,66,1) 0 0 5px;*/
 }
@@ -1723,7 +1724,7 @@ h1.pbayheadlogo{
 	vertical-align: top;
 	text-align: left;
 	padding: 10px;
-	margin-bottom: 38px;
+	margin-bottom: 40px;
 	margin-top: 20px;
 	border-radius: 3px;
 	/*-moz-box-shadow: 0 -1px 3px 0 rgba(0,128,128,0.08), 5px 5px 3px 0 rgba(0,128,128,0.10);
@@ -2016,7 +2017,7 @@ h1.pbayheadlogo{
 	/*margin-top: 10px;*/
 	background-color: #fff;	
 	border-radius: 3px;
-	padding-top: 5px;
+	padding-top: 15px;
 	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
 	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
 	box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);	
@@ -2503,9 +2504,15 @@ p.angComment::before {
 	font-weight:bold;
 }
 
-
+#contact .ui-listview{
+	box-shadow: none;
+}
 #contact .ui-listview li{
 	border-color:white;
+	background-color: rgb(253, 248, 230);
+	border-color: silver;
+	border-left: none;
+	border-right: none;
 }
 #contact .ui-collapsible{
 	border-radius:3px;
@@ -2525,7 +2532,8 @@ p.angComment::before {
 	}
 
 	#contact .ui-collapsible-content{
-		background: transparent;
+		/*background: transparent;*/
+		background-color: rgb(253, 248, 230);
 		padding: 8px;
 		/*border: 1px solid teal*/
 		border: none;
