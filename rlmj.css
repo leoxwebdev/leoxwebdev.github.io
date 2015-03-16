@@ -22,9 +22,9 @@ li{
 	}
 	.ui-page .ui-li-divider{
 		background: rgba(0,128,128,0.1);/*rgba(111,172,104,.2);*/
-		font-weight:bold;
-		text-align:center;
-		padding:3px;
+		font-weight: bold;
+		text-align: left;
+		padding: 3px 15px;
 		color: rgb(1,75,66);
 	}
 
@@ -1796,7 +1796,8 @@ h1.pbayheadlogo{
 	}
 
 .roomDetailsTbl{
-	margin:0 auto;
+	/*margin:0 auto;*/
+	margin-left:10px;
 	max-width:550px;
 	border-width: 1px 1px 1px 1px;
 	border-spacing: 0;
@@ -2169,6 +2170,7 @@ h1.pbayheadlogo{
 	padding: 10px;
 	margin-bottom: 38px;
 	margin-top: 20px;
+	margin-left: 15px;
 	border-radius: 3px;
 	-moz-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
 	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
