@@ -2714,6 +2714,9 @@ p.angComment::before {
 	border: none;
 }
 
+#resAllRooms .ui-popup.ui-content{
+	padding-bottom: 0;
+}
 .resBookNowAvail{
 	margin:0 auto;
 	border-width: 0 0 0 0;
@@ -2929,6 +2932,9 @@ p.angComment::before {
 				text-align:left;
 			}
 
+.resFreeTreats .ui-radio input{
+	margin-left: 10px;
+}
 .resComputations{
 	margin:0 auto;
 	border-width: 1px 1px 1px 1px;
