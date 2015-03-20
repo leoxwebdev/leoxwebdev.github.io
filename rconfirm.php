@@ -43,7 +43,7 @@
 					<a href="http://plantationbay.com/leox/activities.html" data-ajax="false" data-role="button">ACTIVITIES</a>
 					<a href="http://plantationbay.com/leox/images.html" data-ajax="false" data-role="button">IMAGES</a>
 					<a href="http://plantationbay.com/leox/contact.html" data-ajax="false" data-role="button">CONTACT US</a>
-					<a href="myreservation.html" data-ajax="false" data-role="button">MY RESERVATION</a>
+					<a href="https://plantationbay.com/leox/myreservation.html" data-ajax="false" data-role="button">MY RESERVATION</a>
 				</nav>
 			</section>
 		</div>
@@ -91,7 +91,7 @@
 			<a href="http://plantationbay.com/english/activities.html" data-ajax="false" data-role="button">ACTIVITIES</a>	
 			<a href="http://plantationbay.com/english/photogallery.html" data-ajax="false" data-role="button">GALLERY</a>	
 			<a href="http://plantationbay.com/english/contact.html" data-ajax="false" data-role="button">CONTACT US</a>
-			<a href="myreservation.html" data-ajax="false" data-role="button">MY RESERVATION</a>
+			<a href="https://plantationbay.com/leox/myreservation.html" data-ajax="false" data-role="button">MY RESERVATION</a>
 		</div>	
 		<div class="CopyRight">
 			&copy;2014 <a href="http://plantationbay.com/english/index.html">Plantation Bay Resort and Spa</a>. All rights reserved.
@@ -112,7 +112,7 @@
 		<li><a href="http://plantationbay.com/english/activities.html" data-ajax="false" data-transition="slide" data-direction="forward">ACTIVITIES</a></li>
 		<li><a href="http://plantationbay.com/english/photogallery.html" data-ajax="false" data-transition="slide" data-direction="forward">PHOTO GALLERY</a></li>
 		<li><a href="http://plantationbay.com/english/contact.html" data-ajax="false" data-transition="slide" data-direction="forward">CONTACT US</a></li>
-		<li><a href="myreservation.html" data-ajax="false" data-transition="slide" data-direction="forward">MY RESERVATION</a></li>
+		<li><a href="https://plantationbay.com/leox/myreservation.html" data-ajax="false" data-transition="slide" data-direction="forward">MY RESERVATION</a></li>
 		<li><a href="#" data-rel="close" data-icon="delete">HIDE/CLOSE</a></li>
 		<!--<li><a href="directory.html"  data-ajax="false" >DIRECTORY OF SERVICES</a></li>-->
 	</ul>
