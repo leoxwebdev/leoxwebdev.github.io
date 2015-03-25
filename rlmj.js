@@ -681,14 +681,31 @@ $( document ).on( "pagecreate", "#Activities", function () {
 	$activities_mobile_menu.on( "change", function () { displayActivitiesItem( this.value ); } );
 
 	//for Bird watching
+	$( "#imgGagmayBirds" ).on( "click", "img", function( event ){
+		event.preventDefault();
+		
+		var imgUrl = $( this ).attr( "bigPic" ),
+			$elemBigImage = $( "#imgPop" ).find( "img" );
+
+		function showBigBirdNa(){
+			$elemBigImage.attr( "src", imgUrl );
+			$( "#imgPop" ).popup( "open" );
+		}
+
+		$.loadImage( imgUrl ).done( showBigBirdNa );
+
+	});
+	/*
 	$( ".showBigBird" ).on( "click", function(){
 		var imgUrl = $( this ).find( "img" ).attr( "bigPic" ),
 			$elemBigImage = $( "#imgPop" ).find( "img" );
-			
+		
+		$elemBigImage.attr( "src", " ");
+
 		$.loadImage( imgUrl ).done(
 			$elemBigImage.attr( "src", imgUrl )
 		);
-	});
+	});*/
 });
 
 // contact us
