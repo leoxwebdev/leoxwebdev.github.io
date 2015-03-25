@@ -682,7 +682,12 @@ $( document ).on( "pagecreate", "#Activities", function () {
 
 	//for Bird watching
 	$( ".showBigBird" ).on( "click", function(){
-		$( "#imgPop" ).find( "img" ).attr( "src", $( this ).find( "img" ).attr( "bigPic" ) );
+		var imgUrl = $( this ).find( "img" ).attr( "bigPic" ),
+			$elemBigImage = $( "#imgPop" ).find( "img" );
+			
+		$.loadImage( imgUrl ).done(
+			$elemBigImage.attr( "src", imgUrl )
+		);
 	});
 });
 
