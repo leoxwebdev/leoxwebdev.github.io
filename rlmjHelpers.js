@@ -66,7 +66,7 @@ $.createCache = function( requestFunction ){
 	};
 };
 
-//Make sure the same image is not loaded multiple times function, using generic asyncronous caache func. :)
+//Make sure the same image is not loaded once only, using generic asyncronous caache func. :)
 $.loadImage = $.createCache(function( defer, url ){
 	var image = new Image();
 	function cleanUp() { 

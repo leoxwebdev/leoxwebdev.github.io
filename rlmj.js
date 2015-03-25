@@ -625,7 +625,7 @@ $( document ).on( "pagecreate", "#Activities", function () {
 	});
 		
 	function displayActivitiesItem( pActivitiesItem ){
-
+		console.log( pActivitiesItem );
 		$AdtoSaTaas.animate( { scrollTop: 0 } );
 		if ( pActivitiesItem === "TOURSandEXCURSIONS" ) {
 			if ( $actTourExcurs.is( ":visible" ) == false ){
@@ -660,13 +660,13 @@ $( document ).on( "pagecreate", "#Activities", function () {
 				$actIndorActiv.slideToggle( 1500 );
 			}	
 		} else if ( pActivitiesItem === "GOLFANDTENNIS" ) {
-			if ( $actGolfTennis.is( ":visible" ) == false ){
+			if ( $actGolfTennis.is( ":visible" ) == false ) {
 				$actTourExcurs.hide();
 				$actDiveShop.hide();
 				$actFunInSun.hide();
 				$actIndorActiv.hide();
 				$actGolfTennis.slideToggle( 1500 );
-			}	
+			}
 		}
 		$( "select.activities_mobile_menu" ).val( pActivitiesItem ).selectmenu( "refresh" );
 		$( "select.activities_mobile_menu" ).val( pActivitiesItem ).selectmenu( "refresh" );
@@ -680,7 +680,7 @@ $( document ).on( "pagecreate", "#Activities", function () {
 	$golfandtennisPage.on( "click", function () { displayActivitiesItem( "GOLFANDTENNIS" ); } );
 	$activities_mobile_menu.on( "change", function () { displayActivitiesItem( this.value ); } );
 
-	//for Bird watching
+	//for Bird watching small image click handler.
 	$( "#imgGagmayBirds" ).on( "click", "img", function( event ){
 		event.preventDefault();
 		
@@ -695,17 +695,6 @@ $( document ).on( "pagecreate", "#Activities", function () {
 		$.loadImage( imgUrl ).done( showBigBirdNa );
 
 	});
-	/*
-	$( ".showBigBird" ).on( "click", function(){
-		var imgUrl = $( this ).find( "img" ).attr( "bigPic" ),
-			$elemBigImage = $( "#imgPop" ).find( "img" );
-		
-		$elemBigImage.attr( "src", " ");
-
-		$.loadImage( imgUrl ).done(
-			$elemBigImage.attr( "src", imgUrl )
-		);
-	});*/
 });
 
 // contact us
