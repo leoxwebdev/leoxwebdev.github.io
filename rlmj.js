@@ -679,6 +679,11 @@ $( document ).on( "pagecreate", "#Activities", function () {
 	$indooractivitiesPage.on( "click", function () { displayActivitiesItem( "INDOORACTIVITIES" ); } );
 	$golfandtennisPage.on( "click", function () { displayActivitiesItem( "GOLFANDTENNIS" ); } );
 	$activities_mobile_menu.on( "change", function () { displayActivitiesItem( this.value ); } );
+
+	//for Bird watching
+	$( ".showBigBird" ).on( "click", function(){
+		$( "#imgPop" ).find( "img" ).attr( "src", $( this ).find( "img" ).attr( "bigPic" ) );
+	});
 });
 
 // contact us
