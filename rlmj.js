@@ -625,8 +625,9 @@ $( document ).on( "pagecreate", "#Activities", function () {
 	});
 		
 	function displayActivitiesItem( pActivitiesItem ){
-		console.log( pActivitiesItem );
+
 		$AdtoSaTaas.animate( { scrollTop: 0 } );
+
 		if ( pActivitiesItem === "TOURSandEXCURSIONS" ) {
 			if ( $actTourExcurs.is( ":visible" ) == false ){
 				$actDiveShop.hide();
