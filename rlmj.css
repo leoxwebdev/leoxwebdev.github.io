@@ -2939,7 +2939,7 @@ p.angComment::before {
 			}
 
 .resFreeTreats .ui-radio input{
-	margin-left: 10px;
+	margin-left: -10px;
 }
 .resComputations{
 	margin:0 auto;
