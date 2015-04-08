@@ -560,6 +560,7 @@ li{
 	.top-menus { display:none; }
 	.L_YourAreHere{margin-bottom:10px;}
 	.popClickToDaku{display: none;}
+	div.callout{ margin-top: 25px; }
 }
 
 @media only screen and (min-width: 300px){
@@ -590,6 +591,7 @@ li{
 	.top-menus { display:none; }
 	.L_YourAreHere{margin-bottom:10px;}
 	.popClickToDaku{display: none;}
+	div.callout{ margin-top: 25px; }
 }
 
 @media only screen and (min-width: 348px){
@@ -622,6 +624,7 @@ li{
 	.top-menus { display:none; }
 	.L_YourAreHere{margin-bottom:10px;}
 	.popClickToDaku{display: none;}
+	div.callout{ margin-top: 25px; }
 }
 
 @media only screen and (min-width: 370px){
@@ -655,6 +658,7 @@ li{
 	.top-menus { display:none; }
 	.L_YourAreHere{margin-bottom:10px;}
 	.popClickToDaku{display: none;}
+	div.callout{ margin-top: 25px; }
 }
 @media only screen and (min-width: 387px){
 	.pbayslogan{
@@ -685,6 +689,7 @@ li{
 	.top-menus { display:none; }
 	.L_YourAreHere{margin-bottom:10px;}
 	.popClickToDaku{display: none;}
+	div.callout{ margin-top: 25px; }
 }
 @media only screen and (min-width: 438px){
 	
@@ -707,6 +712,7 @@ li{
 	.top-menus { display:none; }
 	.L_YourAreHere{margin-bottom:10px;}
 	.popClickToDaku{display: none;}
+	div.callout{ margin-top: 25px; }
 }
 @media only screen and (min-width: 448px){
 /*
@@ -736,6 +742,7 @@ li{
 	.top-menus { display:none; }
 	.L_YourAreHere{margin-bottom:10px;}
 	.popClickToDaku{display: none;}
+	div.callout{ margin-top: 25px; }
 }
 @media only screen and (min-width: 508px){
 /*
@@ -764,6 +771,7 @@ li{
 	.top-menus { display:none; }
 	.L_YourAreHere{margin-bottom:10px;}
 	.popClickToDaku{display: none;}
+	div.callout{ margin-top: 25px; }
 }
 
 @media only screen and (min-width: 514px){
@@ -802,6 +810,7 @@ li{
 	.top-menus { display:none; }
 	.L_YourAreHere{margin-bottom:10px; }
 	.popClickToDaku{display: none;}
+	div.callout{ margin-top: 25px; }
 }
 
 @media only screen and (min-width: 531px){
@@ -832,6 +841,7 @@ li{
 	.top-menus{ display:none; }
 	.L_YourAreHere{margin-bottom:10px;}
 	.popClickToDaku{display: none;}
+	div.callout{ margin-top: 25px; }
 }
 @media only screen and (min-width: 641px){
 	.langOptions li:first-child{ display: inline-block; }
@@ -854,6 +864,7 @@ li{
 	.panelMenu{ margin-top:112px; }
 	.L_YourAreHere{ margin-bottom:10px;}
 	.popClickToDaku{display: none;}
+	div.callout{ margin-top: 25px; }
 }
 
 @media only screen and (min-width: 740px){
@@ -894,6 +905,8 @@ li{
 		display: inline;
 		margin-top:-50px;
 	}
+	div.callout{ margin-top: 3px; }
+
 }
 @media only screen and (min-width: 840px){
 	.langOptions li:first-child{ display: inline-block; }
@@ -935,6 +948,7 @@ li{
 		display: inline;
 		margin-top:-50px;
 	}
+	div.callout{ margin-top: 3px; }
 }
 
 @media only screen and (min-width: 967px){
@@ -943,7 +957,9 @@ li{
 		margin-left:208px;
 		margin-top:8px;
 		width:500px;
-	}			
+	}
+	div.callout{ margin-top: 3px; }
+
 }
 @media only screen and (min-width: 984px){
 	.pbayslogan{
@@ -951,7 +967,9 @@ li{
 		margin-left:208px;
 		margin-top:30px;
 		width:500px;
-	}			
+	}
+	div.callout{ margin-top: 3px; }
+
 }
 /*@media only screen and (min-width: 981px){*/
 /*
@@ -1035,6 +1053,7 @@ li{
 		display: inline;
 		margin-top:-65px;
 	}
+	div.callout{ margin-top: 3px; }
 }
 @media only screen and (min-width: 1440px){
 	.langOptions li:first-child{ display: inline-block; }
@@ -1052,7 +1071,9 @@ li{
 		display: inline;
 		margin-top:-65px;
 	}
+	div.callout{ margin-top: 3px; }
 }
+
 .YourAreHereUbos{
 	width:100%;
 	float: right;
