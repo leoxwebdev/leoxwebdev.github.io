@@ -885,12 +885,12 @@ li{
 			margin-right:10px;
 		}
 	.top-menus { display:none; }
-	.homeMain .homeArticle{
+	/*.homeMain .homeArticle{
 		float:left;
 		margin: 0px auto 0px 10px;
 		padding-right:10px;
 		width: 67.66666666667%;
-		}
+		}*/
 	.homeMain .homesidebar{
 		float:right;
 		margin: 0px 10px 0px auto;
@@ -928,12 +928,12 @@ li{
 		margin-top:20px;
 		margin-right:10px;
 	}
-	.homeMain .homeArticle{
+	/*.homeMain .homeArticle{
 		float:left;
 		margin: 0px auto 0px 10px;
 		padding-right:10px;
 		width: 67.66666666667%;
-		}
+		}*/
 	.homeMain .homesidebar{
 		float:right;
 		margin: 0px 10px 0px auto;
@@ -1031,13 +1031,13 @@ li{
 		margin-top:8px;
 		margin-right:10px;
 	}
-
+	/*
 	.homeMain .homeArticle{
 		float:left;
 		margin: 0px auto 0px 10px;
 		padding-right:10px;
 		width: 72.66666666667%;
-		}
+		}*/
 	.homeMain .homesidebar{
 		float:right;
 		margin: 0px 10px 0px auto;
@@ -1342,7 +1342,9 @@ h1.pbayheadlogo{
 		}
 
 .homeArticle{
-	clear: right;
+	/*clear: right;*/
+	margin: 0 auto;
+	max-width: 800px;
 	}
 	.homeArticle .ui-body{
 		-webkit-border-bottom-left-radius: 1px;
