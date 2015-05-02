@@ -1229,7 +1229,8 @@ li{
 }
 .leoxSudlanan{
 	margin: 0 auto;
-	max-width: 100%;
+	/*max-width: 100%;*/
+	max-width: 800px;
 	/*background-color: #fff;*/
 	background-color: rgb(253, 248, 230);
 	vertical-align: top;
@@ -2090,7 +2091,7 @@ h1.pbayheadlogo{
 .DiningCulinarySuperlativesIMG{ /* used in Dining CulinarySuperlatives and  Gastronomy */
 	display:inline-block;
 	margin:auto 10px auto;
-	max-width:250px;
+	max-width:233px;
 	vertical-align:top;
 	margin-bottom: 15px;
 	vertical-align: center;
@@ -2126,7 +2127,8 @@ h1.pbayheadlogo{
 	display:inline-block;
 	margin:auto 10px auto;
 	border-radius: 3px;
-	max-width:280px;
+	/*max-width:280px;*/
+	max-width: 233px;
 	vertical-align:top;
 	margin-bottom:15px;
 	padding: 5px;
