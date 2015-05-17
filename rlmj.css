@@ -1245,7 +1245,7 @@ li{
 	-webkit-box-shadow: 1px 1px 1px 1px rgba(0,75,66,0.3);
 	box-shadow: 1px 1px 1px 1px rgba(0,75,66,0.3);
 	transition: box-shadow 0.2s ease-out;
-	/*border: 1px dotted rgba(0,75,66,0.3);*/
+	border-top: 10px solid rgb(1,75,66);
 	}
 	.leoxSudlanan:hover{
 		/*box-shadow: inset rgba(0,128,128,0.8) 0 0 5px;*/
@@ -1518,7 +1518,7 @@ h1.pbayheadlogo{
 		height:100%;
 		width:100%;
 		}
-		.homeBackHead .homeBack{
+		.homeBackHead .homeBack{;
 			height:100%;
 			width:100%;
 			margin-top:2px;
@@ -1528,28 +1528,32 @@ h1.pbayheadlogo{
 				position:absolute;				
 				height:450px;
 				width:100%;
-			}
-			.captionWrap .slideImageCaption{
-				position:absolute;
-				display:none;
-				padding:8px 5px;
-				font-size:20px;
-				font-weight:bold;
-				text-align:center;
-				text-shadow:none;
-				line-height:25px;
-				background-color:rgba(255,255,255,.5);
 			}		
-			.homeBackHead .captionWrap{
+			/*.homeBackHead .captionWrap{*/
+			.captionWrap{
+				position:absolute;
 				margin:0 auto;
-				width:100%;
-				position:relative;				
+				/*width:100%;*/
+				position:relative;			
 				margin-top:-100px;
 				}
-				.homeBackHead .captionWrap p{
+				.captionWrap .slideImageCaption{
+					/*position:absolute;*/
+					display:none;
+					padding:8px 5px;
+					font-size:20px;
+					font-weight:bold;
+					text-align:center;
+					line-height:25px;
+					background-color:rgba(255,255,255,.5);
 					color:rgb(1,75,66);
 					text-shadow: 0.7px 0.7px rgba(255,255,204,0.8);
-				}
+				}	
+				/*.homeBackHead .captionWrap p{
+				.captionWrap p{	
+					color:rgb(1,75,66);
+					text-shadow: 0.7px 0.7px rgba(255,255,204,0.8);
+				}*/
 
 
 .homeMain .discover{
@@ -1814,6 +1818,7 @@ h1.pbayheadlogo{
 	-webkit-box-shadow: 1px 1px 1px 2px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);
 	box-shadow: 1px 1px 1px 2px rgba(0,75,66,0.3), 8px 12px 15px 0px rgba(0,75,66,0.35);	
 	transition: box-shadow 0.2s ease-out;
+	border-top: 10px solid rgb(1,75,66);
 	}
 		.divRoomCategory:hover{
 		/*box-shadow: inset rgba(0,128,128,1) 0 0 5px;*/
