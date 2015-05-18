@@ -1533,12 +1533,12 @@ h1.pbayheadlogo{
 			.captionWrap{
 				position:absolute;
 				margin:0 auto;
-				/*width:100%;*/
+				width:100%;
 				position:relative;			
 				margin-top:-100px;
 				}
 				.captionWrap .slideImageCaption{
-					/*position:absolute;*/
+					position:absolute;
 					display:none;
 					padding:8px 5px;
 					font-size:20px;
