@@ -266,7 +266,7 @@ $( document ).on( "pagecreate", "#rooms", function () {
 				//console.log(this.name);
 				$rmTypId.find( "a.rmDetails" ).html("Hide room details");
 			} else {
-				$rmTypId.find( "a.rmDetails" ).html("Show room details");
+				$rmTypId.find( "a.rmDetails" ).html("Learn more");
 			}
 		});
 	});

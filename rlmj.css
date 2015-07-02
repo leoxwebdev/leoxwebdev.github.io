@@ -1844,11 +1844,14 @@ h1.pbayheadlogo{
 			-moz-box-shadow: none;
 			box-shadow: none;
 		}
-	.divRoomCategory .ui-btn-icon-left:after{
-		background-color: teal;
-		border-radius: 3px;
-		left:0;
+	.divRoomCategory .ui-btn-icon-left{
+		padding-left: 2em;
 	}
+		.divRoomCategory .ui-btn-icon-left:after{
+			background-color: teal;
+			border-radius: 3px;
+			left:0;
+		}
 		
 	.divRoomCategory h4{
 		margin-top:0;
