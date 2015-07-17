@@ -356,7 +356,8 @@ $( document ).on( "pagecreate", "#myreservation", function () {
 			remainingChild = allChild,
 			maxGuests = 0,
 			maxAdult = 0,
-			maxChildren = 0;
+			maxChildren = 0,
+			withWaterEdgeRm;
 
 		for ( var i = 0; i < roomDetailsAll; i = i + 1 ) {
 			// Number of rooms to be reserve
@@ -797,9 +798,14 @@ $( document ).on( "pagecreate", "#myreservation", function () {
 					if ( cntP ){
 						$( "#resGuaranteeP" ).show();
 						cancelNotice = "1";
-					} else if ( ( cntNP + cntBO ) >= 6 ){ //GDR
-						$( "#resGuaranteeGDR" ).show();
-						cancelNotice = "5";
+					} else if ( ( cntNP + cntBO ) >= 6 ){ //GDR	
+						if ( foundSpa ){ //SPA no GDR
+							$( "#resGuaranteeSpa" ).show();
+							cancelNotice = "4";
+						} else {  //GDR
+							$( "#resGuaranteeGDR" ).show();
+							cancelNotice = "5";
+						}
 					} else if ( cntBO ){
 						$( "#resGuaranteeBlackOut" ).show();	
 						cancelNotice = "2";
@@ -825,7 +831,8 @@ $( document ).on( "pagecreate", "#myreservation", function () {
 						bfRmTypeIndex = roomTypes.indexOf( bfRmType ), // get index of room type from roomTypes array
 						bfastAmount = bfastValue * resDetails.resRoomNights * roomDetails[ bfRmTypeIndex ].resRooms,
 						curGrandTotal = parseFloat( $( "#grandTotal" ).html().substring(2).replace(/\,/g,'') ), //existing grand total
-						$naaBfast = $ ( "#hasBfast" );
+						$naaBfast = $ ( "#hasBfast" ),
+						$naaRequiredAmount = $ ( "#requiredAmtTotal" );
 
 					if ( $("#" + BfastchkId ).is( ":checked" ) ) { //add bfast.
 
@@ -854,6 +861,15 @@ $( document ).on( "pagecreate", "#myreservation", function () {
 							$( "#grandTotal" ).html( "$ " + AddComma( ( curGrandTotal + ( bfastAmount * 1.232 ) ).toFixed(2) ) );
 						}
 
+						//Add bfast package amount to required amount, if needed.
+
+						if ( $naaRequiredAmount.length ){
+
+							var curRequiredAmountTotal = parseFloat( $( "#requiredAmtTotal" ).html().substring(2).replace(/\,/g,'') ); //existing Total required amount
+
+							$naaRequiredAmount.html( "$ " + AddComma( ( curRequiredAmountTotal + ( bfastAmount * 1.232 ) ).toFixed(2) ) )					
+						}						
+
 					} else { //remove bfast
 
 						var	oldbfastTotal = parseFloat( $( "#bfastTotal" ).html().substring(2).replace(/\,/g,'') ), // existing bfast total
@@ -874,6 +890,30 @@ $( document ).on( "pagecreate", "#myreservation", function () {
 							$( "#trBfastTaxSC" ).remove();
 							$( "#hasBfast" ).remove();
 						}
+
+						//Remove bfast package amount to required amount, if needed.
+						var $chkresAddVEP = $( "#chkresAddVEP" ),
+							$chkresAddRRP = $( "#chkresAddRRP" ),
+							$chkresAddPAP = $( "#chkresAddPAP" ),
+							$chkresAddCCP = $( "#chkresAddCCP" ),
+							totalAddOnAmountss = 0;
+
+						if ( $chkresAddVEP.is( ":checked" ) ){ totalAddOnAmountss = totalAddOnAmountss + $chkresAddVEP.val(); }
+						if ( $chkresAddRRP.is( ":checked" ) ){ totalAddOnAmountss = totalAddOnAmountss + $chkresAddRRP.val(); }
+						if ( $chkresAddPAP.is( ":checked" ) ){ totalAddOnAmountss = totalAddOnAmountss + $chkresAddPAP.val(); }
+						if ( $chkresAddCCP.is( ":checked" ) ){ totalAddOnAmountss = totalAddOnAmountss + $chkresAddCCP.val(); }
+
+						if ( $naaRequiredAmount.length ){
+
+							var curRequiredAmountTotal = parseFloat( $( "#requiredAmtTotal" ).html().substring(2).replace(/\,/g,'') ), //existing Total required amount
+								newBfastAmount = bfastAmount * 1.232;
+
+							if ( curRequiredAmountTotal > totalAddOnAmountss ) {
+								$naaRequiredAmount.html( "$ " + AddComma( ( curRequiredAmountTotal - newBfastAmount ).toFixed(2) ) );
+							} else {
+								$( "#trRequiredAmnt" ).remove();//remove required amount row
+							}
+						}						
 					}
 				});
 

@@ -185,7 +185,7 @@ for RoomTypeCnt=1 to 11
 		'Deduct from room availability calendar.'
 		datedifference=Datediff("d",resArrivalDate,resDepartureDate)
 		for m=0 to datedifference-1
-			dt=dateadd("d",m,ArrivalDate)
+			dt=dateadd("d",m,resArrivalDate)
 			'select number of reservations per room type per date
 			strSQL = "SELECT RsvnRooms from roomsetcalendar where cdate='"& ConvertDateformat(dt) &"' and rtid='"& RoomTypeId(d) &"'"
 			objCmd.CommandText = strSQL
@@ -193,9 +193,10 @@ for RoomTypeCnt=1 to 11
 						
 			if not objRec.EOF then				
 				rs=Cint(objrec("RsvnRooms"))
-			end if																
-						
-			CheckCalendar "","",dt,RoomTypeId(RoomTypeCnt),rs+RoomTypeShort(RoomTypeCnt)
+			end if
+
+			'CheckCalendar "","",dt,RoomTypeId(RoomTypeCnt),rs+RoomTypeShort(RoomTypeCnt)
+			CheckCalendar "","",dt,RoomTypeId(RoomTypeCnt),RoomTypeShort(RoomTypeCnt)
 		next
 	end if										
 Next

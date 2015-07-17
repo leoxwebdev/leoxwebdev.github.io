@@ -70,29 +70,6 @@ from roomsetcalendar as t1 right join roomtypesetup as t2 on t1.rtid=t2.rtid  an
 <!--Book Now -->
 <div data-role="page" id="booknow">
 	<div data-role="header">	
-		<!--
-		<div class="headerwhole">
-			<h1 class="pbayheadlogo">
-				<img src="http://plantationbay.com/pbaylogo.png" alt="Plantation Bay Resort and Spa" />
-			</h1>
-			<a href="#RESERVATIONpanelMenu" class="MenuPanel ui-btn ui-btn-inline ui-btn-icon-right ui-icon-plus" data-rel="panel">MENU</a>   
-			<section class="top-menus">
-				<nav class="main" role="navigation">
-					<a href="index.html" data-ajax="false" data-role="button">HOME</a>
-					<a href="rooms.html" data-ajax="false" data-role="button">ROOMS</a>
-					<a href="packages.html" data-ajax="false" data-role="button">PACKAGES</a>
-					<a href="dining.html" data-ajax="false" data-role="button">DINING</a>
-					<a href="spa.html" data-ajax="false" data-role="button">SPA</a>
-					<a href="activities.html" data-ajax="false" data-role="button">ACTIVITIES</a>
-					<a href="photogallery.html" data-ajax="false" data-role="button">GALLERY</a>
-					<a href="contact.html" data-ajax="false" data-role="button">CONTACT US</a>
-					<a class="myReservatonTopInMenu" href="myreservation.html" data-ajax="false" data-role="button">MY RESERVATION</a>
-				</nav>
-			</section>
-			<img src="slogan.png" alt="Plantation Bay Slogan" class="pbayslogan" />
-			<a href="myreservation.html" class="myReservationTop" style="color:rgb(1,75,66);" data-ajax="false">My RESERVATION</a>	
-		</div>	
-		-->
 		<div class="headerwhole">
 			<h1 class="pbayheadlogo">
 				<img src="http://plantationbay.com/english/pbayImages/pbaylogo.png" alt="Logo - Plantation Bay Resort and Spa"/>
@@ -200,13 +177,13 @@ from roomsetcalendar as t1 right join roomtypesetup as t2 on t1.rtid=t2.rtid  an
 									<td><a href="#resQVRoomDetailspop" data-rel="popup" data-position-to="window" data-transition="flip"><strong>Quantum Villa </strong><img src="images/info.png" alt="more details" /></a></td>
 									<td></td>
 									<td><select data-mini="true" data-native-menu="true" class="resNumReserveThis" name="numresQV" id="numresQV"><option selected value="0">0</option></select></td>
-									</tr>
+									</tr><!--
 								<tr id="TRresPS" class="bookNowRoomAvail" style="display:none;">
 									<td><a href="#resPSRoomDetailspop" data-rel="popup" data-position-to="window" data-transition="flip"><img style="width:60px;" src="https://online.plantationbay.com/Picture/TPH.jpg" alt="" /></a></td>
 									<td><a href="#resPSRoomDetailspop" data-rel="popup" data-position-to="window" data-transition="flip"><strong>Penthouse Suite </strong><img src="images/info.png" alt="more details" /></a></td>
 									<td></td>
 									<td><select data-mini="true" data-native-menu="true" class="resNumReserveThis" name="numresPS" id="numresPS"><option selected value="0">0</option></select></td>
-									</tr>
+									</tr>-->
 								<tr id="TRresRS" class="bookNowRoomAvail" style="display:none;">
 									<td><a href="#resRSRoomDetailspop" data-rel="popup" data-position-to="window" data-transition="flip"><img style="width:60px;" src="https://online.plantationbay.com/Picture/TRS.jpg" alt="" /></a></td>
 									<td><a href="#resRSRoomDetailspop" data-rel="popup" data-position-to="window" data-transition="flip"><strong>Riverboat Suite  </strong><img src="images/info.png" alt="more details" /></a></td>
@@ -239,13 +216,13 @@ from roomsetcalendar as t1 right join roomtypesetup as t2 on t1.rtid=t2.rtid  an
 								<div class="IpatungaInlineBlock roomAndDetails">			
 									<ul data-role="listview" data-inset="true" data-corners="false">
 										<li data-role="list-divider">Bed Configuration</li>
-										<li>1 king or 2 queen beds</li>			
+										<li>1 king or 2 queen beds</li>
 										<li data-role="list-divider">Recommended Room Capacity</li>
-										<li>2 adults and 2 children 17 years old and below</li>		
+										<li>2 adults</li>
 										<li data-role="list-divider">Maximum Capacity</li>
-										<li>4 persons. 3rd and 4th adult charged at $20++ per person</li>
+										<li>4 adults. 3rd and 4th adult charged at $20++ per person</li>
 										<li data-role="list-divider">Extra Bed</li>
-										<li>''Futon'' mattress is available upon request for rooms with 1 king bed and not with 2 queen beds</li>		
+										<li>''Futon'' mattress is available upon request for rooms with 1 king bed and not with 2 queen beds</li>
 									</ul>
 									<table class="roomDetailsTbl">
 										<tr><td>Non-Peak Rate </td>
@@ -720,8 +697,8 @@ from roomsetcalendar as t1 right join roomtypesetup as t2 on t1.rtid=t2.rtid  an
 					</p>
 				   <p><strong> NON-PEAK PERIODS: </strong>
 				   <br />
-					No Shows or cancellations made less than 48 hours prior to 
-					arrival will be charged with a ONE NIGHT cancellation fee. 
+					Cancellations made 4-7 days prior to arrival will be charged a ONE NIGHT cancellation fee for each room reserved.
+					No shows or cancellations made 3 days prior to arrival will be charged in FULL equivalent to the number of room nights reserved.
 					</p>
 				</div>
 			</div>
@@ -816,7 +793,7 @@ from roomsetcalendar as t1 right join roomtypesetup as t2 on t1.rtid=t2.rtid  an
 			<h3 class="iCenter Tealcolor">Reservation Details</h3>
 			<div class="ui-corner-all custom-corners">
 				<div class="ui-bar ui-bar-a">
-					<h3>Add-on Services to turn a special holiday into and extra special holiday. </h3>
+					<h3>Add-on Services to turn a special holiday into an extra special holiday. </h3>
 				</div>
 				<div class="ui-body ui-body-a">
 					<p class="iCenter">Advance full payment is required with the preferred package/packages.</p>
@@ -865,6 +842,7 @@ from roomsetcalendar as t1 right join roomtypesetup as t2 on t1.rtid=t2.rtid  an
 								<div class="IpatungaInlineBlock iTop">
 									<img class="IpatungaDblock overlay round" src="http://plantationbay.com/wp-content/uploads/2012/08/Vip.jpg" alt="VIP Express Package" title="VIP Express Package" />
 								</div>
+								<p class="iLeft"><strong class="txtDarkGreen">Note:</strong> To ensure airport pick-up, please provide your flight details above. If you do not have the information yet, please send your flight details with your confirmation number as the Subject of your email to rsvns@plantationbay.com at least 48 hours prior to arrival.</p>
 							</div>
 							<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow">Close</a>
 						</div>
@@ -1021,8 +999,8 @@ from roomsetcalendar as t1 right join roomtypesetup as t2 on t1.rtid=t2.rtid  an
 									<td><a href="#RomanticDinner" data-rel="popup" data-position-to="window">Romantic dinner at Palermo Restaurant for 2 persons, worth about P3,000!!! (Please reserve in advance.)</td></tr>
 								<tr><td><input type="radio" name="optTreats" id="optPBayIceCream" value="33"></td>
 									<td><a href="#PBayIceCream" data-rel="popup" data-position-to="window">Unlimited Plantation Bay homemade ice cream for the duration of your stay, worth Thousands of Pesos!!!</td></tr>
-								<tr><td><input type="radio" name="optTreats" id="optFijiGC" value="34"></td>
-									<td><a href="#FijiGC" data-rel="popup" data-position-to="window">Gift certificate worth P3,000 at Fiji Restaurant!!! (Please reserve in advance.)</td></tr>
+								<tr><td><input type="radio" name="optTreats" id="optAlienGC" value="40"></td>
+									<td><a href="#AlienGC" data-rel="popup" data-position-to="window">Gift certificate worth P3,000 at Alien Abduction!!! (Please reserve in advance.)</td></tr>
 								<tr><td><input type="radio" name="optTreats" id="optPalermoGC" value="35"></td>
 									<td><a href="#PalermoGC" data-rel="popup" data-position-to="window">Gift certificate worth P3,000 at Palermo Restaurant!!! (Please reserve in advance.)</a></td></tr>
 								<tr><td><input type="radio" name="optTreats" id="optMargaritas" value="36"></td>
@@ -1048,9 +1026,9 @@ from roomsetcalendar as t1 right join roomtypesetup as t2 on t1.rtid=t2.rtid  an
 							<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
 							<img class="IpatungaDblock" title="Unlimited Plantation Bay homemade ice cream" src="http://plantationbay.com/wp-content/uploads/2012/08/SPromo3.jpg" />
 						</div>
-						<div data-role="popup" id="FijiGC" data-overlay-theme="b" class="ui-content" data-history="false">
+						<div data-role="popup" id="AlienGC" data-overlay-theme="b" class="ui-content" data-history="false">
 							<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-							<img class="IpatungaDblock" title="Gift certificate worth P3,000 at Fiji Restaurant" src="http://plantationbay.com/wp-content/uploads/2012/08/SPromo4.jpg" />
+							<img class="IpatungaDblock" title="Gift certificate worth P3,000 at Alien Abduction" src="./images/SPromo10.jpg" />
 						</div>
 						<div data-role="popup" id="PalermoGC" data-overlay-theme="b" class="ui-content" data-history="false">
 							<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
@@ -1104,16 +1082,17 @@ from roomsetcalendar as t1 right join roomtypesetup as t2 on t1.rtid=t2.rtid  an
 					<div  id="resGuarantee1Kind" style="display:none;">
 						<p class="Tealcolor iBold">ONE OF A KIND SUITE ROOM</p>
 						<p class="iJustify">You have reserved a one of a kind suite room. A full advance payment is required to guarantee the reservations.</p>
-						<p class="iJustify">For cancellation made less than 48 hours or No Show, the hotel will impose One Night cancellation charge.</p>
+						<p class="iJustify">Cancellations made less than 14 days prior to arrival will be charged 50% of the total number of room nights reserved. FULL cancellation charges apply on No Shows or cancellations made less than 7 days prior to arrival.</p>
 					</div>	
 					<div  id="resGuaranteeSpa" style="display:none;">
 						<p class="Tealcolor iBold">SPA INDULGENCE PACKAGE</p>
 						<p class="iJustify">You have reserved our Spa Indulgence Package. A full advance payment is required to guarantee the reservations.</p>
-						<p class="iJustify">For cancellation made less than 48 hours or No Show, the hotel will impose One Night cancellation charge.</p>
+						<p class="iJustify">Cancellations made less than 14 days prior to arrival will be charged 50% of the total number of room nights reserved. FULL cancellation charges apply on No Shows or cancellations made less than 7 days prior to arrival.</p>
 					</div>	
 					<div  id="resGuaranteeNP" style="display:none;">
 						<p class="Tealcolor iBold">NON-PEAK PERIOD</p>
-						<p class="iJustify">We only require your credit card details to guarantee your reservation. For cancellation made less than 48 hours or No Show, the hotel will impose One Night cancellation charge.</p>
+						<p class="iJustify">We only require your credit card details to guarantee your reservation.</p>
+						<p class="iJustify">Cancellations made 4-7 days prior to arrival will be charged a ONE NIGHT cancellation fee for each room reserved. No shows or cancellations made 3 days prior to arrival will be charged in FULL equivalent to the number of room nights reserved.</p>
 					</div>
 					<div  id="resGuaranteeGDR" style="display:none;">
 						<p class="Tealcolor iBold">GREAT DISCOUNTED RATE</p>
@@ -1122,7 +1101,7 @@ from roomsetcalendar as t1 right join roomtypesetup as t2 on t1.rtid=t2.rtid  an
 					
 					<p class="Tealcolor"><strong>REMINDERS:</strong>
 						<ol style="padding-left:3px;">
-							<li class="iJustify">If arriving by air, please proceed to our booth at the arrival area and our Airport Rep will assist you. In the event that our Airport Representative is not available at the booth, please contact the Duty Manager at (+63) 917-631-3675. Our shuttle bus is complimentary and runs about every 1 1/2 hours, but if you would have to wait more than about 20 minutes we will, at no expense to you, arrange a transfer by hired car. (This hired-car alternative is solely at the hotel's option and will only be offered for arrivals, not departures.) Our hotel-to-airport shuttle schedule is also every 1 1/2 hours; please select the most convenient one.</li>
+							<li class="iJustify">To ensure airport pick-up, please provide us with your flight details at least 48 hours prior to arrival. At the arrival area, please look for our Airport Representative. In the event that he is not available, please contact the Duty Manager at (+63) 917-631-3675. Our shuttle bus is complimentary and runs about every 1 1/2 hours, but if you would have to wait more than about 20 minutes we will, at no expense to you, arrange a transfer by hired car. (This hired-car alternative is solely at the hotel's option and will only be offered for arrivals, not departures.) Our hotel-to-airport shuttle schedule is also every 1 1/2 hours; please select the most convenient one.</li>
 							<li class="iJustify">Check-in time is 3 PM. Should you arrive earlier, we will make every effort to get you into your room sooner; this is usually but not always possible. On peak days, due to late departure of outgoing guests, we may sometimes not be able to check you in by 3 PM but if so we will provide you with changing facilities and complimentary refreshments.</li>
 							<li class="iJustify">Please take careful note of the maximum occupancy for your type of room. Our occupancy norms are generous compared with most other hotels, but we do enforce them.</li>
 							<li class="iJustify">While of course you are welcome to invite local friends and relatives to see you or dine with you at the resort, for non-registered guests who wish to use the swimming and other leisure facilities there will be a charge of P 2000 for the day (inclusive of a set lunch). Please advise us in advance.</li>

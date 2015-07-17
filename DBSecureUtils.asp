@@ -72,8 +72,9 @@ end function
 
 sub CheckCalendar(nr,st,dt,rt,rs)
 	if rs>0 then
-	  'update row for actual reservation booking recording
-	   strSQL = "Update roomsetcalendar set RsvnRooms='"&rs&"' where cdate='"& ConvertDateformat(dt) &"' and rtid='"& rt &"'"
+	   'update row for actual reservation booking recording
+	   'strSQL = "Update roomsetcalendar set RsvnRooms='"&rs&"' where cdate='"& ConvertDateformat(dt) &"' and rtid='"& rt &"'"
+	   strSQL = "Update roomsetcalendar set RsvnRooms=RsvnRooms+"&rs&" where cdate='"& ConvertDateformat(dt) &"' and rtid='"& rt &"'"
 	   objCmd.CommandText = strSQL
 	   objCmd.Execute
 	  

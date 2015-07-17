@@ -41,8 +41,7 @@ while ( $row = mysql_fetch_assoc( $queryGuestRooms )){
 		$totalRoomCount = $totalRoomCount + $numberofrooms;
 		echo "<tr><td colspan=3 class='iBold Tealcolor'> $roomtypedesc </td></tr>";
 		
-		if ( $totalNights >= 6 ){ // GDR
-			
+		if ( $totalNights >= 6 && $roomtype != "SPA" ){ // GDR	- SPA not included.
 			$rateGDR = $PriceNP * .75;
 			
 			if ( $cntNP > 0 ){
@@ -365,6 +364,11 @@ if ( $foundBfast == 1 ){ // Breakfast code
 	$rmCompute = $rmCompute + $bfastText;
 }
 
+//ADD BFAST TOTAL TO REQUIRED AMOUNT
+if ( $totalRequiredAmt > 0 ){
+	$totalRequiredAmt = $totalRequiredAmt + ( $bfastTotal * 1.232 );
+}
+
 //ADD-ONS
 //$totalRequiredAmt = $totalRequiredAmt * 1.232;
 if ( $VEP == "Y" ){
@@ -421,8 +425,10 @@ if ( $RandomNum == "31" ){
 	echo "<tr><td colspan=3 style='text-align:right;'><span style='font:bold 14px Arial;color:red'>FREE : </span>Romantic dinner at Palermo Restaurant for 2 persons, worth about P3,000!!! ( For each room booked for 4 or 5 nights )</td>";
 } elseif ( $RandomNum == "33" ){
 	echo "<tr><td colspan=3 style='text-align:right;'><span style='font:bold 14px Arial;color:red'>FREE : </span>Unlimited Plantation Bay homemade ice cream for the duration of your stay, worth Thousands of Pesos!!! <br />( For each room booked for 4 or 5 nights )</td>";
-} elseif ( $RandomNum == "34" ){
+} elseif ( $RandomNum == "34" ){	
 	echo "<tr><td colspan=3 style='text-align:right;'><span style='font:bold 14px Arial;color:red'>FREE : </span>Gift certificate worth P3,000 at Fiji Restaurant!!! ( For each room booked for 4 or 5 nights )</td>";
+} elseif ( $RandomNum == "40" ){
+	echo "<tr><td colspan=3 style='text-align:right;'><span style='font:bold 14px Arial;color:red'>FREE : </span>Gift certificate worth P3,000 at Alien Abduction!!! ( For each room booked for 4 or 5 nights )</td>";
 } elseif ( $RandomNum == "35" ){
 	echo "<tr><td colspan=3 style='text-align:right;'><span style='font:bold 14px Arial;color:red'>FREE : </span>Gift certificate worth P3,000 at Palermo Restaurant!!! ( For each room booked for 4 or 5 nights )</td>";
 } elseif ( $RandomNum == "36" ){

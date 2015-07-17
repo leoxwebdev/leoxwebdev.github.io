@@ -266,7 +266,7 @@ $( document ).on( "pagecreate", "#rooms", function () {
 				//console.log(this.name);
 				$rmTypId.find( "a.rmDetails" ).html("Hide room details");
 			} else {
-				$rmTypId.find( "a.rmDetails" ).html("Show room details");
+				$rmTypId.find( "a.rmDetails" ).html("Learn more");
 			}
 		});
 	});
@@ -447,7 +447,7 @@ $( document ).on( "pagecreate", "#dining", function () {
 		
 	function displayDiningItem( pDiningItem ){
 	
-		//$AdtoSaTaas.animate( { scrollTop: 0 } );
+		$AdtoSaTaas.animate( { scrollTop: 0 } );
 		if ( pDiningItem === "RESTAURANTS" ) {
 			if ( $diningRestaurants.is( ":visible" ) == false ){
 				$diningCulinarySuper.hide();
@@ -480,8 +480,6 @@ $( document ).on( "pagecreate", "#dining", function () {
 		$( "select.dining_mobile_menu" ).val( pDiningItem ).selectmenu( "refresh" );
 		$( "select.dining_mobile_menu" ).val( pDiningItem ).selectmenu( "refresh" );
 		$( "select.dining_mobile_menu" ).val( pDiningItem ).selectmenu( "refresh" );
-		$AdtoSaTaas.animate( { scrollTop: 0 } );
-		return false;
 	}
 	
 	$restaurantPage.on( "click", function () { displayDiningItem( "RESTAURANTS" ); } );
