@@ -1,0 +1,39 @@
+
+#imageBox{
+	border-top: 3px solid rgb(1,75,66);
+}
+.image-slideshow img { width: 100%; height: 450px; }
+
+#imgList a.active {
+  background: #58FAAC;
+}
+
+#imgList{
+  position: relative;
+  z-index: 1000;
+  margin: 0;
+  text-align: right;
+  margin-top: -25px;
+  margin-right: 5px;
+}
+	#imgList a {
+	  display: inline;
+	  /*border-radius: 50%;*/
+	  padding: 0 7.5px;
+	  margin: 2px;
+	  font-size: 14px;
+	  background: teal;
+	  cursor: pointer;
+	}
+#imgCaption{
+	padding-top: 5px;
+}
+#imgCaption p{
+	margin: 0;
+	padding: 5px 3px;
+	font: bold 18px Arial;
+	text-align: center;
+	background: rgb(1,75,66);
+  	text-shadow: none;
+  	color: #fff;
+}

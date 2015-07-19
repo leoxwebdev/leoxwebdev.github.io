@@ -35,7 +35,8 @@ $( document ).on( "pagecreate", function() {
 /* Index */
 $( document ).on( "pagecreate", "#home", function () {
 
-	var $slidingImage = $( "#homeBack .homebackground" ),
+	/*var $slidingImage = $( "#homeBack .homebackground" ),
+	var $slidingImage = $( "#imageBox" ).find("img"),
 		$slidingImageCaption = $( ".captionWrap" ).find( ".slideImageCaption" );
 
 	function updateSlidingImagePath() { //Function to detect screen with and change path of sliding image to load.
@@ -88,16 +89,16 @@ $( document ).on( "pagecreate", "#home", function () {
 		setTimeout(rollDayon, 9000);
 	}
 	
-	$( '.homebackground' ).hide();
+	//$( '.homebackground' ).hide();
 
-	rollDayon(); //Animate na. Home background animation: Easy lang :)
+	//rollDayon(); //Animate na. Home background animation: Easy lang :)
 
 	$( window ).resize( function ( event ) {
 
 		event.preventDefault();
 		updateSlidingImagePath(); 
 	} );
-
+*/
 	//Reserve now Click handling from home
 	$( "#homeReserveNow" ).on( "click", function ( event ) {
 

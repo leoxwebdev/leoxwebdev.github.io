@@ -378,7 +378,7 @@ li{
 	background-color: #fff;
 }
 
-
+/*
 @media only screen and (min-width: 180px){
 	.ui-page .ui-header{
 		background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("images/banner0320/13_aerialnight.jpg") no-repeat;
@@ -525,7 +525,7 @@ li{
 		background-size: 100% 100%;
 	}
 }
-
+*/
 .headerwhole{
 	clear:both;
 	width:100%;
@@ -1057,13 +1057,13 @@ li{
 }
 @media only screen and (min-width: 1440px){
 	.langOptions li:first-child{ display: inline-block; }
-	.ui-page{
+	/*.ui-page{
 		background: url('images/bg4.jpg') no-repeat center center fixed;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
-	}
+	}*/
 	.mobile_page_menu{ display: none; }
 	.L_YourAreHere{ margin-bottom: 0; }
 	.E_YourAreHere{display: none; }
