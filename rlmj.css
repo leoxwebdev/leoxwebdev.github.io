@@ -36,18 +36,11 @@ li{
 
 .ui-content{
 	margin:0 auto;
-<<<<<<< HEAD
-	max-width:1300px;	
-	background-color: #fff;
-	box-shadow: inset rgba(1,75,66,1) 0 0 5px;
-	/*box-shadow: inset rgba(0,0,0,0.5) 0 0 10px;*/
-=======
 	max-width:1000px;	
 	background-color: #fff;
 	/*box-shadow: inset rgba(1,75,66,1) 0 0 5px;*/
 	/*box-shadow: inset rgba(0,0,0,0.5) 0 0 10px;*/
 	/*border-top: 3px solid rgb(1,75,66);*/
->>>>>>> cce79164ea2536c31a77fbb249116a6b18e1f586
 	}
 	.ui-content p{
 		font-size: 14px;
@@ -94,18 +87,6 @@ li{
 	background:teal;
 	text-shadow:none;
 	color:white;
-<<<<<<< HEAD
-	/*box-shadow: 2px 4px rgba( 210, 189, 134, 0.5);*/
-	box-shadow: 2px 4px rgba( 255, 255, 204, 0.6);
-	border-top: 2px solid rgba(250, 250, 250, 0.27);
-	border-left: 2px solid rgba(250, 250, 250, 0.27);
-	border-right: 1px solid #d2bd86;
-	border-bottom: 1px solid #d2bd86;
-	transition: background-color 1s;
-	-moz-transition: background-color 1s;
-	-o-transition: background-color 1s;
-	-webkit-transition: background-color 1s;	
-=======
 	/*box-shadow: 2px 4px rgba( 255, 255, 204, 0.6);*/
 	border-top: 2px solid rgba(250, 250, 250, 0.27);
 	border-left: 2px solid rgba(250, 250, 250, 0.27);
@@ -116,7 +97,6 @@ li{
 	-o-transition: background-color 1s;
 	-webkit-transition: background-color 1s;
 	margin-bottom: 0;
->>>>>>> cce79164ea2536c31a77fbb249116a6b18e1f586
 	}
 	.ui-page .ui-header a.ui-btn:hover,
 	.ui-page .ui-footer a.ui-btn:hover,
@@ -124,11 +104,7 @@ li{
 	.ui-page .ui-popup a.ui-btn:hover{
 		background-color:#58FAAC;
 		color:rgb(1,75,66);
-<<<<<<< HEAD
-		border: 2px solid rgba(0, 128, 128, 0.27);
-=======
 		/*border: 2px solid rgba(0, 128, 128, 0.27);*/
->>>>>>> cce79164ea2536c31a77fbb249116a6b18e1f586
 	}
 	.sidebarButtons a{
 		white-space: normal;
@@ -136,16 +112,6 @@ li{
 
 .ui-page .ui-header .ui-btn.btnSelected,
 .ui-page .ui-footer a.ui-btn.btnSelected{
-<<<<<<< HEAD
-	background-color: rgb(1,75,66);/ /*#12A25C;  #58FAAC;*/
-	color: #fff; /*rgb(1,75,66);*/
-	border-right: 2px solid rgb(255, 255, 204);
-	border-bottom: 2px solid rgb(255, 255, 204);
-}
-
-.ui-page .ui-header .ui-btn:last-child{
-	box-shadow: 2px 4px rgba( 255, 255, 204, 0.6);
-=======
 	background-color: rgb(1,75,66);
 	color: #fff;
 	border-right: 2px solid rgb(255, 255, 204);
@@ -154,7 +120,6 @@ li{
 
 .ui-page .ui-header .ui-btn:last-child{
 	/*box-shadow: 2px 4px rgba( 255, 255, 204, 0.6);*/
->>>>>>> cce79164ea2536c31a77fbb249116a6b18e1f586
 }
 
 .ui-page .ui-header h1,
@@ -164,11 +129,7 @@ li{
 
 .ui-page .ui-footer{
 	margin:0 auto;
-<<<<<<< HEAD
-	max-width:1300px;	
-=======
 	max-width:1000px;	
->>>>>>> cce79164ea2536c31a77fbb249116a6b18e1f586
 	background:rgb(1,75,66);
 	white-space:normal;
 	color:white;
@@ -398,11 +359,7 @@ li{
 }
 .ui-page .ui-header{
 	margin:0 auto;
-<<<<<<< HEAD
-	max-width:1300px;	
-=======
 	max-width:1000px;	
->>>>>>> cce79164ea2536c31a77fbb249116a6b18e1f586
 	background:white;/*
 	background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("images/banner1280/13_aerialnight.jpg") no-repeat;
     background: -webkit-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("images/banner1280/13_aerialnight.jpg") no-repeat;
@@ -422,8 +379,6 @@ li{
 	background-color: #fff;
 }
 
-<<<<<<< HEAD
-=======
 .subMenu{
 	margin-right: 8px;
 	text-align: right;
@@ -443,7 +398,6 @@ nav.main a{
 		width: -moz-calc((100%) / 9);
 		width: -webkit-calc((100%) / 9);	
 }	*/
->>>>>>> cce79164ea2536c31a77fbb249116a6b18e1f586
 /*
 @media only screen and (min-width: 180px){
 	.ui-page .ui-header{
@@ -952,14 +906,9 @@ nav.main a{
 		}
 	.top-menus { display:none; }
 	.homeMain .homeArticle{
-<<<<<<< HEAD
-		float:left;
-		margin: 0px auto 0px 10px;
-=======
 		/*float:left;
 		margin: 0px auto 0px 10px;*/
 		margin: 0 auto;
->>>>>>> cce79164ea2536c31a77fbb249116a6b18e1f586
 		padding-right:10px;
 		width: 67.66666666667%;
 		}
@@ -997,14 +946,6 @@ nav.main a{
 		display:inline;
 		float: right;
 		padding-top: 0;
-<<<<<<< HEAD
-		margin-top:20px;
-		margin-right:10px;
-	}
-	.homeMain .homeArticle{
-		float:left;
-		margin: 0px auto 0px 10px;
-=======
 		margin-top:25px;
 		margin-right:10px;
 		width: 100%;
@@ -1015,7 +956,6 @@ nav.main a{
 		/*float:left;
 		margin: 0px auto 0px 10px;*/
 		margin: 0 auto;
->>>>>>> cce79164ea2536c31a77fbb249116a6b18e1f586
 		padding-right:10px;
 		width: 67.66666666667%;
 		}
@@ -1118,14 +1058,9 @@ nav.main a{
 	}
 
 	.homeMain .homeArticle{
-<<<<<<< HEAD
-		float:left;
-		margin: 0px auto 0px 10px;
-=======
 		/*float:left;
 		margin: 0px auto 0px 10px;*/
 		margin: 0 auto;
->>>>>>> cce79164ea2536c31a77fbb249116a6b18e1f586
 		padding-right:10px;
 		width: 72.66666666667%;
 		}
