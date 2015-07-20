@@ -36,11 +36,15 @@ li{
 
 .ui-content{
 	margin:0 auto;
-	max-width:1000px;	
+	max-width:1222px;	
 	background-color: #fff;
 	/*box-shadow: inset rgba(1,75,66,1) 0 0 5px;*/
 	/*box-shadow: inset rgba(0,0,0,0.5) 0 0 10px;*/
 	/*border-top: 3px solid rgb(1,75,66);*/
+	-moz-box-shadow: 0 0 35px rgba(0,0,0,.4);
+  	-webkit-box-shadow: 0 0 35px rgba(0,0,0,.4);
+  	box-shadow: 0 0 35px rgba(0,0,0,.4);	
+
 	}
 	.ui-content p{
 		font-size: 14px;
@@ -129,12 +133,15 @@ li{
 
 .ui-page .ui-footer{
 	margin:0 auto;
-	max-width:1000px;	
+	max-width:1222px;	
 	background:rgb(1,75,66);
 	white-space:normal;
 	color:white;
 	text-shadow:none;
-	box-shadow: inset rgba(1,75,66,1) 0 0 5px;
+	/*box-shadow: inset rgba(1,75,66,1) 0 0 5px;*/
+	-moz-box-shadow: 0 0 35px rgba(0,0,0,.4);
+  	-webkit-box-shadow: 0 0 35px rgba(0,0,0,.4);
+  	box-shadow: 0 0 35px rgba(0,0,0,.4);
 	}
 	.ui-page .ui-footer a.ui-btn{
 		margin-top:3px;
@@ -359,7 +366,7 @@ li{
 }
 .ui-page .ui-header{
 	margin:0 auto;
-	max-width:1000px;	
+	max-width:1222px;	
 	background:white;/*
 	background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("images/banner1280/13_aerialnight.jpg") no-repeat;
     background: -webkit-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("images/banner1280/13_aerialnight.jpg") no-repeat;
@@ -377,6 +384,9 @@ li{
 	/*background: url(pbayImages/bg_white.jpg) #ececec;*/
 	/* background: url(pbayImages/bg_light_gray.jpg) #ececec; */
 	background-color: #fff;
+	-moz-box-shadow: 0 0 35px rgba(0,0,0,.4);
+  	-webkit-box-shadow: 0 0 35px rgba(0,0,0,.4);
+  	box-shadow: 0 0 35px rgba(0,0,0,.4);
 }
 
 .subMenu{
@@ -950,7 +960,6 @@ nav.main a{
 		margin-right:10px;
 		width: 100%;
 		text-align: right;
-		border-bottom: 3px solid rgb(1,75,66);
 	}
 	.homeMain .homeArticle{
 		/*float:left;
