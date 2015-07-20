@@ -68,9 +68,9 @@ $(document).ready(function() {
   $imageBoxSlide
   .cycle({
     autoHeight: 0,
-    autoHeightSpeed: 250,
-    /*speed: 250,*/
-    timeout: 5000
+    autoHeightSpeed: 1000,
+    speed: 1000,
+    timeout: 4000
     /*pauseOnHover: true*/
   });
   
