@@ -1,0 +1,2040 @@
+/* -------------------------------- para sa tanan ni ------------------------------*/
+.ui-content{
+	margin:0 auto;
+	max-width:1680px;	
+	/*max-width:1200px;*/
+	background-color:rgb(255,255,255);
+}
+
+.ui-content p{
+	font-size: 14px;
+	line-height: 1.5em; 
+	margin-left:10px;
+	margin-right:15px;
+}
+
+.ui-page .ui-header{
+	/*background: url("http://plantationbay.com/wp-content/uploads/nivoslider4wp_files/3_s.png") no-repeat !important;*/
+	/*background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), to(rgba(255,255,255,1))),url("http://plantationbay.com/wp-content/uploads/nivoslider4wp_files/3_s.png") no-repeat !important;*/
+	/* faded left with 15% white space on left 
+	background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("http://plantationbay.com/wp-content/uploads/nivoslider4wp_files/3_s.png") no-repeat !important;
+    background: -webkit-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("http://plantationbay.com/wp-content/uploads/nivoslider4wp_files/3_s.png") no-repeat !important;
+	background-size: 85% 100% !important;
+	background-position: right 0 !important;*/
+	/*
+	background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("http://plantationbay.com/wp-content/uploads/nivoslider4wp_files/3_s.png") no-repeat !important;
+    background: -webkit-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("http://plantationbay.com/wp-content/uploads/nivoslider4wp_files/3_s.png") no-repeat !important;
+	background-size: 100% 100% !important;*/
+	
+	/* faded bottom to top
+	background: -moz-linear-gradient(top,rgba(255,255,255,0),rgba(255,255,255,1)),url("http://plantationbay.com/wp-content/uploads/nivoslider4wp_files/3_s.png") no-repeat !important;
+    background: -webkit-linear-gradient(top,rgba(255,255,255,0),rgba(255,255,255,1)),url("http://plantationbay.com/wp-content/uploads/nivoslider4wp_files/3_s.png") no-repeat !important;
+	background-size: 100% 100% !important;*/
+	margin:0 auto;
+	max-width:1680px;	
+	/*max-width:1200px;	*/
+	/*background: url("http://plantationbay.com/wp-content/uploads/nivoslider4wp_files/3_s.png") no-repeat;*/
+	background:white;
+	background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("images/banner/13_aerialnight.jpg") no-repeat;
+    background: -webkit-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("images/banner/13_aerialnight.jpg") no-repeat;
+	background-size: 100% 100%;
+	/*background: url("pblogo5.png");*/
+	border-bottom: 5px solid rgb(1,75,66);
+	
+}
+
+.ui-page div.ui-content {
+	padding-left:0;
+	padding-right:0;
+	padding-top:0;
+}
+/*
+.ui-page .ui-header{
+	margin:0 auto;
+	background: url("http://plantationbay.com/wp-content/uploads/nivoslider4wp_files/3_s.png") no-repeat;
+	background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("http://plantationbay.com/wp-content/uploads/nivoslider4wp_files/3_s.png") no-repeat;
+    background: -webkit-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("http://plantationbay.com/wp-content/uploads/nivoslider4wp_files/3_s.png") no-repeat;
+	background-size: 100% 100%;
+	border-bottom: 5px solid rgb(1,75,66);
+}
+*/
+.ui-page .ui-header .ui-btn,
+.ui-page .ui-footer a.ui-btn{
+	/*background: rgb(1,75,66);*/
+	background:teal;
+	text-shadow:none;
+	color:white;
+	box-shadow: 2px 2px #d2bd86;/*white;*/
+}
+
+.ui-page .ui-footer{
+	margin:0 auto;
+	max-width:1680px;	
+	/*max-width:1200px;*/
+	background:rgba(1,75,66,.8);
+	white-space:normal;
+	color:white;
+	text-shadow:none;
+}
+
+.ui-page .ui-header a.ui-btn:hover,
+.ui-page .ui-footer a.ui-btn:hover,
+div.ui-collapsible .CONVENTIONALROOMS a.ui-btn:hover,
+div.ui-collapsible .SPECIALTYROOMS a.ui-btn:hover,
+.RoomDetails .ui-content a.ui-btn:hover{ /* for Rooms Details link buttons highlight*/
+	background:#58FAAC;
+	color:rgb(1,75,66);
+}
+
+.headerwhole{
+	clear:both;
+	width:100%;
+	height:128px;
+}
+
+.headerwhole .MenuPanel{
+	float: right;
+	margin-top:3.8em;
+	font-size:18px;
+}
+
+h1.pbayheadlogo{
+	position:absolute;
+	margin-top:3px;
+}
+
+.ui-page .ui-header h1,
+.ui-page .ui-footer h4{
+	white-space:normal;
+} /* Makita tanan text sa h1 nga header */
+
+table, .ui-table{font-size:14px;} 
+
+.ui-collapsible{
+	border-bottom: 3px solid #d2bd86;
+	padding: 1px 0;
+}
+
+.ui-collapsible-content {  
+	padding: 5px 15px; /* default padding: 10 15px;*/
+}
+
+.ui-page .ui-collapsible .ui-btn{ /* Collapsible dark green color */
+	background:rgb(1,75,66);
+	text-shadow:none;
+	color:white;
+
+}
+
+.ui-navbar{
+	background:rgb(1,75,66); /*#0e1700;*/
+}
+
+.ui-page .ui-li-divider{
+	background: rgba(111,172,104,.2);
+	font-weight:bold;
+	text-align:center;
+	padding:3px;
+	color:teal;
+}
+
+.ui-listview li{
+	font-size: 14px;
+	line-height: 1.5em; 	
+	font-weight: normal; 	
+	display: block; 
+	text-overflow: ellipsis; 
+	overflow: hidden; 
+	white-space: normal !important;
+	border-color:#d2bd86;
+}
+
+.ui-page .ui-content h1.pageNameMenuItem{
+	text-align:center;	
+	}
+	.ui-page .ui-content h1.pageNameMenuItem span{
+		vertical-align:middle;
+		color:red;
+	}
+	.ui-page .ui-content h1.pageNameMenuItem button{
+		background-color:rgb(1,75,66);
+	}
+	
+.John .ui-collapsible{
+	border-radius:10px;
+	padding: 0;
+	text-shadow:none;
+}
+
+.iCenter{text-align:center;}
+.iCenterAdust{text-align:center;margin:0 auto;}
+.iLeft{text-align:left;}
+.iRight{text-align:right;}
+.iJustify{text-align:justify;}
+.iBorder{border: 1px solid #d2bd86;}
+.InlineBlock{display:inline-block;}
+.FloatRightPad1{float:right;padding: 1px;margin-left:5px;margin-bottom:5px;} 
+.FloatLeftPad1{float:Left;padding: 1px;margin-left:5px;margin-bottom:5px;margin-right:5px;} 
+.Tealcolor{color: #006666} /* 0,102,102 */
+.bgLightGreen{ background-color: rgba(111,172,104,.2); }
+.iRedtext{ color:red;}
+.iTop{vertical-align:top;}
+.iBold{font-weight:bold;}
+.VACenter{vertical-align:middle;}
+.VABottom{vertical-align:bottom;}
+.L{white-space:normal !important;} /* Show all Text */
+.E{border-radius:0 0 18px 18px ;} /* kasagaran gamit in Header bottom border radius */
+.O{border-radius:18px 18px 0 0  ;} /* mostly use in Footer top border radius */
+.hr1{color:orange;height:3px;}
+.IpatungaDblock{display: block; margin: 0 auto; max-width: 100%;} /* Center and adjust image size to screen size, block*/
+.IpatungaInlineBlock{display:inline-block;margin:0 auto;max-width: 100%;}
+.spacer5px{height:5px;}
+.spacer10px{height:10px;}
+.spacer15px{height:15px;}
+
+.overlay { 
+    border:15px solid transparent;
+    -webkit-border-image:url(overlay_image.png) 15 15 stretch;
+    -o-border-image:url(overlay_image.png) 15 15 stretch;
+    border-image:url(overlay_image.png) 15 15 stretch;
+}
+.custom-corners .ui-bar {
+	-webkit-border-top-left-radius: inherit;
+	border-top-left-radius: inherit;
+	-webkit-border-top-right-radius: inherit;
+	border-top-right-radius: inherit;
+	}
+.custom-corners .ui-body {
+	border-top-width: 0;
+	-webkit-border-bottom-left-radius: inherit;
+	border-bottom-left-radius: inherit;
+	-webkit-border-bottom-right-radius: inherit;
+	border-bottom-right-radius: inherit;
+	}
+/*
+.homeMain .homeArticle .ui-collapsible .ui-collapsible-heading .ui-btn-text {
+	white-space : normal !important;
+}
+//change collapsible header color on collapse/expand
+.ui-collapsible-heading-collapsed > .ui-collapsible-heading-toggle{
+    background:red;
+}
+.ui-collapsible-heading-toggle{
+    background:yellow;
+}
+*/
+h1{font-size:24px;}
+
+li{
+	font-size: 14px;
+	line-height: 1.5em; 
+	margin-left:10px;
+	margin-right:15px;
+	margin-bottom:10px;
+}
+
+a{
+	text-decoration:none;
+}
+
+/*  PANEL MENU */
+.panelMenu {
+	margin-top:110px;
+	margin-right:11px;
+	max-width:250px;
+	}
+	.panelMenu .ui-listview{
+		box-shadow: 3px 3px #d2bd86;
+		}
+		.panelMenu .ui-listview li{
+			text-shadow:none;
+			white-space:normal;
+			background-color:teal;
+			}
+			.panelMenu .ui-listview li a{
+				color:white;
+				font-weight:bold;
+				text-decoration:none;
+				}
+				.panelMenu .ui-listview li a:hover{
+					background-color: rgba(111,172,104,.3);
+					text-decoration:none;
+					text-shadow:none;	
+				}
+.ui-panel-inner {/* Override ni, remove default panel padding :) */
+	padding: 0 !important;
+	}
+/* Tumoy sa panel menu */
+
+#rooms .Mika .ui-btn,
+#dining .Mika .ui-btn,
+#Activities .Mika .ui-btn,
+#packages .Mika .ui-btn,
+#mogambosprings .Mika .ui-btn{
+	background:#6fac68; /* green anchor link button color*/
+	color:white;
+	text-shadow:none;
+} 
+
+#rooms .John .ui-collapsible .ui-btn,
+#contact .John .ui-collapsible .ui-btn{
+	background:#6fac68;
+	text-shadow:none;
+}
+
+@media only screen and (min-width: 180px) {
+/*
+	#homeMenu{
+		display:inline-block;
+		max-width:278px;
+		margin-left:15px;
+		padding:0;
+	}
+	*/
+	.top-menus .myReservatonTopInMenu{
+		display:none;
+	}	
+	.myReservationTop{
+		display:none;
+	}	
+	.pbayslogan{
+		float:left;
+		margin-left:5px;
+		margin-top:-13px;
+		width:230px;
+	}		
+	h1.pbayheadlogo{
+		left:5px;
+	}	
+	.headerwhole{
+		height:132px;
+		}
+		.headerwhole .MenuPanel{
+			display:inline;
+			margin-top:2em;
+			margin-right:2px;
+		}
+	.top-menus {
+		display:none;
+	}
+}
+
+@media only screen and (min-width: 320px) {
+/*
+	#homeMenu{
+		display:inline-block;
+		max-width:278px;
+		margin-left:15px;
+		padding:0;
+	}
+	*/
+	.top-menus .myReservatonTopInMenu{
+		display:none;
+	}	
+	.myReservationTop{
+		display:none;
+	}	
+	.pbayslogan{
+		float:left;
+		margin-left:5px;
+		margin-top:-10px;
+		width:230px;
+	}		
+	h1.pbayheadlogo{
+		left:5px;
+	}	
+	.headerwhole{
+		height:132px;
+		}
+		.headerwhole .MenuPanel{
+			display:inline;
+			margin-top:3em;
+			margin-right:2px;
+		}
+	.top-menus {
+		display:none;
+	}
+}
+@media only screen and (min-width: 380px) {
+/*
+	#homeMenu{
+		display:inline-block;
+		max-width:278px;
+		margin-left:15px;
+		padding:0;
+	}
+	*/
+	.top-menus .myReservatonTopInMenu{
+		display:none;
+	}	
+	.myReservationTop{
+		display:none;
+	}	
+	.pbayslogan{
+		float:left;
+		margin-left:5px;
+		margin-top:103px;
+		width:230px;
+	}		
+	h1.pbayheadlogo{
+		left:5px;
+	}	
+	.headerwhole{
+		height:132px;
+		}
+		.headerwhole .MenuPanel{
+			display:inline;
+			margin-top:3em;
+		}
+	.top-menus {
+		display:none;
+	}		
+}
+
+@media only screen and (min-width: 640px) {
+/*
+	#homeMenu{
+		display:inline-block;
+		max-width:278px;
+		margin-left:15px;
+		padding:0;
+	}*/
+	.top-menus .myReservatonTopInMenu{
+		display:none;
+	}	
+	.myReservationTop{
+		display:none;
+	}
+	.pbayslogan{
+		float:left;
+		margin-left:195px;
+		margin-top:1px;
+		width:300px;
+	}		
+	h1.pbayheadlogo{
+		left:5px;
+	}	
+	.headerwhole{
+		height:110px;
+		}
+		.headerwhole .MenuPanel{
+			display:inline;
+			margin-top:2em;
+		}
+	.top-menus {
+		display:none;
+	}		
+}
+
+@media only screen and (min-width: 726px) {
+	/*#homeMenu{
+		visibility:hidden;
+	}*/
+	.top-menus .myReservatonTopInMenu{
+		display:none;
+	}	
+	.myReservationTop{
+		display:inline;
+		margin-top:-140px;
+	}
+	.pbayslogan{
+		float:left;
+		margin-left:208px;
+		margin-top:-128px;
+		width:500px;
+	}		
+	h1.pbayheadlogo{
+		left:18px;
+	}
+	.headerwhole{
+		height:153px;
+		}	
+		.headerwhole .MenuPanel{
+			display:none;
+		}
+	.top-menus {
+		display:inline;
+		float: right;
+		padding-top: 6.45em;
+		padding-right:10px;
+		margin-right:10px;
+	}
+	.homeMain .homeArticle{
+		float:left;
+		margin:0 auto;
+		width: 78.66666666667%;
+		}
+	.homeMain .homesidebar{
+		float:right;
+		margin:0 auto;
+		width:	20.333333333333%;
+		}		
+}
+
+@media only screen and (min-width: 913px){
+	/*#homeMenu{
+		visibility:hidden;
+	}*/
+	.top-menus .myReservatonTopInMenu{
+		display:none;
+	}	
+	.myReservationTop{
+		display:inline;
+		margin-top:-100px;
+	}
+	.pbayslogan{
+		float:left;
+		margin-left:218px;
+		margin-top:-110px;
+		width:500px;
+	}	
+	h1.pbayheadlogo{
+		left:18px;
+	}
+	.headerwhole{
+		height:115px;
+		}
+		.headerwhole .MenuPanel{
+			display:none;
+		}
+	.top-menus {
+		display:inline;
+		float: right;
+		padding-top: 4em;
+		padding-right:10px;
+		margin-right:10px;
+	}
+
+	.homeMain .homeArticle{
+		float:left;
+		margin:0 auto;
+		width: 78.66666666667%;
+		}
+	.homeMain .homesidebar{
+		float:right;
+		margin:0 auto;
+		width:	20.333333333333%;
+		}		
+}
+
+@media only screen and (min-width: 1069px){
+	.top-menus .myReservatonTopInMenu{
+		display:none;
+	}
+	.myReservationTop{
+		display:inline;
+		margin-top:-100px;
+	}
+}
+
+@media only screen and (min-width: 1434px){
+/*	#homeMenu{
+		visibility:hidden;
+	}*/
+	/*
+	.myReservatonTopInMenu{
+		display:inline;
+	}
+	.myReservationTop{
+		display:none;
+	}	*/
+
+	h1.pbayheadlogo{
+		left:18px;
+	}
+	.headerwhole{
+		height:115px;
+		}
+		.headerwhole .MenuPanel{
+			display:none;
+		}
+	.top-menus {
+		display:inline;
+		float: right;
+		padding-top: 4em;
+		padding-right:10px;
+		margin-right:10px;		
+	}
+
+	.homeMain .homeArticle{
+		float:left;
+		margin:0 auto;
+		width: 78.66666666667%;
+		}
+	.homeMain .homesidebar{
+		float:right;
+		margin:0 auto;
+		width:	20.333333333333%;
+		}		
+}
+
+@media only screen and (min-width: 1070px){
+	.top-menus .myReservatonTopInMenu{
+		display:inline;
+	}
+	.myReservationTop{
+		display:none;
+	}		
+}
+@media only screen and (min-width: 1589px){
+	.pbayslogan{
+		float:left;
+		margin-left:218px;
+		margin-top:10px;
+		width:500px;
+	}	
+}
+
+/*
+@media only screen and (min-width: 1613px) and (max-width: 5000px){
+	.myReservationTop{
+		display:inline;
+		margin-top:10px;
+		margin-right:-300px;
+	}
+}
+@media only screen and (min-width: 1435px) and (max-width: 1612px){
+	.myReservationTop{
+		float:right;
+		display:inline;
+		margin-top:10px;
+	}
+}
+*/
+/*
+@media only screen and (min-width: 180px) and (max-width: 453px){
+	#img387,#img680{
+		display:none;
+	}
+	#img1134{
+		display:inline-table;
+	}
+}
+@media only screen and (min-width: 454px) and (max-width: 907px){
+	#img387,#img1134{
+		display:none;
+	}
+	#img680{
+		display:inline-table;
+	}
+}
+@media only screen and (min-width: 908px){
+	#img680,#img1134{
+		display:none;
+	}
+	#img387{
+		display:inline-table;
+	}
+}
+*/
+
+/*
+@media only screen and (min-width: 12em) {
+
+	#homeMenu{
+		max-width:278px;
+		margin-top:-438px;
+		margin-left:15px;
+		padding:0;
+	}
+	.HOMEheadlogo{
+		width:100%;
+		left:18px;
+	}
+	h1.pbayheadlogo{
+		left:10px;
+	}	
+	.headerwhole .MenuPanel{
+		display:inline;
+	}
+	.headerwhole{
+		height:128px;
+	}
+	.top-menus {
+		display:none;
+	}		
+}
+
+@media only screen and (min-width: 45em) {
+	#homeMenu{
+		visibility:hidden;
+	}
+	h1.pbayheadlogo,
+	.HOMEheadlogo{
+		left:18px;
+	}
+	.HOMEheadlogo{
+		text-align:left;
+	}	
+	
+	.headerwhole .MenuPanel{
+		display:none;
+	}
+	.headerwhole{
+		height:168px;
+	}
+	.top-menus {
+		display:inline;
+		float: right;
+		padding-top: 7.375em;
+		padding-right:10px;		
+	}
+	.homeMain .homeArticle{
+		float:left;
+		margin:0 auto;
+		width: 75.66666666667%;
+		}
+	.homeMain .homesidebar{
+		float:right;
+		margin:0 auto;
+		width:	23.333333333333%;
+		}		
+}
+
+@media only screen and (min-width: 57em) {
+	#homeMenu{
+		visibility:hidden;
+	}
+	h1.pbayheadlogo,
+	.HOMEheadlogo{
+		left:18px;
+	}
+	.HOMEheadlogo{
+		text-align:left;
+	}
+	.headerwhole .MenuPanel{
+		display:none;
+	}
+	
+	.headerwhole{
+		height:128px;
+	}
+
+	.top-menus {
+		display:inline;
+		float: right;
+		padding-top: 4.375em;
+		padding-right:10px;
+	}
+
+	.homeMain .homeArticle{
+		float:left;
+		margin:0 auto;
+		width: 75.66666666667%;
+		}
+	.homeMain .homesidebar{
+		float:right;
+		margin:0 auto;
+		width:	23.333333333333%;
+		}		
+}
+*/
+/* ------------------------- index.html SUGOD ----------------------------*/
+
+#pblogoMain{
+	border-radius:3px;
+}
+
+/*
+#homeBack{
+	margin: 0 auto;
+	height:450px;
+	width:100%;
+	}
+	
+	.homebackground{
+		position:absolute;
+		display:none;
+		height:450px;
+		width:100%;
+	}
+*/
+
+
+/* HOME MENU */
+/*
+#homeMenu{
+	max-width:278px;
+	margin-top:-450px;
+	margin-left:15px;
+	padding:0;
+}
+*/
+/*
+.home .ui-listview{
+	margin-top:0;
+	margin-bottom:1px;
+	border-color:rgba(210,189,134,0.5); 
+	}
+	.home .ui-listview li{
+	border-width:3px;
+	border-color:rgba(210,189,134,0.5); 
+	text-shadow:none;
+	white-space:normal;
+	background-color: rgba(255,255,255,0.3);
+	background-image: url('');
+	}
+		.home .ui-listview  li a{
+			border-radius:5px;
+			border-width:2px;
+			background-color: rgba(255,255,255,0.8);
+			color: rgb(1,75,66);
+			text-shadow: 1px 1px rgb(1,75,66);
+			font-weight:bold;
+			text-decoration:none;
+			}
+			.home .ui-listview  li a:hover{
+				background-color:rgb(1,75,66);
+				color:white;
+				text-shadow: 1px 1px white;
+			}
+*/
+.home h1{white-space:normal;}
+
+.myReservationTop{
+	float:right;
+	font:bold 16px Arial;
+	margin-right:20px;
+	text-shadow:none;
+	background-color:rgba(255,255,255,.5);
+	padding-left:3px;
+	padding-right:3px;
+}	
+
+.homebackgroundBack{
+	height:450px;
+	width:100%;
+	background: url("pblogo5.png");
+	}
+	.homebackgroundBack .homeBackHead{
+		margin-top:3px;
+		height:100%;
+		width:100%; /* change this to center image without stretching, value=actual image size ha */
+		}
+		.homeBackHead .homeBack{			
+			height:100%;
+			width:100%;
+			}
+			.homeBack .homebackground{
+				display:none;
+				position:absolute;				
+				height:450px; /*remove this to center image without stretching */
+				width:100%; /*remove this to center image without stretching*/
+			}
+			.captionWrap .slideImageCaption{
+				position:absolute;
+				display:none;
+			}			
+			.homeBackHead .captionWrap{
+				margin:0 auto;
+				width:100%;
+				position:relative;				
+				margin-top:-100px;
+				}
+				.homeBackHead .captionWrap p{
+					padding:8px;
+					font-size:20px;
+					font-weight:bold;
+					text-align:center;
+					text-shadow:none;
+					line-height:25px;
+					background-color:rgba(255,255,255,.5);
+					}				
+					.homeBackHead .captionWrap p:nth-child(odd){
+						color:rgb(1,75,66);
+					}
+					.homeBackHead .captionWrap p:nth-child(even){
+						color:rgba(255,255,255,.01);
+					}					
+
+.homeMain{
+	margin:0 auto;
+	max-width:98%;
+	margin-top:5px;
+	background-color:rgb(255,255,255);
+	}
+	.homeMain .discover{
+		border-left:18px solid teal;
+		padding: 1px;
+		background: white;
+		background: rgba(210, 189, 134, 0.1);
+		background:linear-gradient(to right, teal, rgba(210, 189, 134,.3) 1%);
+		}
+		
+		.homeMain .discover p{
+			padding-left:10px;
+			color:black;}			
+			.homeMain .discover p span{
+				font-size:18px;
+				font-style:italic;
+				font-weight:600;}	
+	.homeArticle h4.ui-bar.ui-bar-a{
+		background-color:rgba(1,75,66,.9);
+		color:white;
+		text-shadow:none;
+		margin-top:15px;
+		padding:10px;}
+		
+	.homeArticle  .ui-corner-all .ui-bar.ui-bar-a{
+		/*background-color:rgba(1,75,66,.9);*/
+		background-color:teal;
+		color:white;
+		text-shadow:none;
+		margin-top:15px;
+		padding:10px;}		
+	.homeMain .ui-collapsible{
+		border-bottom:none;
+		margin-bottom:0;
+		margin-top:0;}
+		.homeMain .ui-collapsible p{
+			text-align:justify;}		
+		.homeMain .ui-collapsible .ui-btn{
+			background-color:teal;
+			border-bottom:none;}
+		.homeMain .ui-collapsible ol{
+			text-align:justify;
+			padding-left:5px;}
+		.homeMain .ui-body p{
+			text-align:justify;}		
+		.homeMain .ui-body ol{
+			text-align:justify;
+			padding-left:5px;}
+	.homeMain a {
+		text-decoration: underline; 
+	}
+	.homeMain p{
+		font-size: 14px;
+		line-height: 1.5em; 
+		margin-left:10px;
+		margin-right:15px;
+	}
+
+.homesidebarItem{
+	display: block;
+	width:100%;
+	margin: 0 auto;
+	/*width:100%;*/
+	border-radius:12px;
+	margin-bottom:15px;
+	margin-top:15px;
+	box-shadow:5px 5px #d2bd86;
+	}/*
+	.homesidebarItem .followus{
+		margin:0 auto;
+		width:95%;
+		background-color:white;
+		border-radius:5px;
+		padding-bottom:10px;
+	}
+		.homesidebarItem .followus a{
+			text-decoration:none;
+			padding-left:15px;
+			padding-top:10px;
+		}
+		.homesidebarItem .followus a img{
+			vertical-align:middle;
+		}
+		.homesidebarItem .followus a span{
+			vertical-align:middle;
+			padding-left:10px;
+		}
+*/
+
+	.followHead,
+	.homeComment,
+	.awardsHead{
+		 width:100%;
+		 background-color:rgb(1,75,66);
+	}
+		.followHead h2, .awardsHead h2{
+			 text-align:center;
+			 padding-top:5px;
+			 color:white;
+			 text-shadow:none;
+		}
+		.homeComment h3{
+			 text-align:center;
+			 padding-top:18px;
+			 color:white;
+			 text-shadow:none;
+		}
+		.homeComment .theComment{
+			 width:95%;
+			 margin:0 auto;
+			 background-color:white;
+			 border-radius:5px;
+			 padding-bottom:10px;
+			}
+			.homeComment .theComment .L{
+				 padding-top:10px;
+			}
+		.homeComment .commentMoreview{
+			margin:0 auto;
+			width:95%;
+			padding-bottom:1px;
+			}
+			.homeComment .commentMoreview a.ui-btn{
+				background-color: teal;
+				color:white;
+				font:bold 12px Arial;
+				text-shadow:none;				
+				white-space:normal;
+				border:none;
+				}
+				.homeComment .commentMoreview a.ui-btn:hover{
+					background:#58FAAC;
+					color:rgb(1,75,66);
+					text-shadow:none;
+				}
+		.followus{
+			margin:0 auto;
+			width:95%;
+			background-color:white;
+			border-radius:5px;
+			padding-bottom:10px;
+		}
+		.followus a{
+			margin:0 auto;
+			display:inline-table;
+			width:140px;
+			text-decoration:none;
+			padding-left:15px;
+			margin-top:10px;
+			}
+			.followus a img{
+				vertical-align:middle;
+			}
+			.followus a span{
+				vertical-align:middle;
+				padding-left:10px;
+			}
+	.homesidebarItem .awards{
+		margin:0 auto;
+		width:95%;
+		text-align:center;
+		background-color:white;
+		border-radius:5px;
+
+	}
+	.homesidebarItem .awards img{
+		display:inline-block;
+		vertical-align:middle;
+		padding-top:10px;
+	}
+		/*
+.homeH{
+	font-size:16px;
+	font-style:italic;
+	font-weight:700;
+}*/
+/* ------------------------------------------- Tumoy sa  index.html ----------------------------*/
+
+
+/* --------------------------- rooms.html --------------------------------------- */
+
+.ROOMCATETORY{
+	text-align:center;
+}
+.CONVENTIONALROOMS,
+.SPECIALTYROOMS{
+	margin:0 auto;
+}
+
+.divRoomCategory{
+	display:inline-block;
+	max-width: 338px;
+	padding-right:10px;
+	padding-left:10px;
+	vertical-align:top;
+	text-align:left;
+	margin-bottom:3px;
+}
+.divRoomCategory .ui-btn{
+	padding-left:5px;
+	padding-right:5px;
+	border:none;
+}
+	
+.divRoomCategory h4{
+	margin-top:3px;
+	margin-bottom:3px;
+	margin-left:10px;
+}
+
+.divRoomCategory p{
+	margin-bottom:40px;
+}
+
+.RoomDetails div.ui-content{
+	/*max-width:550px;*/
+} /* Based on the room image size, change the value if needed. */
+
+.roomAndDetails{
+	 max-width:550px;
+	 vertical-align:top;
+	}
+	.roomAndDetails .ui-listview{
+		 margin-top:0;
+	}
+	
+.roomDetailsTbl{
+	margin:0 auto;
+	max-width:550px;
+	border-width: 2px 2px 2px 2px;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+}
+
+.roomDetailsTbl td{
+	border-width: 0 0 2px 2px;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	padding:8px 8px 8px 13px;
+}
+.roomDetailsTbl td:nth-child(1){
+	text-align:left;
+	color:teal;
+	font-weight:bold
+}
+.roomDetailsTbl td:nth-child(2){
+	text-align:center;
+	font-weight:bold;
+	width:80px;
+}
+
+div.ui-collapsible .CONVENTIONALROOMS a.ui-btn,
+div.ui-collapsible .SPECIALTYROOMS a.ui-btn,
+.RoomDetails .ui-btn,
+.RoomDetails .ui-content a.ui-btn{
+	background:teal;
+	text-shadow:none;
+	color:white;
+}
+
+.NextRoomType{ /* Button/icon to show next room type in room details */
+	float:right;
+	margin-right:0;
+	font:bold 10px Arial;
+	padding-left:0;	
+}
+
+.PreviousRoomType{ /* Button/icon to show next room type in room details */
+	float:left;
+	margin-left:0;
+	font:bold 10px Arial;
+	padding-right:0;	
+}
+
+/* Room Details Header Pbay Logo */
+/*
+.HdrPbayLogo{ 
+	width:100%;
+	background-color:white;
+}
+*/
+#rooms h3{margin-top:0px;}
+#rooms ul{margin-top:0px;}
+ 
+/* Override for jquery default thumbnail size of 80x80, use in rooms thumbnails 
+#rooms .ui-li-thumb{
+	position:absolute;
+	border-radius:1px;
+    max-height: 118px; 
+    max-width: 298px;
+	margin-top:5px;
+}
+*/
+
+#rooms .ui-listview li{
+	background:white;
+} /* rooms li thumbnails pic background color */
+
+#rooms div.ui-collapsible{
+	margin:3px;
+	border-left:none;
+	border-right:none;
+}
+
+
+#imgHotelAmenities{
+	max-width: 100%;
+	margin-bottom:1px;
+	display: block;
+}
+
+/* --------------------------- activities.html -----------------------------  */
+.activitiesTableWithPrice{
+	display:inline-block;
+	max-width:350px;
+	margin:0 auto;
+	vertical-align:top;
+	border-width: 1px 1px 0 0;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	margin-bottom:10px;
+}
+
+.activitiesTableWithPrice td{
+	border-width: 0 0 1px 1px;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	padding:8px 8px 8px 13px;
+}
+
+.activitiesTableWithPrice td:nth-child(1){
+	text-align:left;
+}
+.activitiesTableWithPrice td:nth-child(2){
+	text-align:right;
+	width:80px;
+}
+
+.activitiesTableWithPrice .rowHighlighted{
+	color:teal;
+	font-weight:bold;
+	background-color:rgba(111,172,104,.2); /* highlight color */
+}
+
+
+.activitiesGolfTableWithPrice{
+	display:inline-block;
+	max-width:450px;
+	margin:0 auto;
+	vertical-align:top;
+	border-width: 1px 1px 1px 1px;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	margin-bottom:10px;
+}
+
+.activitiesGolfTableWithPrice .rowHighlighted{
+	line-height:30px;
+	text-align:center;
+	color:teal;
+	font-weight:bold;
+	background-color:rgba(111,172,104,.2); /* highlight color */
+}
+
+
+#Activities .ui-listview li{
+	white-space:normal;
+	font-size: 14px;
+	font-style: normal;
+}
+
+#Activities div.ui-collapsible{margin:2px;}
+
+#Activities .ui-li-divider{
+	margin:0 auto;
+	background:#6fac68;
+	font-weight:bold;
+	text-align:center;
+	padding:3px;
+}
+#Activities .ui-listview li{
+	white-space:normal;
+}
+#Activities .ui-listview{
+	border-radius:3px;
+}
+#Activities .ui-listview li span.ui-li-aside{
+	color:teal;
+} /* prices change color */
+/* ---------------------------------- dining.hmtl ----------------------------*/
+
+.Rprice{
+	font-size:16px;
+	font-weight:bold;
+	text-align:left;
+}
+
+.Rprice span{color:teal;}
+
+.DiningCulinarySuperlativesIMG{ /* used in Dining CulinarySuperlatives and  Gastronomy */
+	display:inline-block;
+	margin:0 auto;
+	max-width:250px;
+	vertical-align:top;
+	margin-bottom: 3px;
+}/*
+.DiningCulinarySuperlativesIMG img{
+	border-top: 2px solid teal;
+	border-bottom: 2px solid teal;
+}*/
+.DiningCulinarySuperlativesIMG p{
+	text-align:justify;
+}
+.DiningCulinarySuperlativesIMG p strong, /* Dining Images name color */
+.DiningCulinarySuperlativesIMG p span{ /* Gastronomy price color change */
+	color:teal;
+}
+
+.DiningRestaurantsIMG{
+	display:inline-block;
+	/*max-width: 100%;*/
+	margin:0 auto;
+	/*border: 1px solid #d2bd86; */
+	max-width:280px;
+	vertical-align:top;
+	margin-bottom:15px;
+}
+.DiningRestaurantsIMG img{
+	/*border-top: 2px solid teal;
+	border-bottom: 2px solid teal;*/
+	margin-bottom:0;
+}
+.DiningRestaurantsIMG h4,
+.DiningCulinarySuperlativesIMG h4{
+	color:Teal;
+	font-style:italic;
+	margin-bottom:0;	
+	margin-top:3px;
+	padding:0;
+}
+.DiningRestaurantsIMG p{
+	text-align:left;
+	margin-top:3px;
+	margin:0 auto;
+}
+
+#dining div.ui-collapsible{margin:2px;}
+#dining div.ui-footer{margin-top:5px;}
+
+
+/* ---------------------------- Tumoy sa DINING ---------------------------------- */
+
+/* -----------------------------spa.html   SUGOD --------------------------------- */
+#mogambosprings div.ui-collapsible{margin:2px;}
+
+#mogambosprings div.ui-collapsible .Mika{ /* Spa Tretments Tables with prices collapsibles */
+	margin:0 auto;
+	max-width:800px;
+	text-align:left;
+}
+
+.spaTableWithPrice{
+	margin:0 auto;
+	border-width: 0 0 0 0;
+	border-spacing: 0;
+}
+
+.spaTableWithPrice tr:nth-child(odd){
+	line-height:30px;
+	color:teal;
+	font-weight:bold;
+}
+.spaTableWithPrice tr:nth-child(odd) i{
+	color:#000;
+}
+.spaTableWithPrice .rowHighlighted{
+	background-color:rgba(192,192,192,.2); /* highlight color */
+}
+
+.spaTableWithPrice tr:nth-child(even) p{
+	margin-top:0;
+	margin-left:0;
+}
+.spaTableWithPrice td:nth-child(1){
+	padding-left:10px;
+}
+.spaTableWithPrice td:nth-child(2){
+	width:78px;
+	text-align:right;
+	padding-right:10px;
+}
+
+#mogambosprings .ui-listview .ui-li-divider{margin-bottom:0px;}
+#mogambosprings .ui-listview li{margin-bottom:-10px;}
+
+/*
+#mogambosprings .ui-listview li h4{
+	text-overflow: initial !important;
+	white-space:normal !important;	
+	color:teal;
+	margin-bottom:1px;	
+}
+*/
+
+#mogambosprings .ui-listview li h4 i{color:black;}
+
+#mogambosprings #LovingLifeDay1 li p,
+#mogambosprings #LovingLifeDay2 li p{
+	font:14px Arial;
+	text-overflow: initial;
+	overflow: visible;
+	white-space:normal;
+}
+/* -------- Tumoy sa spa.html  -------------------------------- */
+
+/* ----------------------  packages.html ---------------------------    */
+
+#conferencesvenuetable thead th{
+	background: #6fac68;
+	color: white;
+	text-shadow:none;
+}
+#conferencesvenuetable {
+	border-width: 0 1px 2px 1px;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	}
+#conferencesvenuetable td{
+	margin: 0;
+	padding: 4px;
+	border-color:#d2bd86;
+	border-width: 1px 1px 0 0;
+	border-style: solid;
+	}
+#meetingpackagewholeday thead th{
+	background: #6fac68;
+	color: white;
+	text-shadow:none;
+	text-align:center;
+	padding:4px;
+	}
+#meetingpackagewholeday {
+	border-width: 0 1px 2px 1px;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	}
+#meetingpackagewholeday td{
+	margin: 0;
+	padding: 4px;
+	border-color:#d2bd86;
+	border-width: 1px 1px 0 0;
+	border-style: solid;
+	}
+#meetingpackagehalfday thead th{
+	background: #6fac68;
+	color: white;
+	text-shadow:none;
+	text-align:center;
+	padding:4px;
+	}
+#meetingpackagehalfday {
+	border-width: 0 1px 2px 1px;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	}
+#meetingpackagehalfday td{
+	margin: 0;
+	padding: 4px;
+	border-color:#d2bd86;
+	border-width: 1px 1px 0 0;
+	border-style: solid;
+	}
+#packages div.ui-collapsible{
+	margin:2px;
+	}
+
+/* ----------------Tumoy sa packages.html  --------------------------------- */
+
+/* -----------------contact.html ---------------------------------------------*/
+#contact div.ui-collapsible{margin:2px;}
+
+#contact .ui-table-columntoggle-btn {
+   /* width: 200px !important; */
+	margin-bottom:3px;
+}
+
+#guestcommentsTable1,
+#guestcommentsTable2 {
+	border-width: 0 1px 2px 1px;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	margin-bottom:8px;
+}
+
+#guestcommentsTable1 thead th,
+#guestcommentsTable2 thead th{
+	background: #6fac68;
+	color: white;
+	text-shadow:none;
+	text-align:center;
+}
+
+#guestcommentsTable1 th,
+#guestcommentsTable2 th,
+#guestcommentsTable1 td,
+#guestcommentsTable2 td{
+	margin: 0;
+	padding: 4px;
+	border-color:#d2bd86;
+	border-width: 1px 1px 0 0;
+	border-style: solid;
+}
+#guestcommentsTable1 td + td,
+#guestcommentsTable2 td + td{
+	margin: 0;
+	padding: 4px;
+	border-color:#d2bd86;
+	border-width: 1px 1px 0 0;
+	border-style: solid;
+	text-align:center;
+}
+
+.commenter{
+	white-space:normal;
+	margin-top:18px;
+	text-align:right;
+	color: #006666;
+	font-style:italic;
+	font-weight:bold;
+}
+
+#contact .ui-listview li{
+	border-color:white;
+}
+
+/* -------------------------- myreservation -------------- */
+
+#myreservation .ui-controlgroup{
+	margin:0 auto;
+	margin-bottom:18px;
+	padding-left:10px;
+	/*max-width:380px;*/
+}
+
+#resDates{
+	text-align:center;
+	margin:0 auto;
+	margin-bottom:18px;
+	margin-top:18px;
+	/*max-width:380px;*/
+}
+
+
+#resDatesAndDetails{
+	margin:0 auto;
+	max-width:450px;
+}
+/*
+#myreservation div.ui-collapsible {
+	margin:3px;
+}
+*/
+/*#myreservation .ui-collapsible table .ui-btn{*/
+#myreservation #resDatesAndDetails table .ui-btn{
+	background:rgba(111,172,104,.2);
+	text-shadow:none;
+	/*color:teal;*/
+	color: rgb(1,75,66);
+}
+
+/*#myreservation .ui-collapsible fieldset{*/
+#myreservation  #resDatesAndDetails fieldset{
+	margin-top:3px;
+	margin-bottom:3px;
+}
+ 
+#myreservation  #resDatesAndDetails  .ui-bar.ui-bar-a{
+	background: rgba(1,75,66,.9); /*#6fac68;*/
+	color:white;
+	text-shadow:none;
+}
+ 
+.resDatesTbl{
+	margin:0 auto;
+	/*border-width: 1px 1px 1px 1px;*/
+	border-width: 0 0 0 0;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	font-weight:bold;
+}
+
+.resDatesTbl td{
+	/*border-width: 0 0 1px 1px;*/
+	border-width: 0 0 0 0;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	/*padding:8px 8px 8px 13px;*/
+}
+
+.resPeakBalckOUtTbl{
+	/*border-width: 1px 1px 1px 1px;*/
+	border-width: 0 0 0 0;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+}
+
+.resPeakBalckOUtTbl td{
+	/*border-width: 0 0 1px 1px;*/
+	border-width: 0 0 0 0;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	padding:8px 8px 8px 13px;
+}
+.resPeakBalckOUtTbl td:nth-child(1){
+	text-align:left;
+}
+.resPeakBalckOUtTbl td:nth-child(2){
+	text-align:left;
+	max-width:280px;
+}
+
+.resPeakBalckOUtTbl tr:nth-child(even){
+	background-color:rgba(111,172,104,.1);
+}
+
+.resRoomsAvailability{
+	border-width: 0 0 0 0;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	}
+
+.resRoomsAvailability td{
+	border-width: 0 0 0 0;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	padding:8px 8px 8px 13px;
+	}
+
+#myreservation .custom-corners .ui-bar {
+	-webkit-border-top-left-radius: inherit;
+	border-top-left-radius: inherit;
+	-webkit-border-top-right-radius: inherit;
+	border-top-right-radius: inherit;
+	}
+#myreservation .custom-corners .ui-body {
+	border-top-width: 0;
+	-webkit-border-bottom-left-radius: inherit;
+	border-bottom-left-radius: inherit;
+	-webkit-border-bottom-right-radius: inherit;
+	border-bottom-right-radius: inherit;
+	}
+
+#prefRooms{
+	font-weight:bold;
+	list-style:square url('http://plantationbay.com/wp-content/themes/plantaccess/images/favicon.ico');
+}
+
+
+/* Booknow.html */
+
+#resRoomAvailability{
+	margin:0 auto;
+	max-width:650px
+}
+
+#resRoomAvailability .ui-bar.ui-bar-a{
+	 /*background: rgba(111,172,104,.2);*/
+	 /*background:#6fac68;*/
+	 background-color:rgba(1,75,66,.9);
+	 color:white;
+	 text-shadow:none;"
+}	
+
+#booknow  table .resNumReserveThis{
+	text-align:center;
+	/*padding:3px;*/
+	font:bold 16px Arial;
+	/*width:45px;
+	margin-top:0;
+	margin-bottom:0;
+	margin: 0 0 0 0;*/
+}
+
+.resBookNowAvail{
+	margin:0 auto;
+	/*border-width: 1px 1px 1px 1px;*/
+	border-width: 0 0 0 0;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	}
+	.resBookNowAvail td{
+		/*border-width: 0 0 1px 1px;*/
+		border-width: 0 0 0 0;
+		border-spacing: 0;
+		border-color:#d2bd86;
+		border-collapse: collapse;
+		border-style: solid;
+		padding: 8px 5px 8px 5px;
+		}
+		.resBookNowAvail td:nth-child(2) a{
+			color:rgb(1,75,66);
+		}
+		.resBookNowAvail td:nth-child(3){
+			text-align:right;
+			max-width:280px;
+			font-size:10px;
+		}
+	.resBookNowAvail tr:nth-child(even){
+		background-color:rgba(111,172,104,.1);
+	}
+	.resBookNowAvail tr:first-child{
+		padding-bottom:15px;
+		background-color:rgba(111,172,104,.3);
+		}
+	.resBookNowAvail tr:last-child{
+		text-align:right;
+		}
+		#resBookNowAvailFirstRow td label,
+		#TRBookNowLast td span label{
+			color:Teal;
+			font:bold 12px Arial;
+			text-shadow:none;
+		}
+	#resCheckAvailability,
+	#ReservedTheseRooms,
+	#reservationBack,
+	#bookNowContinue{
+		background:#58FAAC;
+		color:rgb(1,75,66);
+		/*background:teal !important;
+		color:white;*/
+		box-shadow: 3px 3px #d2bd86;
+		text-shadow:none;
+	}
+	#reservationGuests{
+		text-align:right;
+		font:bold 14px Arial;
+	}
+
+#reservationChildren,#reservationAdults{
+	font:bold 14px Arial;
+	text-align:right;
+}	
+/*		
+.resBookNowAddOn table .resAddONChoice{
+	text-align:center;
+	padding:3px;
+	font:bold 16px Arial;
+	width:45px;
+	margin-top:0;
+	margin-bottom:0;
+}
+*/
+.resBookNowAddOn{
+	margin:0 auto;
+	/*border-width: 1px 1px 1px 1px;*/
+	border-width: 0 0 0 0;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	}
+	.resBookNowAddOn tr{
+		height:50px;
+		}
+		.resBookNowAddOn tr:nth-child(odd){
+			background-color:rgba(111,172,104,.1);
+		}
+		.resBookNowAddOn td{
+			/*border-width: 0 0 1px 1px;*/
+			border-width: 0 0 0 0;
+			border-spacing: 0;
+			border-color:#d2bd86;
+			border-collapse: collapse;
+			border-style: solid;
+			padding:5px 5px 5px 13px;
+			}
+			.resBookNowAddOn td:nth-child(1){
+				text-align:right;
+				min-width:20px;
+				max-width:280px;
+				font-size:12px;
+				}
+				.resBookNowAddOn td:nth-child(1) input{
+					margin-top:-15px;
+				}
+			.resBookNowAddOn td:nth-child(2){
+				text-align:left;
+				font:bold 16px Arial;
+				}
+				.resBookNowAddOn td:nth-child(2) a{
+					color:rgb(1,75,66);
+				}
+			
+			.resBookNowAddOn td:nth-child(3){
+				text-align:right;
+			}
+			
+
+.resBookBfast{
+	margin:0 auto;
+	/*border-width: 1px 1px 1px 1px;*/
+	border-width: 0 0 0 0;
+	border-spacing: 0;
+	border-color:#d2bd86;
+	border-collapse: collapse;
+	border-style: solid;
+	}
+	
+	.resBookBfast td{
+		/*border-width: 0 0 1px 1px;*/
+		border-width: 0 0 0 0;
+		border-spacing: 0;
+		border-color:#d2bd86;
+		border-collapse: collapse;
+		border-style: solid;
+		padding:8px 8px 8px 13px;
+		}	
+
+.resFreeTreats{
+	margin:0 auto;
+	/*border-width: 1px 1px 1px 1px;*/
+	font:bold 12px Arial;
+	border-spacing: 0;
+	border-collapse: collapse;
+	}
+	.resFreeTreats tr:nth-child(even){
+		background-color:rgba(111,172,104,.1);
+		}	
+		.resFreeTreats td{
+			/*border-width: 0 0 1px 1px;*/
+			border-width: 0 0 0 0;
+			border-spacing: 0;
+			border-color:#d2bd86;
+			border-collapse: collapse;
+			border-style: solid;
+			padding:7px 7px 7px 13px;
+			}			
+			.resFreeTreats td:nth-child(1){
+				width:10px;
+				text-align:left;
+			}
+
+.resComputations{
+	margin:0 auto;
+	border-width: 1px 1px 1px 1px;
+	/*border-width: 0 0 0 0;*/
+	font:bold 12px Arial;
+	border-spacing: 0;
+	border-collapse: collapse;
+	}
+	.resComputations tr:nth-child(even){
+		background-color:rgba(111,172,104,.1);
+		}	
+		.resComputations td{
+			border-width: 1px 1px 1px 1px;
+			/*border-width: 0 0 0 0;*/
+			border-spacing: 0;
+			border-color:#d2bd86;
+			border-collapse: collapse;
+			border-style: solid;
+			padding:7px 7px 7px 13px;
+			}			
+			.resComputations td:last-child{
+				//width:30px;
+				text-align:right;
+			}
+			.resComputations td:nth-child(1){
+				//width:10px;
+				text-align:left;
+			}			
+.confComputations{
+	margin:0 auto;
+	/*float:right;*/
+	min-width: 280px;
+	/*border-width: 1px 1px 1px 1px;*/
+	border-width: 0 0 0 0;
+	font-size: 14px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	}/*
+	.confComputations tr:nth-child(1) td{ 
+		 background: rgba(111,172,104,.3);
+		 text-align:center;
+		 font:bold 16px Arial;
+		}*/
+	.confComputations tr:nth-child(odd){
+		background-color:rgba(192,192,192,.2);
+		}
+		.confComputations td{
+			/*border-width: 1px 1px 1px 1px;*/
+			border-width: 0 0 0 0;
+			border-spacing: 0;
+			border-color:#d2bd86;
+			border-collapse: collapse;
+			border-style: solid;
+			padding:7px 7px 7px 13px;
+			}			
+			.confComputations td:last-child{
+				min-width:70px;
+				text-align:right;
+			}
+			.confComputations td:nth-child(1){
+				//width:10px;
+				text-align:left;
+			}			
+#reservationDetails{
+	margin:0 auto;
+	max-width:800px;
+}
+	#reservationDetails .ui-bar.ui-bar-a{
+		/*background-color:#6fac68; 
+		color:white;
+		*/
+		background-color: rgba(1,75,66,.9);
+		color:white;
+		text-shadow:none;
+	}
+		
+/* Illustraive costs of food and beverages */
+
+.iCostTblhead{
+	margin:0 auto;
+	display:inline-table;
+	}
+.iCostTbl{
+	border-width: 2px 2px 2px 2px;
+	border-spacing: 0;
+	border-color:rgba(111,172,104,.3);
+	border-collapse: collapse;
+	border-style: solid;
+	margin-bottom:10px;
+	margin-left:10px;
+	}
+	.iCostTbl td{
+		/*border-width: 0 0 1px 1px;*/
+		border-width: 0 0 0 0;
+		border-spacing: 0;
+		border-color:#d2bd86;
+		border-collapse: collapse;
+		border-style: solid;
+		padding:8px 8px 8px 13px;
+		}
+		.iCostTbl td:nth-child(1){
+			text-align:left;
+			}
+		.iCostTbl td:nth-child(2),.iCostTbl td:nth-child(3){
+			text-align:left;
+			max-width:280px;
+			border-left:1px solid rgba(111,172,104,.2);
+		}
+		.iCostTbl tr:nth-child(even){
+			background-color:rgba(111,172,104,.2);
+		}
+		.iCostTbl tr:nth-child(1){
+			font:bold 16px Arial;
+			color:white;
+			background-color:rgba(111,172,104,.8);
+			text-shadow:none;
+			}
+
+/* ------- confirmation ------------------- */
+
+
+
+#Conf{
+	/*margin:0 auto;*/
+	/*max-width:788px;*/
+	/*border: 1px solid rgba(111,172,104,.2);*/
+	/*border: 5px solid #FFFFDD;*/
+	/*border: 1px solid teal;*/
+	/*border-radius:5px;*/
+	/*margin-top:8px;*/
+}
+#Confheader{
+	/*margin:0 auto;
+	/*max-width:1680px;	*/
+	/*background:white;*/
+	/*background: url("confHeader.jpg") no-repeat;	*/
+	/*background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("confKayak.jpg") no-repeat;
+    background: -webkit-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1)),url("confKayak.jpg") no-repeat;		
+	background-size: 100% 100%;
+	border-bottom: 1px solid rgba(1,75,66,.2);*/
+	
+}
+
+
+/* CALENDAR OF ACTIVITIES */
+
+.actDiv{
+	margin:0 auto;
+	max-width:100%;
+	text-align:left;
+	padding-left:10px;
+	font:bold 24px Arial;
+}
+.actDays{
+ text-align:left;
+ font:bold 24px Arial;
+ color:rgb(1,75,66);"
+}
+.actAdultChildren{
+	display:inline-block;
+	max-width:500px;
+	border:1px solid rgb(1,75,66);
+	vertical-align:top;	
+	margin-bottom:10px;
+}
+.clsAct{
+	text-align:center;
+	border-width: 0 0 0 0;
+	border-collapse: collapse;
+	border-style: solid;
+	}
+	.clsAct thead tr td{
+		border-width: 0 0 0 0;
+		border-collapse: collapse;
+		border-style: solid;
+		background-color:rgb(1,75,66);
+		color:white;
+		font:20px Arial;
+		text-align:center;
+		padding-top: 3px;
+		padding-bottom: 3px;
+	}		
+	.clsAct tbody tr:nth-child(even){
+			background-color:#FFFFDD;
+		}
+		.clsAct tbody tr td{
+			border-width: 0 0 0 0;
+			border-collapse: collapse;
+			border-style: solid;
+			font:20px Arial;
+			text-align:left;
+			padding-left:15px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			}	
+			.clsAct tbody tr td:nth-child(1){
+				min-width:100px;
+			}
+			.clsAct tbody tr td:nth-child(2){
+				padding-left:0;
+				padding-right:0;
+			}
+
+/*  copyright */
+.CopyRight{
+	font:bold 10px Arial;
+	text-align:center;
+	padding-bottom:3px;
+}
+.ui-page .ui-footer .CopyRight a{
+	color:rgb(111,172,104);
+}

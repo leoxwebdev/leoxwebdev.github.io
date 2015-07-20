@@ -1,0 +1,6 @@
+REVISSION:
+
+all header, including pages in rooms page.
+menu: PHOTO GALLERY -> IMAGES
+remove renovation announcement: index,rooms
+languages images

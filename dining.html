@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>Plantation Bay Resort and Spa, Mactan Cebu Resort Hotel | Outstanding Cuisine</title>
+<meta name="description" content="We take pride in our kitchens at Plantation Bay and can assure you of consistently delicious, beautifully-presented dishes at reasonable prices.">
+<meta name="keywords" content="Palermo, Savannah, Kilimanjaro, Fiji">
+<link rel="Shortcut Icon" href="pbayImages/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="jqm145.css" />
+<link rel="stylesheet" href="rlmj.css" />
+<script src="jq211.js"></script>
+<script type="text/javascript" src="rlmj.js"></script>
+<script src="jqm145.js"></script>
+<script type="text/javascript">
+	window.onload = function () {
+		if (localStorage.AngNagTawagNiDiningPage == "homeCulinary"){
+			localStorage.AngNagTawagNiDiningPage="LeoGwapo";
+			$("#diningRestaurants").collapsible("option", "collapsed", true );
+			$("#diningCulinarySuper").collapsible("option", "collapsed", false );
+			var timeoutId = setTimeout(function(){movetoGuestComments()},100);
+			function movetoGuestComments(){
+				$('html, body').animate({scrollTop: $("#diningCulinarySuper").offset().top});
+			}
+		};
+	}
+</script>
+</head>
+<body>
+<!--Dining -->
+<div data-role="page" id="dining">
+	<div data-role="header">
+		<div class="headerwhole">
+			<h1 class="pbayheadlogo">
+				<img src="pbayImages/pbaylogo.png" alt="Logo - Plantation Bay Resort and Spa"/>
+			</h1>
+			<div class="linguahi">
+				<ul class="langOptions action-bar clearfix">
+					<li>Translate Page</li>
+					<li><a href="/english/" class="lang_link" data-ajax="false"><img src="images/flags/english.png" alt="" /><span class="langs"></span><span class="langtooltip">English</span></a></li>
+					<li><a href="/japanese/" class="lang_link" data-ajax="false"><img src="images/flags/japanese.png" alt="" /><span class="langs"></span><span class="langtooltip">Japanese</span></a></li>
+					<li><a href="/russian/" class="lang_link" data-ajax="false"><img src="images/flags/russian.png" alt="" /><span class="langs"></span><span class="langtooltip">Russian</span></a></li>
+					<li><a href="/english/" class="lang_link" data-ajax="false"><img src="images/flags/korean.png" alt="" /><span class="langs"></span><span class="langtooltip">Korean</span></a></li>
+					<li><a href="/english/" class="lang_link" data-ajax="false"><img src="images/flags/mandarin.png" alt="" /><span class="langs"></span><span class="langtooltip">Mandarin</span></a></li>
+				</ul>
+			</div>
+			<img src="pbayImages/slogan.png" alt="Plantation Bay Slogan" class="pbayslogan" />	
+			<a href="#DININGpanelMenu" class="MenuPanel ui-btn ui-btn-inline ui-btn-icon-right ui-icon-bars" data-rel="panel">MENU</a>   
+			<section class="top-menus">
+				<nav class="main" role="navigation">
+					<a href="index.html" data-ajax="false" data-role="button">HOME</a>
+					<a href="rooms.html" data-ajax="false" data-role="button">ROOMS</a>
+					<a href="packages.html" data-ajax="false" data-role="button">PACKAGES</a>
+					<a href="dining.html" data-ajax="false" data-role="button" class="btnSelected">DINING</a>
+					<a href="spa.html" data-ajax="false" data-role="button">SPA</a>
+					<a href="activities.html" data-ajax="false" data-role="button">ACTIVITIES</a>
+					<a href="images.html" data-ajax="false" data-role="button">IMAGES</a>
+					<a href="contact.html" data-ajax="false" data-role="button">CONTACT US</a>
+					<a href="https://plantationbay.com/leox/myreservation.html" data-ajax="false" data-role="button">MY RESERVATION</a>
+				</nav>
+			</section>
+		</div>
+	</div>
+	<div data-role="content">
+		<section class="homeMain">
+			<div class="L_YourAreHere">
+				<div class="IpatungaInlineBlock">
+					<label>You are here:</label>
+				</div>
+				<div class="IpatungaInlineBlock">
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+						<select class="leoxYourHereMainMenu" data-native-menu="false" data-icon="bars" data-iconpos="none">
+							<option value="index.html">HOME</option>
+							<option value="rooms.html">ROOMS</option>
+							<option value="packages.html">PACKAGES</option>
+							<option value="dining.html" selected>DINING</option>
+							<option value="spa.html">SPA</option>
+							<option value="activities.html">ACTIVITIES</option>
+							<option value="images.html">IMAGES</option>
+							<option value="contact.html">CONTACT US</option>
+							<option value="https://plantationbay.com/leox/myreservation.html">MY RESERVATION</option>
+						</select>
+					</fieldset>
+				</div>
+				<div class="IpatungaInlineBlock"><span class="arrowleo txtDarkGreen iBold"> > </span></div>
+				<div class="IpatungaInlineBlock">
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+						<select class="dining_mobile_menu" data-native-menu="false" data-icon="bars" data-iconpos="right">
+							<option value="RESTAURANTS" selected>RESTAURANTS</option>
+							<option value="CULINARYSUPERLATIVES">CULINARY SUPERLATIVES</option>
+							<option value="GASTRONOMYONABUDGET">GASTRONOMY ON A BUDGET</option>
+							<option value="THEMEDDINNERBUFFETS">THEMED DINNER BUFFETS</option>
+						</select>
+					</fieldset>
+				</div>
+			</div>
+			<section class="homeArticle">		
+				<div id="diningRestaurants">
+					<h1 class="leoxTitle">RESTAURANTS</h1>
+					<div class="leoxSudlanan">
+						<h3 class="leoxTitle">Outstanding Cuisine</h3>
+						<p class="iJustify">We take pride in our kitchens at Plantation Bay and can assure you of consistently delicious, beautifully-presented dishes at reasonable prices. For groups and conferences, our award-winning chefs can prepare just about any kind of banquet you desire. Haute cuisine? Nouvelle? Theme-party buffets? Marshmallows and beach bonfire? We’ve got a menu and a venue for you.</p>
+						<p class="iJustify"><strong class="txtDarkGreen">FIVE OUTSTANDING RESTAURANTS.</strong>&nbsp; <strong>Kilimanjaro Kafé</strong>, international. <strong>Fiji</strong>, seafood and Asian specialties. <strong>Palermo</strong>, tapas and pastas. <strong>Savannah Grill</strong>, fast-food favorites with 5-star flair. <strong>Alien Abduction</strong>, ice cream and cocktail. Three of these are rated by the prestigious Philippine Tatler among the Top 150 restaurants in the entire country.</p>
+					</div>
+					<div class="leoxSudlanan">
+						<!--KILIMANJARO -->
+						<img class="IpatungaDblock" src="pbayImages/kili_logo.gif" alt="Kilimanjaro Kafe" title="Kilimanjaro Kafe" />
+						<p class="iCenter"><i>(Open 24 hours daily.)</i></p>
+						<p>
+							<img class="IpatungaDblock" src="pbayImages/Tatlersmall.jpg" alt="Kilimanjaro Kafe - Best Restaurants" />	
+						</p>					
+						<p class="iJustify">
+							The coffee shop is surrounded by our gigantic swimming pool. Features international and Filipino favorites, a special children&#8217;s menu, and our world-famous Breakfast Buffet with different culinary themes for every day of the week.
+						</p>						
+						<h4 class="txtDarkGreen iCenter">Sample Food Prices</h4>
+						<p class="iCenter"><i>Prices are subject to 10% Service Charge.</i></p>
+						<div class="iCenter">
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaInlineBlock" src="pbayImages/spc_06.jpg" alt="Kilimanjaro Kafe - Seafood Pancit Canton" />
+									<h4>Seafood Pancit Canton</h4>
+									<p>Noodles with mussels, squid, shrimps, vegetables, chili and oyster sauce.</p>
+									<div class="Rprice">Php 480+<span> (about US$ 11+)</span></div>
+							</div>
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaInlineBlock"  src="pbayImages/gnys_06.jpg" alt="Kilimanjaro Kafe - The Great New York Cheesecake" />
+								<h4>The Great New York Cheesecake</h4>
+								<p>A classic cheesecake with Graham cracker crust and blueberries.</p>
+								<div class="Rprice">Php 180+<span> (about US$ 4+)</span></div>
+							</div>
+						</div>
+					</div>
+					<!-- FIJI RESTAURANT -->
+					<div class="leoxSudlanan">
+						<img title="Fiji Restaurant" class="IpatungaDblock" src="pbayImages/Fiji_Logo.gif" alt="Fiji Restaurant" />
+						<p class="iCenter"><i>(Open 12 Noon – 3PM and 6PM – 11PM. Closed on Mondays.)</i></p>											
+						<p>
+							<img class="IpatungaDblock" src="pbayImages/Tatlersmall.jpg" alt="Kilimanjaro Kafe - Best Restaurants" />	
+						</p>
+						<p>
+							Situated by the hotel’s beachfront, Fiji offers both air-conditioned and open-air dining. Open for lunch and dinner, it serves seafood, Japanese, Korean and other Asian cuisine.
+						</p>									
+						<h4 class="txtDarkGreen iCenter">Sample Food Prices</h4>
+						<p class="iCenter"><i>Prices are subject to 10% Service Charge.</i></p>
+						<div class="iCenter">
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/tempura1.jpg" alt="Fiji - Prawns Tempura" />
+								<h4>Prawns Tempura</h4>
+								<p>Deep-fried battered jumbo prawns, without any doubt as good as the best tempura anywhere.</p>
+								<div class="Rprice">Php 980+<span> (about US$ 23+)</span></div>
+							</div>
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/spareribs2.jpg" alt="Fiji - Polynesian Spareribs" />
+								<h4>Polynesian Spareribs</h4>
+								<p>A must try! This dish will surely delight your taste buds.</p>
+								<div class="Rprice">Php 540+<span> (about US$ 13+)</span></div>
+							</div>
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/kimchi.jpg" alt="Fiji - Kimchi" />
+								<h4>Kimchi</h4>
+								<p>Traditional Korean pickled cabbage (available upon request).</p>
+								<div class="Rprice">Php 120+<span> (about US$ 3+)</span></div>
+							</div>
+						</div>
+					</div>
+					<!-- Palermo-->
+					<div class="leoxSudlanan">
+						<img  class="IpatungaDblock" title="Palermo Restaurant" src="pbayImages/paler_logo.png" alt="Palermo Restaurant" />
+						<p class="iCenter">Café Bar: <i>Open 6AM – 11PM</i><br />
+							Tapas and Pastas: <i>Open 5PM – 11PM</i><br />
+							Air conditioned. Closed on Wednesdays.
+						</p>
+						<p>
+							<img class="IpatungaDblock" src="pbayImages/Tatlersmall.jpg" alt="Kilimanjaro Kafe - Best Restaurants" />	
+						</p>	
+						<p class="iJustify">			
+							Palermo, our Mediterranean-inspired restaurant, is open for light breakfasts, great coffee all day, and Spanish tapas and Italian pastas for dinner.
+						</p>									
+						<h4 class="txtDarkGreen iCenter">Sample Food Prices</h4>
+						<p class="iCenter"><i>Prices are subject to 10% Service Charge.</i></p>
+						<div class="iCenter">
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/gambas_palermo2.jpg" alt="Palermo - Gambas" />
+								<h4>Gambas</h4>
+								<p>Garlic Prawns. Hot and spicy!</p>
+								<div class="Rprice">Php 250+<span> (about US$ 6+)</span></div>
+							</div>
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/vongole1.jpg" alt="Palermo - Linguine Alle Vongole" />
+								<h4>Linguine Alle Vongole</h4>
+								<p>Linguine with clams and white wine sauce.</p>
+								<div class="Rprice">Php 450+<span> (about US$ 10+)</span></div>
+							</div>
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/bellpeppers.jpg" alt="Palermo - Roasted Bell Peppers" />
+								<h4>Roasted Bell Peppers</h4>
+								<p>Soft and spicy sweet, in olive oil.</p>
+								<div class="Rprice">Php 250+<span> (about US$ 6+)</span></div>
+							</div>
+						</div>
+						<br />
+						<h4 class="iCenter txtDarkGreen">Café Bar Sample Beverage Prices</h4>
+						<div class="iCenter">
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/cafemocha.jpg" alt="Palermo Cafe Bar- Café Mocha" />
+								<h4>Café Mocha</h4>
+								<div class="Rprice">Php 165 nett<span> (about US$ 4 nett)</span></div>
+							</div>
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/mocha_frost.jpg" alt="Palermo Cafe Bar- Mocha Frost" />
+								<h4>Mocha Frost</h4>
+								<div class="Rprice">Php 330 nett<span> (about US$ 7 nett)</span></div>
+							</div>
+						</div>
+					</div>
+					<!--<h3> Savannah Grill</h3>-->
+					<div class="leoxSudlanan">
+						<img  title="Savannah Grill" class="IpatungaDblock" src="pbayImages/Savannahgrill_logobig.jpg" alt="Savannah Grill" />
+						<p class="iCenter"><i>(Open 10AM – 8PM. Closed on Tuesdays.)</i></p>				
+						<p class="iJustify">Fast-food favorites with 5-star flair. We will stack our Powerhouse Burger (order it with everything on!) against anyone’s. The steaks literally melt in your mouth, and the stateside hotdogs are out of sight.</p>							
+						<h4 class="txtDarkGreen iCenter">Sample Food Prices</h4>
+						<p class="iCenter"><i>Prices are subject to 10% Service Charge.</i></p>
+						<div class="iCenter">
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/phb_07.jpg" alt="Savannah Grill - The Powerhouse Burger" />
+								<h4>The Powerhouse Burger</h4>
+								<p>If this isn’t the best hamburger you’ve ever tasted in your life,<br /> tell us after two bites and there’s no charge.</p>
+								<div class="Rprice">Php 430+<span> (about US$ 10+)</span></div>
+							</div>
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/hotdog1.jpg" alt="Savannah Grill - The World’s Best Hot Dogs" />
+								<h4>The World’s Best Hot Dogs</h4>
+								<p>We searched high and low to find the world’s tastiest hotdog and came up with a tie: <br />Hebrew National Jumbo (all-beef), and Armour Kielbasa (beef, pork, and turkey).</p>
+								<div class="Rprice">Php 260+<span> (about US$ 6+)</span></div>
+							</div>
+						</div>
+					</div>
+					<!-- Alein Abduction-->
+					<div class="leoxSudlanan">
+						<img  class="IpatungaDblock" title="Palermo Restaurant" src="pbayImages/AlienAbduction_logo.png" alt="Palermo Restaurant" />
+						<p class="iJustify">			
+							Perched atop our Kilimanjaro Kafé, sci-fi-inspired Alien Abduction offers commanding views of Plantation Bay. An ice cream parlor from 10AM to 5PM, it metamorphoses into an out of this world cocktail lounge from 6PM to 12MN. You may never visit outer space, but you can still meet cute aliens at our futuristic watering hole. (Closed on Thursdays.)
+						</p>									
+						<h4 class="txtDarkGreen iCenter">Sample Food Prices</h4>
+						<!--<p class="iCenter"><i>Prices are subject to 10% Service Charge.</i></p>-->
+						<div class="iCenter">
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/magmatic.jpg" alt="Palermo - Gambas" />
+								<h4>Magmatic Eruption</h4>
+								<p>Chocolate lava cake with gooey chocolate center. Topped with chocolate ice cream.</p>
+								<div class="Rprice">Php 220 nett<span> (about US$ 5+ nett)</span></div>
+							</div>
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/alienpeepingtom.jpg" alt="Palermo - Linguine Alle Vongole" />
+								<h4>Alien Peeping Tom on Dark Matter</h4>
+								<p>Chocolate Ice Cream topped with a chocolate dome cookie. Alien antennas made with chocolate with almond chipped eyes.</p>
+								<div class="Rprice">Php 220 nett<span> (about US$ 5+)</span></div>
+							</div>
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/adoboflying.jpg" alt="Palermo - Roasted Bell Peppers" />
+								<h4>Adobo Flying Saucer</h4>
+								<p>Sliced bread filled with soft boiled eggs and Adobo, the country’s unofficial national dish.</p>
+								<div class="Rprice">Php 330 nett<span> (about US$ 7.5 nett)</span></div>
+							</div>
+						</div>
+						<br />
+						<h4 class="iCenter txtDarkGreen">Bar Sample Beverage Prices</h4>
+						<div class="iCenter">
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/brainhemorrhage.jpg" alt="Palermo Cafe Bar- Café Mocha" />
+								<h4>Brain Hemorrhage</h4>
+								<div class="Rprice">Php 120 nett <span> (about US$ 3 nett)</span></div>
+							</div>
+							<div class="DiningRestaurantsIMG">
+								<img class="IpatungaDblock" src="pbayImages/pinacolada.jpg" alt="Palermo Cafe Bar- Mocha Frost" />
+								<h4>Quantum Colada</h4>
+								<div class="Rprice">Php 280 nett<span> (about US$ 7 nett)</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="diningCulinarySuper" class="itago">
+					<h1 class="leoxTitle">CULINARY SUPERLATIVES</h1>
+					<div class="leoxSudlanan">
+						<p class="iJustify">Plantation Bay offers an astonishing range of food items that various guests have judged the best, or comparable to the best, they’ve ever had:</p>
+					<!--</div>
+					<div class="leoxSudlanan" style="margin-top:-38px">-->
+					<div class="bgPuti" data-inset="true" data-role="collapsible-set" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" style="margin-top: -5px;">
+						<div data-role="collapsible" data-collapsed="false">
+							<h3> BREAKFAST </h3>
+							<h3 class="leoxTitle1">BREAKFAST</h3>
+							<p class="iCenter"><i><strong class="txtDarkGreen">Available at Kilimanjaro Kafé</strong></i></p>
+							<div class="iCenter">
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/pancakes.jpg"/>
+									<p><strong>Wheat Pancakes </strong> – Full-bodied but not heavy, smooth but not insipid. Didn&#8217;t come from a carton.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/fruits.jpg"/>
+									<p><strong>Dwarf pineapples </strong> – Crunchy instead of pulpy, and naturally sweet. Even the pith is delicious. Without any question the best pineapple on earth, and available only in Cebu and nearby islands (certainly not Manila).</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/pandesal.jpg"/>
+									<p><strong>Pan de Sal </strong> – Possibly the last remaining properly-made Philippine breakfast bun – chewy, stretchy, with a subtle wheat flavor. Some of our Filipino guests order it by the dozen to take home.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/longganisa.jpg"/>
+									<p><strong>Longganiza </strong> – Philippine breakfast sausage of the highest order. Made in our own pantry, slightly on the lean side, with just a hint of sweetness and a smattering of spice. Nobody does it better, we humbly inform you.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/danish.jpg"/>
+									<p><strong>Danish Pastries </strong> – Crisp, not too sweet, with a perfect custard lining and a selection of fruity toppings.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/mangoes.jpg"/>
+									<p><strong>Mangoes </strong> – Tart, firm, with hardly any fibrousness, Cebu mangoes are quite unlike their poor relations from Mexico or Africa, and are considered the world standard by connoisseurs.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/eggs.jpg"/>
+									<p><strong>Eggs any style </strong> – Cooked precisely to your preference in front of you, anything from fluffy-soft scrambleds to impeccable sunny-side ups. Few hotels (and fewer resorts) can claim as much.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/croissants.jpg"/>
+									<p><strong>Croissants </strong> – Light, flaky, buttery but not oily. You’d have a hard time finding a better one in Paris. (As a matter of fact, we never have.) From our own pâtissièr (as are all the breads, pastries, and desserts served in the resort).</p>
+								</div>
+							</div>
+						</div>
+						<div data-role="collapsible">	
+							<h3> LUNCH and DINNER</h3>
+							<h3 class="leoxTitle1">LUNCH and DINNER</h3>
+							<div class="iCenter">
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/tempura2.jpg"/>
+									<p><strong>Prawns Tempura at Fiji </strong> – Tiger prawns almost as big as chicken drumsticks, coated in rice-flour batter and deep-fried. Certainly the best in the country, our tempura would hold its own in Tokyo, or anywhere.</p>
+								</div>				
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/batchoy.jpg"/>
+									<p><strong>Batchoy at Kilimanjaro </strong> – If it’s absolutely authentic native cuisine you’re after, look no further. We borrowed the recipe for this quintessential Philippine onion-and-noodle soup from our very own staff cafeteria after it was discovered that some enterprising (and obviously discriminating) guests were eating there on the sly.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/karekare.jpg"/>
+									<p><strong>Kare-Kare at Kilimanjaro </strong> – Philippine oxtail stew with banana flowers in peanut sauce, served with shrimp paste on the side. There’s nothing quite like this dish anywhere else in the world, and ours is about as good as it gets. Messy and fun: eat with a spoon, and leave the Hermes ties and scarves at home.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/ceasr.jpg"/>
+									<p><strong>Caesar Salad at Kilimanjaro </strong> – Nothing like American Caesar Salad, the Philippine version (some would say, original) is thick, creamy, garlicky, lemony, and piquant. This dressing doesn’t keep at all, and so must be prepared from scratch each time it is ordered. When our waiters are having a good day, our Caesar outshines the best from Manila; on a bad day, it’s still better than anything east of the Pacific.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/lechon.jpg"/>
+									<p><strong>Roast Pig (Lechon) at Themed Dinner Buffet </strong> – Cebu’s lechon is prized as the finest in the Philippines, and we do it better than anyone else. Slow roasting, herb stuffing, and a secret dressing process yield crunchy skin and delectable flesh so tender and juicy you can cut it with a fork.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/spareribs.jpg"/>
+									<p><strong>Barbecued Polynesian Spareribs at Fiji </strong> – What is this obsession with baby-back ribs, we ask. Baby-back just means the pig was small and skinny. Our ribs come from meatier and – yes, we admit it – fatter pigs, and our special Polynesian barbecue sauce would make even Kansas City gourmands sit up and take notice.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/steak.jpg"/>
+									<p><strong>US Angus Prime Rib Steak at Kilimanjaro and Savannah </strong> – US cornbelt restaurants undeniably have better meat to work with, but we try harder. Our proprietary marinade combines Midwestern and other ingredients, and we wait two days for the flavors to ripen. The results are sublime – tastier, smokier, juicier than anything out of Chicago. Don’t believe us? Try it, and decide for yourself.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/spaghetti-pepperoncino.jpg"/>
+									<p><strong>Spaghetti Pepperoncino at Kilimanjaro </strong> – This classic spaghetti dish also known as ‘Spaghetti al Aglio, Olio e Pepperoncino’, is made only of simple ingredients, fresh sliced garlic sautéed in fine olive oil though not browned, chopped mild green chilis, and crushed black pepper. It is usually finished with shaved Pecorino cheese. We put more ingredients into our dish than Italians normally do, giving it a stronger, “in your face” flavor, that you absolutely won’t find a match to in Italy. So, it’s not “authentic”, but it’s better.</p>
+								</div>
+							</div>
+						</div>
+						<div data-role="collapsible">
+							<h3> FAST FOOD</h3>
+							<h3 class="leoxTitle1">FAST FOOD</h3>
+							<p class="iCenter"><i><strong class="txtDarkGreen">Available at Savannah Grill</strong></i></p>
+							<div class="iCenter">
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/chiliconcarne.jpg"/>
+									<p><strong>Chile con Carne </strong> – Our meat is diced, not ground, and we use just the right amount of chili powder and other condiments, kidney beans, and fresh bell peppers (“chile” means pepper as in bell pepper, or is a shorthand way of referring to the whole dish; “chili” is a spice). Then we mix in yesterday’s leftovers and simmer for hours. Trust us, this is the way to do it. South-of-the-border purists might not be impressed by our “moderately spicy” chile, but if your standards are based on what’s generally available in Los Angeles or in cans, this is as good as it gets.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/hotdog.jpg"/>
+									<p><strong>Hot Dogs </strong> – Really! We didn’t make them, but we searched high and low for the world’s best, and came up with a tie: Hebrew National Jumbo (all-beef), and Armor Kielbasa (beef, pork, and turkey). Then we went through a heck of a lot of trouble importing them. Plantation Bay is the only place in Asia (and probably the US, too, for all we know) which serves the two best hot dogs in the world.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/hamburger1.jpg"/>
+									<p><strong>Char-broiled Hamburger </strong> – Our patties are made in-house with a precise blend of different cuts of beef, and go through a multi-stage grinding process to assure the right texture and cohesion. Then they’re seared over a real fire, with the flames licking all around. In all our travels in America, we haven’t found any burger, anywhere, at any price, as outright delicious as ours. And you can quote us on that.</p>
+								</div>
+							</div>
+						</div>
+						<div data-role="collapsible">
+							<h3> DESSERTS </h3>
+							<h3 class="leoxTitle1">DESSERTS</h3>
+							<div class="iCenter">
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/BananaToffeeTart1.jpg"/>
+									<p><strong>Banana Toffee Tart at Palermo </strong> – Fresh banana, chocolate, and whipped cream. Undeniably the greatest way to end your dinner!</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/flambeedmangocrepes.jpg"/>
+									<p><strong>Crepes Samurai at Fiji </strong> – Fresh mangoes, of course. Really thin crepes. Rum. Creamy vanilla sabayon with a flame-kissed fringe. Most plates go back to our kitchen looking like they were licked clean.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/3chocofaci.jpg"/>
+									<p><strong>Three Chocolate Fascination at Palermo and Fiji </strong> – Know what Guy Lian Fruits de Mer Belgian chocolates are? Our mousse cake is built on a similar concept, layering white, milk, and dark chocolate flavors in a single chocolate-lovers’ delight.</p>
+								</div>		
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/homemade_ice_cream.jpg"/>
+									<p><strong>Homemade Ice Cream available in all restaurants </strong> – Extra rich and extra creamy Homemade Ice Cream (Peanut Butter Chocolate, Vanilla, Mango, Strawberry and Jackfruit).</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/halohalo.jpg"/>
+									<p><strong>Halo-Halo at Kilimanjaro </strong> – A Filipino’s idea of a refreshing afternoon snack, a colorful mixture of candied fruits, jellies and custard, collated with shaved ice and native ube ice cream. Don’t leave the country without having sampled this.</p>
+								</div>
+								<div class="DiningCulinarySuperlativesIMG">
+									<img class="IpatungaDblock" alt="" src="pbayImages/cheesecake.jpg"/>
+									<p><strong>Cheesecake at Kilimanjaro and Palermo </strong> – We realize we’re treading on thin ice here, but our semi-New York-style cheesecake, modified for Asian tastes (meaning slightly heavier, slightly sweeter, and with a moist, dense, butter-packed Graham-cracker crust), has a lot of devoted followers. Including some New Yorkers.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div id="diningGastronomy" class="itago">
+					<h1 class="leoxTitle">Gastronomy on a Budget</h1>
+					<div class="leoxSudlanan">
+						<p class="iJustify">Are you on your dream vacation but still very mindful of your expenses? Do you want the most bang for your dining buck? Then here are our tips to frugal gastronomy at Plantation Bay!</p>
+					</div>
+					<div class="leoxSudlanan">
+						<img class="IpatungaDblock" src="pbayImages/kili_logo.gif" alt="Kilimanjaro Kafe" />
+						<p class="iCenter"><i>(Open 24 hours daily.)</i></p>
+						<p class="iCenter">The coffee shop is surrounded by our gigantic swimming pool. Features international and Filipino favorites, a special children&#8217;s menu, and our world-famous Breakfast Buffet with different culinary themes for every day of the week.</p>
+						<div class="iCenter">
+							<div class="DiningCulinarySuperlativesIMG">
+								<img class="IpatungaDblock" src="pbayImages/Pochero.jpg" alt="Kilimanjaro Kafe - Pochero Cebuano Style" />
+								<h4>Pochero Cebuano Style</h4>
+								<p>Cebu’s famous specialty beef casserole, serves 2-3 persons for only <span>P480+ (about US$ 12+).</span></p>
+							</div>
+							<div class="DiningCulinarySuperlativesIMG">
+								<img class="IpatungaDblock" src="pbayImages/Half-Roast-Chicken.jpg" alt="Kilimanjaro Kafe - Half Roast Chicken" />
+								<h4>Half Roast Chicken</h4>
+								<p>Big and satisfying, can be shared by 2 persons, <span>P450+ (about US$ 11+).</span></p>
+							</div>
+							<div class="DiningCulinarySuperlativesIMG">
+								<img class="IpatungaDblock" src="pbayImages/Lasagna.jpg" alt="Kilimanjaro Kafe - Lasagna" />
+								<h4>Lasagna</h4>
+								<p>One good meal for sharing! It can feed two persons for only <span>P380+ (about US$ 10+).</span></p>
+							</div>
+							<div class="DiningCulinarySuperlativesIMG">
+								<img class="IpatungaDblock" src="pbayImages/Stir-fried-Noodles.jpg" alt="Kilimanjaro Kafe - Stir-fried Mixed Noodles" />
+								<h4>Stir-fried Mixed Noodles</h4>
+								<p>No better way to share good chow than noodles! A light meal for 3 for only <span>P480+ (about US$ 12+).</span></p>
+							</div>
+							<div class="DiningCulinarySuperlativesIMG">
+								<img class="IpatungaDblock" src="pbayImages/karekare.jpg" alt="Kilimanjaro Kafe - Kare-Kare" />
+								<h4>Kare-Kare</h4>
+								<p>The best Kare-kare in the world! Enjoy our peanut ox-tail stew, made with US oxtail, for only <span>P480+ (about US$ 12+)</span>. May be shared by up to 3 persons.</p>
+							</div>
+						</div>
+					</div>
+					<div class="leoxSudlanan">
+						<img class="IpatungaDblock" src="pbayImages/Fiji_Logo.gif" alt="Fiji Restaurant" />
+						<p class="iCenter"><i>(Open 12 Noon – 3PM and 6PM – 11PM. Closed on Mondays.)</i></p>
+						<p class="iCenter">Situated by the hotel’s beachfront, Fiji offers both air-conditioned and open-air dining. Open for lunch and dinner, it serves seafood, Japanese, Korean and other Asian cuisine.</p>
+						<div class="iCenter">
+							<div class="DiningCulinarySuperlativesIMG">
+								<img class="IpatungaDblock" src="pbayImages/crispy%20pata.jpg" alt="Fiji - Crispy Pata" />
+								<h4>Crispy Pata</h4>
+								<p>A scrumptious meal awaits you as you try one of our favorite Filipino dishes as pork shank deep fried to perfection, and deliciously fattening! Will feed 4 persons for only P750+ (about US$ 19+).</p>
+							</div>
+							<div class="DiningCulinarySuperlativesIMG">
+								<img class="IpatungaDblock" src="pbayImages/spareribs.jpg" alt="Fiji - Sizzling Polynesian Spareribs" />
+								<h4>Sizzling Polynesian Spareribs</h4>
+								<p>A must try! This dish will surely delight your taste buds. Can be shared by 2 persons for only <span>P540+ (about US$ 14+)</span>.</p>
+							</div>
+							<div class="DiningCulinarySuperlativesIMG">
+								<img class="IpatungaDblock" src="pbayImages/salosalo.jpg" alt="Fiji - Salo-Salo" />
+								<h4>Salo-Salo</h4>
+								<p>Up for some seafood? Try our Salo-salo! Enjoy a platter of shrimps, salmon skewer, bay lobster, pork barbeque, clams, mussels, salted egg, steamed rice and green mango salad with shrimp paste. A <span>P990+ (about US$ 25+) </span>platter is enough for 3 hungry mouths!</p>
+							</div>
+							<div class="DiningCulinarySuperlativesIMG">
+								<img class="IpatungaDblock" src="pbayImages/crepes_samurai.jpg" alt="Fiji - Crepes Samurai" />
+								<h4>Crepes Samurai</h4>
+								<p>What better way to end a sumptuous meal than Crepes Samurai for dessert? Filled with mangoes and smothered with vanilla sabayon, 4 persons can enjoy this heavenly desert for only <span>P240+ (about US$ 6+)</span>. (But you’ll want more!)</p>
+							</div>
+						</div>
+					</div>	
+					<div class="leoxSudlanan">
+						<img class="IpatungaDblock" src="pbayImages/paler_logo.png" alt="Palermo Restaurant" />
+						<p class="iCenter">Café Bar: <i>Open 6AM – 11PM</i><br />
+							Tapas and Pastas: <i>Open 5PM – 11PM</i><br />
+							Air conditioned. Closed on Wednesdays.
+						</p>
+						<p class="iCenter">Palermo, our Mediterranean-inspired restaurant, is open for light breakfasts, great coffee all day, and Spanish tapas and Italian pastas for dinner.</p>
+						<div class="iCenter">
+							<div class="DiningCulinarySuperlativesIMG">		
+								<img class="IpatungaDblock" src="pbayImages/Fabada.jpg" alt="Palermo - Fabada" />
+								<h4>Fabada</h4>
+								<p>Spain’s answer to cassoulet, an aromatic bean and sausage stew. At <span>P250+ (about US$ 6+)</span>, enough for a meal.</p>
+							</div>
+							<div class="DiningCulinarySuperlativesIMG">
+								<img class="IpatungaDblock" src="pbayImages/callos_gambas_friedrice2.jpg" alt="Palermo - Callos, Gambas, and Fried Rice" />
+								<h4>Callos, Gambas, and Fried Rice</h4>
+								<p>Braised Pork Stew with rich tomato and onion sauce for only <span>P250+ (about US$ 6+)</span>. Pair it with our spicy Gambas (shrimps) and sinful Fried Rice (each at P250+), and it’s a <span>P750+ (about US$ 19+)</span> feast for 2-3 people.</p>
+							</div>
+						</div>
+					</div>
+					<div class="leoxSudlanan">
+						<img class="IpatungaDblock" src="pbayImages/Savannahgrill_logobig.jpg" alt="Savannah Grill" />
+						<p class="iCenter"><i>(Open 10AM – 8PM. Closed on Tuesdays.)</i></p>
+						<p class="iCenter">Fast-food favorites with 5-star flair. We will stack our Powerhouse Burger (order it with everything on!) against anyone’s. The steaks literally melt in your mouth, and the stateside hotdogs are out of sight.</p>
+						<div class="iCenter">
+							<div class="DiningCulinarySuperlativesIMG">		
+								<img class="IpatungaDblock" src="pbayImages/hotdog.jpg" alt="Savannah Grill - Hotdogs" />
+								<h4>Hotdogs</h4>
+								<p>For only <span>P200+ (about US$ 5+)</span>, enjoy a Hungarian Hotdog topped with our amazing Chile con Carne.</p>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div id="diningThemedDinner" class="itago">	
+					<h1 class="leoxTitle">Themed Dinner Buffets</h1>
+					<div class="leoxSudlanan" style="text-align:center;">
+						<h4 class="txtDarkGreen iCenter iBold">at Php1,380 nett</h3>
+						<p class="iCenter">There’s something different every night (Mon – Sat, 6:30 PM) at Plantation Bay Resort and Spa.</p>
+					<!--</div>
+					<div class="leoxSudlanan iCenter" style="margin-top:-38px;text-align:center;">-->
+						<div class="themeddinnerbox">
+							<h3 class="leoxTitle1">MONDAYS</h3>
+							<img class="IpatungaDblock" src="pbayImages/viva_espana.jpg" alt="Viva España" />
+							<h4>Viva España</h4>
+							<p>An evening of Spanish food and dance.</p>
+						</div>
+						<div class="themeddinnerbox">
+							<h3 class="leoxTitle1">TUESDAYS</h3>
+							<img class="IpatungaDblock" src="pbayImages/filipinofiesta_sm.jpg" alt="Filipino Fiesta " />
+							<h4>Filipino Fiesta </h4>
+							<p>Filipino cultural dance performance with a feast of native Philippine dishes.</p>				
+						</div>
+						<div class="themeddinnerbox">
+							<h3 class="leoxTitle1">WEDNESDAYS</h3>
+							<img class="IpatungaDblock" src="pbayImages/saharanights_4web_A.jpg" alt="Sahara Nights " />
+							<h4>Sahara Nights </h4>
+							<p>Bare skin! Appetizing Gypsy dancers! Very hot harem costumes! and lots of yummy food! (Shawarma, Kebabs, and more)</p>
+						</div>
+						<div class="themeddinnerbox">
+							<h3 class="leoxTitle1">THURSDAYS</h3>
+							<img class="IpatungaDblock" src="pbayImages/brazillianfever_sm.jpg" alt="Brazilian Fever" />
+							<h4>Brazilian Fever</h4>
+							<p>Hot and tempting…and that’s just food</p>							
+						</div>
+						<div class="themeddinnerbox">
+							<h3 class="leoxTitle1">FRIDAYS</h3>
+							<img class="IpatungaDblock" src="pbayImages/hawluau_4web_A.jpg" alt="Hawaiian Luau" />
+							<h4>Hawaiian Luau</h4>
+							<p>Fire Eaters. Provocative Hula dancers. Skimpy loin cloths on sexy male performers. Oh yes, plenty of high-cholesterol food.</p>
+						</div>
+						<div class="themeddinnerbox">
+							<h3 class="leoxTitle1">SATURDAYS</h3>
+							<img class="IpatungaDblock" src="pbayImages/rockin_usa.jpg" alt="Rockin’ USA " />
+							<h4>Rockin’ USA</h4>
+							<p>A Rock and Roll Dinner Show Song! Dance! (and some Skin!) Plus barbecue, ribs, and beer!</p>
+						</div>	
+					</div>
+				</div>
+				<div class="E_YourAreHere">
+					<div class="IpatungaInlineBlock">
+						<label>You are here:</label>
+					</div>
+					<div class="IpatungaInlineBlock">
+						<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+							<select class="leoxYourHereMainMenu" data-native-menu="false" data-icon="bars" data-iconpos="none">
+								<option value="index.html">HOME</option>
+								<option value="rooms.html">ROOMS</option>
+								<option value="packages.html">PACKAGES</option>
+								<option value="dining.html" selected>DINING</option>
+								<option value="spa.html">SPA</option>
+								<option value="activities.html">ACTIVITIES</option>
+								<option value="images.html">IMAGES</option>
+								<option value="contact.html">CONTACT US</option>
+								<option value="https://plantationbay.com/leox/myreservation.html">MY RESERVATION</option>
+							</select>
+						</fieldset>
+					</div>
+					<div class="IpatungaInlineBlock"><span class="arrowleo txtDarkGreen iBold"> > </span></div>
+					<div class="IpatungaInlineBlock">
+						<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+							<select class="dining_mobile_menu" data-native-menu="false" data-icon="bars" data-iconpos="right">
+								<option value="RESTAURANTS" selected>RESTAURANTS</option>
+								<option value="CULINARYSUPERLATIVES">CULINARY SUPERLATIVES</option>
+								<option value="GASTRONOMYONABUDGET">GASTRONOMY ON A BUDGET</option>
+								<option value="THEMEDDINNERBUFFETS">THEMED DINNER BUFFETS</option>
+							</select>
+						</fieldset>
+					</div>
+				</div>				
+			</section>
+			<!--
+			<aside class="homesidebar">
+				<div class="callout top">Click Dining items below</div>
+				<div class="sidebarItem ui-corner-all custom-corners">
+					<div class="ui-bar ui-bar-a">
+						<h3 class="leoxTitle">RESTAURANTS</h3>
+					</div>
+					<div class="ui-body ui-body-a">
+						<a href="javascript:void(null);" class="restaurantPage" style="text-decoration:none;color:#333;font-weight:normal;">
+							<img class="IpatungaDblock" src="pbayImages/kili_logo.gif" alt="Kilimanjaro Kafe" title="Kilimanjaro Kafe" />						
+							<p>Features international and Filipino favorites, a special children’s menu, and our world-famous Breakfast Buffet with different culinary themes for every day of the week.</p>
+						</a>
+					</div>
+					<div class="sideBarDetailsLink"><a href="javascript:void(null);" class="restaurantPage">Click for details</a></div>	
+				</div>
+				<div class="sidebarItem ui-corner-all custom-corners">
+					<div class="ui-bar ui-bar-a">
+						<h3 class="leoxTitle">CULINARY SUPERLATIVES</h3>
+					</div>
+					<div class="ui-body ui-body-a">
+						<a href="javascript:void(null);" class="culinaryPage" style="text-decoration:none;color:#333;font-weight:normal;">
+							<img class="IpatungaDblock" alt="" src="pbayImages/lechon.jpg" />					
+							<p>Plantation Bay offers an astonishing range of food items that various guests have judged the best, or comparable to the best, they’ve ever had.</p>
+						</a>	
+					</div>
+					<div class="sideBarDetailsLink"><a href="javascript:void(null);" class="culinaryPage">Click for details</a></div>						
+				</div>
+				<div class="sidebarItem ui-corner-all custom-corners">
+					<div class="ui-bar ui-bar-a">
+						<h3 class="leoxTitle">GASTRONOMY ON A BUDGET</h3>
+					</div>
+					<div class="ui-body ui-body-a">
+						<a href="javascript:void(null);" class="gastronomyPage" style="text-decoration:none;color:#333;font-weight:normal;">
+							<img class="IpatungaDblock" src="pbayImages/Pochero.jpg" alt="Kilimanjaro Kafe - Pochero Cebuano Style" />					
+							<p class="iCenter">Are you on your dream vacation but still very mindful of your expenses? Do you want the most bang for your dining buck? Then here are our tips to frugal gastronomy at Plantation Bay!</p>
+						</a>	
+					</div>
+					<div class="sideBarDetailsLink"><a href="javascript:void(null);" class="gastronomyPage">Click for details</a></div>						
+				</div>
+				<div class="sidebarItem ui-corner-all custom-corners">
+					<div class="ui-bar ui-bar-a">
+						<h3 class="leoxTitle">THEMED DINNER BUFFETS</h3>
+					</div>
+					<div class="ui-body ui-body-a">
+						<a href="javascript:void(null);" class="themeddinnerPage">
+							<h4 class="iCenter Tealcolor">at Php1,380 nett</h4>
+							<img class="IpatungaDblock" src="pbayImages/viva_espana.jpg" alt="Viva España" />
+							<h4 class="iCenter">Viva España</h4>
+						</a>
+					</div>
+					<div class="sideBarDetailsLink"><a href="javascript:void(null);" class="themeddinnerPage">Click for details</a></div>	
+				</div>		
+				<div class="iCenter">
+					<div class="sidebarButtons">
+						<a href="#phhotelpricing" class="popupLink" data-srcfile="hotelpricing.html" data-role="button" title="Understand Philippine Hotel Pricing" data-rel="popup" data-position-to="window" data-transition="flip">Understand Philippine Hotel Pricing</a>
+					</div>
+					<div class="spacer15px"></div>
+					<div class="sidebarButtons">
+						<a href="#satisfaction" class="popupLink" data-role="button" data-srcfile="satisfactionguarantee.html" title="The Plantation Bay Room and Restaurant Satisfaction Guarantee" data-rel="popup" data-position-to="window" data-transition="flip">Room and Restaurant Satisfaction Guarantee</a>
+					</div>
+				</div>
+				<div class="spacer15px"></div>
+				<div class="iCenter">
+					<h4><strong>Plantation Bay Resort and Spa is a member of:</strong></h4>
+					<img src="pbayImages/chainesnewlogo.gif" alt="CONFRÉRIE DE LA CHAINE DES ROTISSEURS" /></td>
+					<p class="iCenter"><strong><span>CONFRÉRIE DE LA CHAINE DES ROTISSEURS </span></strong></p>	  
+					<img src="pbayImages/ordremondiallogo2.gif" alt="CONFRÉRIE DE LA CHAINE DES ROTISSEURS" /></td>
+					<p><strong><span>ORDRE MONDIAL DES GOURMETS DEGUSTATEURS</span></strong></p>	  
+				</div>		
+			</aside>-->
+		</section>
+		<div class="YourAreHereUbos">
+			<div class="O_YourAreHere">
+				<div class="IpatungaInlineBlock">
+					<label>You are here:</label>
+				</div>
+				<div class="IpatungaInlineBlock">
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+						<select class="leoxYourHereMainMenu" data-native-menu="false" data-icon="bars" data-iconpos="none">
+							<option value="index.html">HOME</option>
+							<option value="rooms.html">ROOMS</option>
+							<option value="packages.html">PACKAGES</option>
+							<option value="dining.html" selected>DINING</option>
+							<option value="spa.html">SPA</option>
+							<option value="activities.html">ACTIVITIES</option>
+							<option value="images.html">IMAGES</option>
+							<option value="contact.html">CONTACT US</option>
+							<option value="https://plantationbay.com/leox/myreservation.html">MY RESERVATION</option>
+						</select>
+					</fieldset>
+				</div>
+				<div class="IpatungaInlineBlock"><span class="arrowleo txtDarkGreen iBold"> > </span></div>
+				<div class="IpatungaInlineBlock">
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+						<select class="dining_mobile_menu" data-native-menu="false" data-icon="bars" data-iconpos="right">
+							<option value="RESTAURANTS" selected>RESTAURANTS</option>
+							<option value="CULINARYSUPERLATIVES">CULINARY SUPERLATIVES</option>
+							<option value="GASTRONOMYONABUDGET">GASTRONOMY ON A BUDGET</option>
+							<option value="THEMEDDINNERBUFFETS">THEMED DINNER BUFFETS</option>
+						</select>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+		<div data-role="popup" id="satisfaction" data-loaded="" data-overlay-theme="b" class="ui-content" data-history="false">
+			<div class="popHead">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				<h1 class="leoxTitle">Satisfaction Guarantee</h1>
+			</div>	
+			<div class="popSudlanan">
+				<!-- satisfaction guarantee here! -->
+				<a href="#" data-rel="back" data-role="button" data-mini="true" data-inline="true" data-icon="delete">Close</a>
+			</div>
+		</div>
+		<div data-role="popup" id="phhotelpricing" data-loaded="" data-history="false"  data-overlay-theme="b" class="ui-content">
+			<div class="popHead">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				<h1 class="leoxTitle">Understanding Philippine Hotel Pricing</h1>
+			</div>	
+			<div class="popSudlanan">
+				<!-- hotel pricing here! -->
+				<a href="#" data-rel="back" data-role="button" data-mini="true" data-inline="true" data-icon="delete">Close</a>
+			</div>
+		</div>
+	</div><!-- Content - Human Dining Home -->
+
+	<div data-role="footer">
+		<div class="iCenter">
+			<a href="index.html" data-ajax="false" data-role="button">HOME</a>	
+			<a href="rooms.html" data-ajax="false" data-role="button">ROOMS</a>	
+			<a href="packages.html" data-ajax="false" data-role="button">PACKAGES</a>	
+			<a href="dining.html" data-ajax="false" data-role="button" class="btnSelected">DINING</a>	
+			<a href="spa.html" data-ajax="false" data-role="button">SPA</a>	
+			<a href="activities.html" data-ajax="false" data-role="button">ACTIVITIES</a>	
+			<a href="images.html" data-ajax="false" data-role="button">IMAGES</a>	
+			<a href="contact.html" data-ajax="false" data-role="button">CONTACT US</a>
+			<a href="https://plantationbay.com/leox/myreservation.html" data-ajax="false" data-role="button">MY RESERVATION</a>			
+		</div>	
+		<div class="CopyRight">
+			&copy;2014 <a href="http://www.plantationbay.com">Plantation Bay Resort and Spa</a>. All rights reserved.
+			<a href="http://www.plantationbay.com" target="_blank">Design and development by Leox.</a>
+		</div>			
+	</div> 
+</div><!-- Tumoy Dining Page -->
+<!-- PANEL MENU -->
+<div data-role="panel" data-position="right" data-display="overlay" id="DININGpanelMenu" class="panelMenu">
+	<div data-role="content">
+	<ul data-role="listview" data-inset="true" >
+		<li><a href="index.html" data-ajax="false" >HOME</a></li>		
+		<li><a href="rooms.html" data-ajax="false" data-transition="slide" data-direction="forward">ROOMS</a></li>
+		<li><a href="packages.html" data-ajax="false" data-transition="slide" data-direction="forward">PACKAGES</a></li>
+		<li><a href="dining.html" data-ajax="false" data-transition="slide" data-direction="forward">DINING</a></li>
+		<li><a href="spa.html" data-ajax="false" data-transition="slide" data-direction="forward">SPA</a></li>
+		<li><a href="activities.html" data-ajax="false" data-transition="slide" data-direction="forward">ACTIVITIES</a></li>
+		<li><a href="images.html" data-ajax="false" data-transition="slide" data-direction="forward">IMAGES</a></li>
+		<li><a href="contact.html" data-ajax="false" data-transition="slide" data-direction="forward">CONTACT US</a></li>
+		<li><a href="https://plantationbay.com/leox/myreservation.html" data-ajax="false" data-transition="slide" data-direction="forward">MY RESERVATION</a></li>
+		<li><a href="#" data-rel="close" data-icon="delete">HIDE/CLOSE</a></li>
+		<!--<li><a href="directory.html"  data-ajax="false" >DIRECTORY OF SERVICES</a></li>-->
+	</ul>
+	</div>
+</div>
+<script type="text/javascript" src="rlmjHelpers.js"></script>
+</body>
+</html>
